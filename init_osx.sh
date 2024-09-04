@@ -36,14 +36,9 @@ setup_zsh() {
 export ZDOTDIR=~/.config/zsh
 [[ -f $ZDOTDIR/.zshenv ]] && . $ZDOTDIR/.zshenv
 EOF
-
-  printf "%s\n" "${FMT_BOLD}${FMT_YELLOW}Setup oh-my-zsh and its plugins.${FMT_RESET}"
-  # Instalation script respects variable set (details in documentation inside script).
-  # Whether run zsh after the install. Disable due installation via script.
-  export RUNZSH="no"
-  # Change default directory path. Needs because of plugin directory, which stores custom setting.
-  export ZSH="$HOME/.config/oh-my-zsh"
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  
+  # https://stackoverflow.com/questions/15769615/remove-last-login-message-for-new-tabs-in-terminal
+  touch .hushlogin
 
   # Install commands autocompletition
   # https://github.com/zsh-users/zsh-autosuggestions
@@ -60,7 +55,7 @@ EOF
   # Install powerline (beautify prompt for input)
   # https://github.com/romkatv/powerlevel10k
   brew install powerlevel10k
-  echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+  echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >> ${ZDOTDIR:-$HOME}/.zshrc
 }
 
 setup_alacritty() {
