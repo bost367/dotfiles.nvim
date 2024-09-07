@@ -1,0 +1,28 @@
+[manager]
+cwd = { fg = "#7A7E85" }
+border_style = { fg = "#1E1F22" }
+hovered = { bg = "#2E436E" }
+
+[status]
+mode_normal = { hidden = true }
+mode_select = { hidden = true }
+mode_unset = { hidden = true }
+
+[filetype]
+rules = [
+   { name = "*/", fg = "#DFE1E5" }
+]
+
+[input]
+border = { fg = "#1E1F22" }
+title = { fg = "#DFE1E5" }
+value = { bg = "#393B40" }
+
+[icon]
+prepend_dirs = [
+	{ name = ".config", text = "" },
+	{ name = ".git", text = "󰊢" },
+]
+prepend_conds = [
+    { if = "dir", text = "" },
+]
