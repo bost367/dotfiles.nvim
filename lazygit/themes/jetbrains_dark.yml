@@ -1,0 +1,34 @@
+gui:
+  theme:
+    activeBorderColor:
+      - "#3975F1"
+      - "bold"
+    inactiveBorderColor:
+      - "#909399" 
+    searchingActiveBorderColor:
+      - "#3975F1" 
+      - "bold"
+    optionsTextColor:
+      - "#3975F1"
+    selectedLineBgColor:
+      - "#2E436E"
+      - "default"
+    inactiveViewSelectedLineBgColor:
+      - "#43444A"
+    # Foreground color of copied commit
+    cherryPickedCommitFgColor:
+      - blue
+    # Background color of copied commit
+    cherryPickedCommitBgColor:
+      - cyan
+    # Foreground color of marked base commit (for rebase)
+    markedBaseCommitFgColor:
+      - blue
+    # Background color of marked base commit (for rebase)
+    markedBaseCommitBgColor:
+      - yellow
+    # Color for file with unstaged changes
+    unstagedChangesColor:
+      - red
+    defaultFgColor:
+      - "#DFE1E5" 
