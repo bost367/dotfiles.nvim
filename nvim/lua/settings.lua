@@ -30,21 +30,16 @@ opt.scrolloff = 5
 opt.number = true
 opt.numberwidth = 2
 
+opt.clipboard = "unnamedplus" -- Enable OS buffer
+opt.cmdheight = 0 -- Hide current mode from command line 
+
 cmd 'syntax enable' -- syntax highlighting
 cmd 'filetype plugin indent on' -- try to recognize filetypes and load rel' plugins
 
 -- colour pallete
-
-local colors = {
-  black    = '#1E2022',
-  blue     = '#375FAD',
-  green    = '#549159',
-  red      = '#ec5f67',
-  cyan     = '#008080',
-}
-
 opt.termguicolors = true -- Enable true colors
 cmd.colorscheme("darcula-dark")
+local palette = require 'palette'
 
 -- colors overriding
 hi(0, "CursorLine", { bg = "#26282E", ctermbg = 1 })
@@ -52,13 +47,28 @@ hi(0, "ColorColumn", { bg = "#393B40", ctermbg = 1 })
 hi(0, "Normal", { bg = "#1E2022", ctermbg = 1 })
 hi(0, "LineNr", { fg = "#474B54" })
 hi(0, "CursorLineNr", { fg = "#A0A2AA" })
-hi(0, "SignColumn", { fg = colors.red })
 
 -- gitsign
-hi(0, "GitGutterAdd", { fg = colors.green })
-hi(0, "GitGutterChange", { fg = colors.blue })
-hi(0, "GitGutterChangeDelete", { fg = colors.red })
-hi(0, "GitGutterDelete", { fg = colors.red })
+hi(0, "GitGutterAdd", { fg = palette.editor.vcs.added_line })
+hi(0, "GitGutterChange", { fg = palette.editor.vcs.changed_line })
+hi(0, "GitGutterChangeDelete", { fg = palette.editor.vcs.changed_line })
+hi(0, "GitGutterDelete", { fg = palette.editor.vcs.deleted_line })
 
 -- scrollbar
-hi(0, "ScrollbarGitAdd", { ctermfg = 0, fg = colors.green })
+hi(0, "ScrollbarGitAdd", { ctermfg = 0, fg = palette.editor.vcs.added_line })
+
+-- code
+hi(0, "TSString", { fg = palette.lang.default.str })
+hi(0, "TSKeyword", { fg = palette.lang.default.keyword })
+hi(0, "TSKeywordFunction", { fg = palette.lang.default.keyword })
+hi(0, "TSNumber", { fg = palette.lang.default.digit })
+hi(0, "TSType", { fg = palette.lang.default.text })
+hi(0, "TSFunction", { fg = palette.lang.default.function_declaration })
+hi(0, "TSFunctionCall", { fg = palette.lang.default.function_call })
+hi(0, "TSConstant", { fg = palette.lang.default.constant })
+hi(0, "TSFuncMacro", { fg = palette.lang.default.metadata })
+--hi(0, "TSConstMacro", { fg = palette.lang.default.metadata })
+--hi(0, "TSField", { fg = palette.lang.default.metadata })
+--hi(0, "TSProperty", { fg = palette.lang.default.metadata })
+--hi(0, "TSTag", { fg = palette.lang.default.metadata })
+
