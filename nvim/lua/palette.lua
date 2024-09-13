@@ -1,7 +1,8 @@
 return {
     editor = {
         background = "#1E2022",
-        cursor_lne = "#26262E",
+        cursor_lne = "#26282E",
+        select = "#214283",
         diagnostic = {
             warn = "#F2C55C",
             error = "#FA6675",
@@ -29,11 +30,19 @@ return {
             str = "#6AAB73",
             keyword = "#CF8E6D",
             digit = "#2AACB8",
-            function_decaration = "#56A8F5",
+            function_decaration = "#00AAFF",
             function_call = "#BCBEC4",
             constant = "#C77DBB",
             metadata = "#B3AE60",
+            generic = "#16BAAC",
+            struct = "#BCBEC4",
+            local_variable = "#BCBEC4",
+            argument = "#BCBEC4", -- function, constructure, etc.
+            label = "#32B8AF",
         },
+        rust = {
+            lifetime = "#20999D",
+        }
     },
 }
 
