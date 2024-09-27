@@ -4,8 +4,9 @@ return {
         cursor_lne = "#26282E",
         select = "#214283",
         diagnostic = {
-            warn = "#F2C55C",
             error = "#FA6675",
+            warn = "#F2C55C",
+            weak_warn = "#857042",
         },
         vcs = {
             added_line = "#549159",
@@ -39,6 +40,9 @@ return {
             local_variable = "#BCBEC4",
             argument = "#BCBEC4", -- function, constructure, etc.
             label = "#32B8AF",
+            comment = "#7A7E85",
+            comment_documentation = "#5F826B",
+            comment_todo = "#8BB33D",
         },
         rust = {
             lifetime = "#20999D",

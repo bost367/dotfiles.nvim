@@ -1,4 +1,4 @@
-local palette = require "palette"
+local palette = require("darcula-dark.palette")
 
 return {
   normal = {
