@@ -1,8 +1,9 @@
 return {
     editor = {
         background = "#1E2022",
-        cursor_lne = "#26282E",
+        cursor_line = "#26282E",
         select = "#214283",
+        under_corsour = "#373B39",
         diagnostic = {
             error = "#FA6675",
             warn = "#F2C55C",
