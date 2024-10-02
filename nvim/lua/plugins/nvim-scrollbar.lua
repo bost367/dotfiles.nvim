@@ -1,9 +1,11 @@
 -- Scrollbar
-return { 
+return {
     "petertriho/nvim-scrollbar",
     opts = {
-        handle = { color = "#808080" },
-        handlers = { gitsigns = true },
+        handlers = {
+            cursor = false,
+            gitsigns = true,
+        },
     }
 }
 

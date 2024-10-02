@@ -5,7 +5,7 @@ return {
         select = "#214283",
         under_corsour = "#373B39",
         diagnostic = {
-            error = "#FA6675",
+            error = "#D54D5B",
             warn = "#F2C55C",
             weak_warn = "#857042",
         },
@@ -20,7 +20,7 @@ return {
         hint_text = "#7A7E85",
         background = "#2B2D30",
         cursor_line = "#2E436E",
-        scroll_bar = "#9798",
+        scroll_bar = "#525355",
         cursor_line_inactive = "#43444A",
         border = "#1E1F22", -- inactive element
         active_element = "#3975F1", -- blue

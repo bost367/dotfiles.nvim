@@ -4,6 +4,33 @@ local MIN_LABEL_WIDTH = 40
 local lspkind = require("lspkind")
 local cmp = require("cmp")
 
+local kind_icons = {
+    Text = " ",
+    Method = "󰰑 ",
+    Function = "󰯼 ",
+    Constructor = " ",
+    Field = "󰯺 ",
+    Variable = "󰰚 ",
+    Class = "󰯳 ",
+    Interface = "󰯹 ",
+    Module = "󰰏  ",
+    Property = "󰰪 ",
+    Unit = " ",
+    Value = "󰎠 ",
+    Enum = "󰯷 ",
+    Keyword = "󰌋 ",
+    Snippet = " ",
+    Color = "󰏘 ",
+    File = " ",
+    Reference = " ",
+    Folder = " ",
+    EnumMember = "󰯷 ",
+    Constant = "󰯱 ",
+    Struct = "󰰡  ",
+    Event = " ",
+    Operator = "󰆕 ",
+    TypeParameter = "󰅲 ",
+}
 require("cmp").setup({
 	performance = {
 		max_view_entries = 10,
@@ -12,6 +39,7 @@ require("cmp").setup({
 		fields = { cmp.ItemField.Kind, cmp.ItemField.Abbr },
 		format = lspkind.cmp_format({
 			mode = "symbol",
+            symbol_map = kind_icons,
 			preset = "default",
 			maxwidth = 50,
 			ellipsis_char = "...",
@@ -33,16 +61,18 @@ require("cmp").setup({
 		}),
 	},
 	window = {
-		completion = {
-			border = "rounded",
-		},
+        completion = cmp.config.window.bordered({
+            rorder = "rounded",
+            winhighlight = 'Normal:Pmenu,FloatBorder:FloatBorder,CursorLine:Visual,Search:None',
+        }),
 		documentation = {
 			border = "rounded",
+            winhighlight = 'Normal:Pmenu,FloatBorder:FloatBorder,CursorLine:Visual,Search:None',
 		},
 	},
 	mapping = {
-		["<C-k>"] = cmp.mapping.select_prev_item(),
-		["<C-j>"] = cmp.mapping.select_next_item(),
+		["<C-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
+		["<C-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
 		["<C-b>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(),
