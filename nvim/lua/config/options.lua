@@ -28,6 +28,7 @@ opt.scrolloff = 5
 -- line number 
 opt.number = true
 opt.numberwidth = 2
+opt.fillchars = { eob = " " } -- Remove '~' character on empty line
 
 opt.clipboard = "unnamedplus" -- Enable OS buffer
 opt.cmdheight = 0 -- Hide current mode from command line 

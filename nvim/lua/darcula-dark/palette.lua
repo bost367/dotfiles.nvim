@@ -25,6 +25,13 @@ return {
         border = "#1E1F22", -- inactive element
         active_element = "#3975F1", -- blue
         popup_window = "#393B40",
+        vcs = {
+            added_file = "#73BD78",
+            changed_file = "#70AEFF",
+            deleted_file = "#868A91",
+            ignored_file = "#CF8E6D",
+            staged_file = "#df8984",
+        },
     },
     lang = {
         default = {
