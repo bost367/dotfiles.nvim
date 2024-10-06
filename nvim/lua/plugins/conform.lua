@@ -5,7 +5,7 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			rust = { "rustfmt", lsp_format = "fallback" },
-            ["_"] = { "trim_whitespace", "trim_newlines" },
+			["_"] = { "trim_whitespace", "trim_newlines" },
 		},
 	},
 }
