@@ -1,7 +1,7 @@
 local hi = vim.api.nvim_set_hl
 local palette = require("darcula-dark.palette")
 
--- use `:h lsp-semantic-highlight` to see all tokens 
+-- use `:h lsp-semantic-highlight` to see all tokens
 hi(0, "@lsp.type.struct", { fg = palette.lang.default.struct })
 hi(0, "@lsp.type.class", { fg = palette.lang.default.struct })
 hi(0, "@lsp.type.macro", { fg = "#FFC66D" })
@@ -26,13 +26,12 @@ hi(0, "@lsp.type.label", { fg = palette.lang.default.label })
 
 -- Highlight & Italic static function declaration and invocation
 vim.api.nvim_create_autocmd("LspTokenUpdate", {
-  callback = function(args)
-    local token = args.data.token
-    if token.type == "function" and token.modifiers.static then
-      vim.lsp.semantic_tokens.highlight_token(
-        token, args.buf, args.data.client_id, "StaticFunction")
-    end
-  end
+	callback = function(args)
+		local token = args.data.token
+		if token.type == "function" and token.modifiers.static then
+			vim.lsp.semantic_tokens.highlight_token(token, args.buf, args.data.client_id, "StaticFunction")
+		end
+	end,
 })
 
 -- Rust
@@ -44,17 +43,16 @@ hi(0, "@lsp.type.lifetime.rust", { fg = palette.lang.rust.lifetime })
 
 -- Underscore mutable variables
 vim.api.nvim_create_autocmd("LspTokenUpdate", {
-  callback = function(args)
-    local token = args.data.token
-    if token.modifiers.mutable then
-      if token.type == "selfKeyword" then
-        vim.lsp.semantic_tokens.highlight_token(token, args.buf, args.data.client_id, "MutablelSelfParameter")
-      elseif token.type == "variable" then
-        vim.lsp.semantic_tokens.highlight_token(token, args.buf, args.data.client_id, "MutableLocalVariable")
-      elseif token.type == "static" then
-        vim.lsp.semantic_tokens.highlight_token(token, args.buf, args.data.client_id, "MutableStaticVariable")
-      end
-    end
-  end
+	callback = function(args)
+		local token = args.data.token
+		if token.modifiers.mutable then
+			if token.type == "selfKeyword" then
+				vim.lsp.semantic_tokens.highlight_token(token, args.buf, args.data.client_id, "MutablelSelfParameter")
+			elseif token.type == "variable" then
+				vim.lsp.semantic_tokens.highlight_token(token, args.buf, args.data.client_id, "MutableLocalVariable")
+			elseif token.type == "static" then
+				vim.lsp.semantic_tokens.highlight_token(token, args.buf, args.data.client_id, "MutableStaticVariable")
+			end
+		end
+	end,
 })
-
