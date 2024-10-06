@@ -16,4 +16,3 @@ hi(0, "ScrollbarGitChange", { ctermfg = 0, fg = palette.editor.vcs.changed_line 
 hi(0, "ScrollbarGitChangeHandle", { ctermfg = 0, fg = palette.editor.vcs.changed_line })
 hi(0, "ScrollbarGitDelete", { ctermfg = 0, fg = palette.editor.vcs.deleted_line })
 hi(0, "ScrollbarGitDeleteHandle", { ctermfg = 0, fg = palette.editor.vcs.deleted_line })
-
