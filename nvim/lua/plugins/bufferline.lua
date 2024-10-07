@@ -8,6 +8,8 @@ return {
 			indicator = {
 				style = "none",
 			},
+			left_trunc_marker = "",
+			right_trunc_marker = "",
 			separator_style = "slant",
 		},
 		highlights = bufferline_theme,
