@@ -4,6 +4,7 @@ local palette = require("darcula-dark.palette")
 
 -- custom
 hi(0, "StaticFunction", { fg = palette.lang.default.function_decaration, italic = true })
+hi(0, "WinSeparator", { fg = palette.interface.background })
 
 -- colors overriding
 hi(0, "Normal", { bg = palette.editor.background, ctermbg = 1 })
