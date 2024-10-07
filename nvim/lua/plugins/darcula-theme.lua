@@ -1,7 +1,7 @@
--- JetBrains Darcula Theme  
+-- JetBrains Darcula Theme
 return {
-    "xiantang/darcula-dark.nvim",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-    }
+  "xiantang/darcula-dark.nvim",
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter",
+  },
 }
