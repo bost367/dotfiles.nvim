@@ -15,7 +15,8 @@ hi(0, "ColorColumn", { bg = "#393B40", ctermbg = 1 })
 hi(0, "Visual", { bg = palette.editor.select })
 
 -- diagnostics
-hi(0, "DiagnosticError", { ctermfg = 1, fg = palette.editor.diagnostic.error })
-hi(0, "DiagnosticHint", { ctermfg = 7, fg = palette.editor.diagnostic.warn })
-hi(0, "DiagnosticWarn", { ctermfg = 7, fg = palette.editor.diagnostic.weak_warn })
-hi(0, "DiagnosticInfo", { ctermfg = 4, fg = palette.editor.diagnostic.error })
+hi(0, "DiagnosticError", { fg = palette.editor.diagnostic.error })
+hi(0, "DiagnosticHint", { fg = palette.editor.diagnostic.warn })
+hi(0, "DiagnosticWarn", { fg = palette.editor.diagnostic.weak_warn })
+hi(0, "DiagnosticInfo", { fg = palette.editor.diagnostic.error })
+hi(0, "DiagnosticUnnecessary", { fg = "#6F737A" })
