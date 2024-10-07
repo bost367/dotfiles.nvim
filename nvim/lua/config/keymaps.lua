@@ -14,4 +14,3 @@ map("n", "<C-l>", ":Format <CR>", default_opts)
 map("n", "L", ":BufferLineCycleNext <CR>", default_opts)
 map("n", "H", ":BufferLineCyclePrev <CR>", default_opts)
 map("n", "<C-w>", ":bd<CR>", default_opts)
-

@@ -8,7 +8,7 @@ require("darcula-dark.illuminate")
 
 local lualine_theme = require("darcula-dark.lualine")
 require("lualine").setup({
-	options = {
-		theme = lualine_theme,
-	},
+  options = {
+    theme = lualine_theme,
+  },
 })

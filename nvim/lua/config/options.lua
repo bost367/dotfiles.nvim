@@ -32,20 +32,19 @@ opt.fillchars = { eob = " " } -- Remove '~' character on empty line
 
 opt.clipboard = "unnamedplus" -- Enable OS buffer
 opt.cmdheight = 0 -- Hide current mode from command line
-
 cmd("syntax enable") -- Syntax highlighting
 cmd("filetype plugin indent on") -- Try to recognize filetypes and load rel' plugins
 
 -- colour pallete
 opt.termguicolors = true -- Enable true colors
 vim.diagnostic.config({
-    underline = true,
-	signs = {
-		text = {
-			[vim.diagnostic.severity.ERROR] = "",
-			[vim.diagnostic.severity.WARN] = "",
-			[vim.diagnostic.severity.INFO] = "",
-			[vim.diagnostic.severity.HINT] = "",
-		},
-	},
+  underline = true,
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = "",
+      [vim.diagnostic.severity.WARN] = "",
+      [vim.diagnostic.severity.INFO] = "",
+      [vim.diagnostic.severity.HINT] = "",
+    },
+  },
 })
