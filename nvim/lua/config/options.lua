@@ -27,7 +27,7 @@ opt.scrolloff = 5
 
 -- line number
 opt.number = true
-opt.numberwidth = 2
+opt.numberwidth = 3
 opt.fillchars = { eob = " " } -- Remove '~' character on empty line
 
 opt.clipboard = "unnamedplus" -- Enable OS buffer

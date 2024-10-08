@@ -97,7 +97,8 @@ setup_gui() {
   printf "%s\n" "${FMT_YELLOW}Install GUI applications${FMT_RESET}"
   brew install --cask \
     openlens \
-    postman
+    postman \
+    visualvm
 }
 
 # Order matters: some functions install cli which requered by the next installations.

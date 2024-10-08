@@ -1,3 +1,4 @@
+-- :highlight - see all
 local hi = vim.api.nvim_set_hl
 local palette = require("darcula-dark.palette")
 --vim.cmd.colorscheme("darcula-dark")

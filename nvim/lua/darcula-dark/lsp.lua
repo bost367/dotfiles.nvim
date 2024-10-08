@@ -40,6 +40,7 @@ hi(0, "MutableStaticVariable", { fg = palette.lang.default.constant, underline =
 hi(0, "MutablelSelfParameter", { fg = palette.lang.default.keyword, underline = true })
 
 hi(0, "@lsp.type.lifetime.rust", { fg = palette.lang.rust.lifetime })
+hi(0, "@lsp.type.selfTypeKeyword.rust" , { fg = palette.lang.default.keyword })
 
 -- Underscore mutable variables
 vim.api.nvim_create_autocmd("LspTokenUpdate", {
