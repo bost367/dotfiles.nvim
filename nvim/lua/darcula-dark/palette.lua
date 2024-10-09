@@ -45,6 +45,7 @@ return {
       digit = "#2AACB8",
       function_decaration = "#00AAFF",
       function_call = "#BCBEC4",
+      property = "#C77DBB",
       constant = "#C77DBB",
       metadata = "#B3AE60",
       generic = "#16BAAC",

@@ -1,9 +1,6 @@
 local hi = vim.api.nvim_set_hl
 local palette = require("darcula-dark.palette")
 
-hi(0, "Pmenu", { bg = palette.interface.background })
-hi(0, "FloatBorder", { bg = palette.interface.background, fg = palette.interface.hint_text })
-
 -- :h cmp-high
 hi(0, "CmpItemAbbr", { fg = palette.editor.text })
 hi(0, "CmpItemAbbrDeprecated", { fg = palette.editor.text, strikethrough = true })
