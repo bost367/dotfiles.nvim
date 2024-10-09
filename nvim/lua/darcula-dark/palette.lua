@@ -3,11 +3,13 @@ return {
     background = "#1E2022",
     cursor_line = "#26282E",
     select = "#214283",
+    search_select = "#114957",
     under_corsour = "#373B39",
     diagnostic = {
       error = "#D54D5B",
       warn = "#F2C55C",
       weak_warn = "#857042",
+      unnecessary = "#6F737A",
     },
     vcs = {
       added_line = "#549159",
@@ -18,6 +20,7 @@ return {
   interface = {
     text = "#DFE1E5",
     hint_text = "#7A7E85",
+    search_select = "#BA9752",
     background = "#2B2D30",
     cursor_line = "#2E436E",
     scroll_bar = "#525355",
@@ -26,11 +29,12 @@ return {
     active_element = "#3975F1", -- blue
     popup_window = "#393B40",
     vcs = {
-      added_file = "#73BD78",
+      added_file = "#73BD79",
       changed_file = "#70AEFF",
-      deleted_file = "#868A91",
+      deleted_file = "#6F737A",
       ignored_file = "#CF8E6D",
       staged_file = "#df8984",
+      unknown_file = "#E88F89",
     },
   },
   lang = {
