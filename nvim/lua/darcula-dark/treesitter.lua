@@ -63,12 +63,16 @@ hi(0, "@markup.list.unckecked", { fg = palette.lang.default.keyword })
 hi(0, "@punctuation.special", { fg = palette.lang.default.text })
 hi(0, "@tag", { fg = "#D5B778" })
 hi(0, "@tag.attribute", { fg = palette.lang.default.text })
+hi(0, "@diff.plus", { fg = palette.editor.vcs.added_diff })
+hi(0, "@diff.minus", { fg = palette.editor.vcs.deleted_diff })
+hi(0, "@diff.delta", { fg = palette.editor.vcs.changed_diff })
 
 -- JSON
 hi(0, "@property.json", { fg = palette.lang.default.constant })
 
 -- Toml
 hi(0, "@type.toml", { fg = palette.lang.default.keyword })
+hi(0, "@property.toml", { fg = palette.lang.default.keyword })
 
 -- YAML
 hi(0, "@label.yaml", { fg = "#FFC66D" })
@@ -78,4 +82,3 @@ hi(0, "@property.yaml", { fg = palette.lang.default.keyword })
 
 -- Markdow
 hi(0, "@punctuation.special.markdown", { fg = palette.lang.default.keyword })
-
