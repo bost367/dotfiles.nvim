@@ -11,12 +11,8 @@ return {
       },
       lualine_c = {
         {
-          "filename",
-          symbols = { modified = "●", readonly = "" },
-        },
-        {
           "diff",
-          symbols = { added = " ", modified = " ", removed = " " },
+          symbols = { added = "● ", modified = "● ", removed = "● " },
         },
       },
       lualine_x = {
