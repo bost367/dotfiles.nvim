@@ -21,6 +21,7 @@ return {
         "bash",
         "go",
         "proto",
+        "dockerfile",
       },
       highlight = {
         enable = true,

@@ -6,6 +6,7 @@ return {
     search_select = "#114957",
     under_corsour = "#373B39",
     diagnostic = {
+      ok = "#5B9761",
       error = "#D54D5B",
       warn = "#F2C55C",
       weak_warn = "#857042",
@@ -15,6 +16,9 @@ return {
       added_line = "#549159",
       changed_line = "#375FAD",
       deleted_line = "#868A91",
+      added_diff = "#2A4436",
+      changed_diff = "#283641",
+      deleted_diff = "#484A4A",
     },
   },
   interface = {
