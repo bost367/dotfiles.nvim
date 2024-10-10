@@ -42,3 +42,5 @@ map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", opts({ desc = "Escape and Clear 
 -- Gitsign
 map("n", "<D-z>", "<cmd>Gitsigns reset_hunk<cr>", opts({ desc = "Git Discard Changes on Current Line" }))
 map("n", "<D-Z>", "<cmd>Gitsigns reset_buffer<cr>", opts({ desc = "Git Discard Buffer Changes" }))
+
+map("n", "<D-1>", ":Neotree <CR>", default_opts)
