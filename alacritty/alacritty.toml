@@ -4,9 +4,6 @@ import = [
     "~/.config/alacritty/jetbrains_dark.toml"
 ]
 
-[env]
-TERM = "xterm-256color"
-
 [window]
 padding.x = 5
 padding.y = 5
