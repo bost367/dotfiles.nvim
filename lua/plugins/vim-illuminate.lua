@@ -6,6 +6,7 @@ return {
       filetypes_denylist = {
         "qf",
         "trouble",
+        "neo-tree",
       },
     })
   end,

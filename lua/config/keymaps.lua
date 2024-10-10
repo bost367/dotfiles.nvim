@@ -40,3 +40,41 @@ map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", opts({ desc = "Escape and Clear 
 -- Gitsign
 map("n", "<D-z>", "<cmd>Gitsigns reset_hunk<cr>", opts({ desc = "Git Discard Changes on Current Line" }))
 map("n", "<D-Z>", "<cmd>Gitsigns reset_buffer<cr>", opts({ desc = "Git Discard Buffer Changes" }))
+
+-- Neotree
+map("n", "<D-1>", "<cmd>NeotreeToggle<cr>", opts({ desc = "Toggle neotree explorer" }))
+map("n", "<D-F1>1", "<cmd>NeotreeReveal<cr>", opts({ nowait = true, desc = "Focus on current file in explorer" }))
+
+local user_command = vim.api.nvim_create_user_command
+local function curent_git_dir()
+  local git_root = vim.fn.finddir(".git", ".;")
+  return git_root .. "/.."
+end
+
+local function is_neotree_opened()
+  local manager = require("neo-tree.sources.manager")
+  local renderer = require("neo-tree.ui.renderer")
+  local state = manager.get_state("filesystem")
+  return renderer.window_exists(state)
+end
+
+local function is_neotree_focus()
+  local buf_name = vim.api.nvim_buf_get_name(0)
+  return buf_name:find("neo%-tree ") ~= nil
+end
+
+user_command("NeotreeToggle", function()
+  if not is_neotree_opened() then
+    local prodject_dir = curent_git_dir()
+    vim.api.nvim_command("Neotree toggle=true dir=" .. prodject_dir)
+  elseif is_neotree_focus() then
+    vim.api.nvim_command("Neotree close")
+  else
+    vim.api.nvim_command("Neotree focus")
+  end
+end, {})
+
+user_command("NeotreeReveal", function()
+  local prodject_dir = curent_git_dir()
+  vim.api.nvim_command("Neotree reveal dir=" .. prodject_dir)
+end, {})
