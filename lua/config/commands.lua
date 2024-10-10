@@ -1,5 +1,6 @@
 local autocmd = vim.api.nvim_create_autocmd
 local user_command = vim.api.nvim_create_user_command
+local nvim_tree_api = require("nvim-tree.api")
 
 local function augroup(name)
   return vim.api.nvim_create_augroup("cusrom_" .. name, { clear = true })
@@ -62,3 +63,31 @@ autocmd({ "BufWinEnter" }, {
   pattern = "*",
   command = 'silent! normal! g`"zv',
 })
+
+local function prodject_dir()
+  local git_dir = vim.fn.finddir(".git", ".;")
+  if git_dir ~= "" then
+    return git_dir .. "/.."
+  else
+    local file_name = vim.api.nvim_buf_get_name(0)
+    return vim.fn.fnamemodify(file_name, ":p:h")
+  end
+end
+
+local is_explorer_init = false
+user_command("ExplorerToggle", function()
+  if not is_explorer_init then
+    is_explorer_init = true
+    nvim_tree_api.tree.open({ path = prodject_dir() })
+  elseif not nvim_tree_api.tree.is_visible() then
+    nvim_tree_api.tree.open()
+  elseif nvim_tree_api.tree.is_tree_buf() then
+    nvim_tree_api.tree.close()
+  else
+    nvim_tree_api.tree.focus()
+  end
+end, {})
+
+user_command("ExplorerReveal", function()
+  nvim_tree_api.tree.find_file({ open = true, focus = true })
+end, {})

@@ -29,6 +29,7 @@ return {
     options = {
       disabled_filetypes = {
         "trouble",
+        "NvimTree",
       },
     },
   },
