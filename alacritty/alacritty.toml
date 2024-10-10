@@ -28,3 +28,9 @@ draw_bold_text_with_bright_colors = true
 style.shape = "Beam"
 style.blinking = "Always"
 
+# https://alacritty.org/config-alacritty-bindings.html
+# Disable quite on MacOS
+[[keyboard.bindings]]
+key = "W"
+mods = "Command"
+action = "ReceiveChar"
