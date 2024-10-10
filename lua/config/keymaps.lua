@@ -6,6 +6,7 @@ local function opts(arg)
     desc = arg.desc,
     noremap = arg.noremap or true,
     silent = arg.noremap or true,
+    nowait = arg.nowait or false,
   }
 end
 
@@ -19,10 +20,7 @@ map("n", "<D-7>", "<cmd>Trouble diagnostics_current_buf toggle<cr>", opts({ desc
 -- Buffers
 map("n", "L", "<cmd>bnext<cr>", opts({ desc = "Next Buffer" }))
 map("n", "H", "<cmd>bprevious<cr>", opts({ desc = "Prev Buffer" }))
-map("n", "<D-w>", "<cmd>bd<cr>", opts({ desc = "Close Buffer" }))
-
--- Tabs
-map("n", "<Bslash><D-w>", "<cmd>tabclose<cr>", { desc = "Close Tab" })
+map("n", "<D-w>", "<cmd>lua MiniBufremove.delete(0)<cr>", opts({ desc = "Close Buffer" }))
 
 -- LSP mapping
 map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts({ desc = "Go to Declaration" }))
