@@ -10,6 +10,17 @@ return {
       cursor = false,
       gitsigns = true,
     },
+    excluded_filetypes = {
+      "dropbar_menu",
+      "dropbar_menu_fzf",
+      "DressingInput",
+      "cmp_docs",
+      "cmp_menu",
+      "noice",
+      "prompt",
+      "TelescopePrompt",
+      "NvimTree",
+    },
     marks = {
       Error = {
         text = { "󰍴", "󰇼" },

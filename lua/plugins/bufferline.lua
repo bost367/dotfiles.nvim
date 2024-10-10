@@ -13,6 +13,11 @@ return {
       separator_style = "slant",
       diagnostics = "nvim_lsp",
       diagnostics_indicator = nil,
+      offsets = {
+        {
+          filetype = "NvimTree",
+        },
+      },
     },
     highlights = bufferline_theme,
   },
