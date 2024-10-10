@@ -6,6 +6,7 @@ return {
       filetypes_denylist = {
         "qf",
         "trouble",
+        "NvimTree",
       },
     })
   end,
