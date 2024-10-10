@@ -22,4 +22,4 @@ hi(0, "CmpItemKindModule", { fg = palette.interface.active_element })
 
 -- custom colours. specified via winhighlight attribute im cmp settings
 hi(0, "CmpNormal", { bg = palette.editor.background })
-hi(0, "CmpFloatBorder", { bg = palette.editor.background, fg = palette.interface.hint_folder })
+hi(0, "CmpFloatBorder", { bg = palette.editor.background, fg = palette.interface.hint_text })
