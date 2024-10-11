@@ -22,6 +22,14 @@ return {
       deleted_diff = "#484A4A",
     },
   },
+  scroll_bar = {
+    background= "#525355",
+    vcs = {
+      added_line = "#447152",
+      changed_line = "#43698D",
+      deleted_line = "#656E76",
+    },
+  },
   interface = {
     text = "#DFE1E5",
     hint_text = "#7A7E85",
