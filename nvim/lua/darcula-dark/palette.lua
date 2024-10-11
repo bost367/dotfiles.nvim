@@ -11,6 +11,7 @@ return {
       warn = "#F2C55C",
       weak_warn = "#857042",
       unnecessary = "#6F737A",
+      spell = "#7EC482",
     },
     vcs = {
       added_line = "#549159",

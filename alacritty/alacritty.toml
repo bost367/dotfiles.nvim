@@ -26,8 +26,16 @@ style.shape = "Beam"
 style.blinking = "Always"
 
 # https://alacritty.org/config-alacritty-bindings.html
-# Disable quite on MacOS
+
+# macOS only
+# Disable Quit
 [[keyboard.bindings]]
 key = "W"
+mods = "Command"
+action = "ReceiveChar"
+
+# Disable SelectTab1
+[[keyboard.bindings]]
+key = "1"
 mods = "Command"
 action = "ReceiveChar"

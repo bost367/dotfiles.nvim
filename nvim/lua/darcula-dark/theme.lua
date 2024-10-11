@@ -28,7 +28,10 @@ hi(0, "WarningMesage", { fg = palette.editor.diagnostic.warn })
 hi(0, "Special", { fg = palette.lang.default.keyword })
 hi(0, "MsgArea", { bg = palette.interface.background, fg = palette.interface.text })
 hi(0, "Question", { fg = palette.interface.hint_text })
-hi(0, "@none", { fg = palette.lang.default.text })
+hi(0, "SpellBad", { sp = palette.editor.diagnostic.spell, undercurl = true })
+hi(0, "SpellCap", { sp = palette.editor.diagnostic.spell, undercurl = true })
+hi(0, "SpellLocal", { sp = palette.editor.diagnostic.spell, undercurl = true })
+hi(0, "SpellRare", { sp = palette.editor.diagnostic.spell, undercurl = true })
 
 -- Language
 hi(0, "Comment", { fg = palette.lang.default.comment })
