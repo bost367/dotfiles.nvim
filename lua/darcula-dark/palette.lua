@@ -1,4 +1,5 @@
 return {
+  icon = "#CED0D6", -- almost any icon: gradle, git, services etc.
   editor = {
     background = "#1E1F22",
     separator = "#393B41", -- split dark windows

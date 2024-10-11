@@ -1,16 +1,19 @@
 local hi = vim.api.nvim_set_hl
 local palette = require("darcula-dark.palette")
+local not_selected = "#C1C3C6"
 
--- Disable all diagnostics highlighting exept error
+-- Colours must be load before bufferline loading
+hi(0, "TabLineSel", { bg = palette.interface.active_element })
+
 -- Errros
 hi(0, "BufferLineError", {
-  fg = "#C1C3C6",
-  bg = palette.interface.popup_window,
+  fg = not_selected,
+  bg = palette.editor.background,
   sp = palette.editor.diagnostic.error,
   undercurl = true,
 })
 hi(0, "BufferLineErrorVisible", {
-  fg = "#C1C3C6",
+  fg = not_selected,
   bg = palette.editor.background,
   sp = palette.editor.diagnostic.error,
   undercurl = true,
@@ -21,106 +24,183 @@ hi(0, "BufferLineErrorSelected", {
   sp = palette.editor.diagnostic.error,
   undercurl = true,
 })
+-- Disable all diagnostics highlighting exept error
 -- Warnings
-hi(0, "BufferLineWarning", { fg = "#C1C3C6", bg = palette.interface.popup_window })
-hi(0, "BufferLineWarningVisible", { fg = "#C1C3C6", bg = palette.editor.background })
-hi(0, "BufferLineWarningSelected", { fg = palette.interface.text, bg = palette.editor.background })
+hi(0, "BufferLineHideDiagnosticHinst", {
+  fg = not_selected,
+  bg = palette.editor.background,
+  sp = palette.editor.separator,
+  underline = true,
+})
+hi(0, "BufferLineWarning", { link = "BufferLineHideDiagnosticHinst" })
+hi(0, "BufferLineWarningVisible", { link = "BufferLineHideDiagnosticHinst" })
+hi(0, "BufferLineWarningSelected", { link = "BufferLineHideDiagnosticHinst" })
 -- Hint
-hi(0, "BufferLineHint", { fg = "#C1C3C6", bg = palette.interface.popup_window })
-hi(0, "BufferLineHintVisible", { fg = "#C1C3C6", bg = palette.editor.background })
-hi(0, "BufferLineHintSelected", { fg = palette.interface.text, bg = palette.editor.background })
+hi(0, "BufferLineHint", { link = "BufferLineHideDiagnosticHinst" })
+hi(0, "BufferLineHintVisible", { link = "BufferLineHideDiagnosticHinst" })
+hi(0, "BufferLineHintSelected", { link = "BufferLineHideDiagnosticHinst" })
 -- Info
-hi(0, "BufferLineInfo", { fg = "#C1C3C6", bg = palette.interface.popup_window })
-hi(0, "BufferLineInfoVisible", { fg = "#C1C3C6", bg = palette.editor.background })
-hi(0, "BufferLineInfoSelected", { fg = palette.interface.text, bg = palette.editor.background })
+hi(0, "BufferLineInfo", { link = "BufferLineHideDiagnosticHinst" })
+hi(0, "BufferLineInfoVisible", { link = "BufferLineHideDiagnosticHinst" })
+hi(0, "BufferLineInfoSelected", { link = "BufferLineHideDiagnosticHinst" })
 
 return {
+  -- empty space after buffers
   fill = {
-    bg = palette.interface.background,
+    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
   },
+  -- buffers
   background = {
-    fg = "#C1C3C6",
-    bg = palette.interface.popup_window,
-  },
-  tab = {
-    fg = "#C1C3C6",
-    bg = palette.interface.popup_window,
-  },
-  tab_selected = {
-    fg = palette.interface.text,
+    fg = not_selected,
     bg = palette.editor.background,
-  },
-  tab_separator = {
-    fg = palette.interface.background,
-    bg = palette.interface.popup_window,
-  },
-  tab_separator_selected = {
-    fg = palette.interface.background,
-    bg = palette.editor.background,
-  },
-  tab_close = {
-    fg = "#C1C3C6",
-    bg = palette.interface.background,
-  },
-  close_button = {
-    fg = palette.interface.popup_window,
-    bg = palette.interface.popup_window,
-  },
-  close_button_visible = {
-    fg = palette.interface.hint_text,
-    bg = palette.editor.background,
-  },
-  close_button_selected = {
-    fg = palette.interface.hint_text,
-    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
   },
   buffer_visible = {
-    fg = palette.interface.text,
+    fg = not_selected,
     bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
   },
   buffer_selected = {
     fg = palette.interface.text,
     bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
     bold = false,
     italic = false,
   },
+  -- separator among buffers
+  separator = {
+    fg = palette.editor.background,
+    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
+  },
+  separator_visible = {
+    fg = palette.editor.background,
+    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
+  },
+  separator_selected = {
+    fg = palette.editor.background,
+    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
+  },
+  -- selected bufer
+  indicator_visible = {
+    fg = palette.interface.active_element,
+    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
+  },
+  indicator_selected = {
+    fg = palette.interface.active_element,
+    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
+  },
+  -- number of hidden buffers (left/right arrows)
+  trunc_marker = {
+    fg = palette.icon,
+    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
+  },
+  -- buffer close button
+  close_button = {
+    fg = palette.editor.background,
+    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
+  },
+  close_button_visible = {
+    fg = palette.interface.hint_text,
+    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
+  },
+  close_button_selected = {
+    fg = palette.interface.hint_text,
+    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
+  },
+  -- modified file indicator
   modified = {
     fg = palette.file_manager.vcs.changed_file,
-    bg = palette.interface.popup_window,
+    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
   },
   modified_visible = {
     fg = palette.file_manager.vcs.changed_file,
     bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
   },
   modified_selected = {
     fg = palette.file_manager.vcs.changed_file,
     bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
   },
-  separator = {
-    fg = palette.interface.background,
-    bg = palette.interface.popup_window,
-  },
-  separator_visible = {
-    fg = palette.interface.background,
+  -- duplicated filenames in different folders
+  duplicate = {
+    fg = not_selected,
     bg = palette.editor.background,
-  },
-  separator_selected = {
-    fg = palette.interface.background,
-    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
+    italic = false,
   },
   duplicate_selected = {
     fg = palette.interface.text,
     bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
     italic = false,
   },
   duplicate_visible = {
-    fg = palette.interface.text,
+    fg = not_selected,
     bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
     italic = false,
   },
-  duplicate = {
-    fg = "#C1C3C6",
-    bg = palette.interface.popup_window,
-    italic = false,
+  -- tabs
+  tab = {
+    fg = not_selected,
+    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
+  },
+  tab_selected = {
+    fg = palette.interface.text,
+    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
+  },
+  tab_separator = {
+    fg = palette.editor.background,
+    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
+  },
+  tab_separator_selected = {
+    fg = palette.editor.background,
+    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
+  },
+  -- buffer close button
+  tab_close = {
+    fg = not_selected,
+    bg = palette.editor.background,
+    sp = palette.editor.separator,
+    underline = true,
   },
 }
