@@ -58,4 +58,19 @@ return {
     fg = "#C1C3C6",
     bg = palette.interface.background,
   },
+  duplicate_selected = {
+    fg = palette.interface.text,
+    bg = palette.editor.background,
+    italic = false,
+  },
+  duplicate_visible = {
+    fg = palette.interface.text,
+    bg = palette.editor.background,
+    italic = false,
+  },
+  duplicate = {
+    fg = "#C1C3C6",
+    bg = palette.interface.popup_window,
+    italic = false,
+  },
 }
