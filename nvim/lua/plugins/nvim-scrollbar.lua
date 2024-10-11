@@ -12,16 +12,16 @@ return {
     },
     marks = {
       Error = {
-        text = { "━" },
+        text = { "󰍴", "󰇼" },
       },
       Warn = {
-        text = { "━" },
+        text = { "󰍴", "󰇼" },
       },
       Info = {
-        text = { "━" },
+        text = { "󰍴", "󰇼" },
       },
       Hint = {
-        text = { "━" },
+        text = { "󰍴", "󰇼" },
       },
       GitAdd = {
         text = "┃",
@@ -30,7 +30,7 @@ return {
         text = "┃",
       },
       GitDelete = {
-        text = "┃",
+        text = "▁",
       },
     },
   },

@@ -49,7 +49,7 @@ hi(0, "PreProc", { fg = palette.lang.default.metadata })
 hi(0, "Todo", { fg = palette.lang.default.comment_todo })
 hi(0, "Type", { fg = palette.lang.default.struct })
 
--- diagnostics
+-- Diagnostics
 hi(0, "DiagnosticOk", { fg = palette.editor.diagnostic.ok })
 hi(0, "DiagnosticError", { fg = palette.editor.diagnostic.error })
 hi(0, "DiagnosticHint", { fg = palette.editor.diagnostic.warn })
