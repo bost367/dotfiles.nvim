@@ -6,13 +6,13 @@ return {
   opts = {
     options = {
       indicator = {
-        style = "none",
+        style = "underline",
       },
       left_trunc_marker = "",
       right_trunc_marker = "",
-      separator_style = "slant",
       diagnostics = "nvim_lsp",
       diagnostics_indicator = nil,
+      separator_style = "thin",
     },
     highlights = bufferline_theme,
   },

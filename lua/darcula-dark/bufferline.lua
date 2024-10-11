@@ -1,6 +1,9 @@
 local hi = vim.api.nvim_set_hl
 local palette = require("darcula-dark.palette")
 
+-- Colours must be load before bufferline loading
+hi(0, "TabLineSel", { bg = palette.interface.active_element })
+
 -- Disable all diagnostics highlighting exept error
 -- Errros
 hi(0, "BufferLineError", {
@@ -36,11 +39,11 @@ hi(0, "BufferLineInfoSelected", { fg = palette.interface.text, bg = palette.edit
 
 return {
   fill = {
-    bg = palette.interface.background,
+    bg = palette.editor.background,
   },
   background = {
     fg = "#C1C3C6",
-    bg = palette.interface.popup_window,
+    bg = palette.editor.background,
   },
   tab = {
     fg = "#C1C3C6",
@@ -63,8 +66,8 @@ return {
     bg = palette.interface.background,
   },
   close_button = {
-    fg = palette.interface.popup_window,
-    bg = palette.interface.popup_window,
+    fg = palette.editor.background,
+    bg = palette.editor.background,
   },
   close_button_visible = {
     fg = palette.interface.hint_text,
@@ -97,15 +100,15 @@ return {
     bg = palette.editor.background,
   },
   separator = {
-    fg = palette.interface.background,
-    bg = palette.interface.popup_window,
+    fg = palette.editor.background,
+    bg = palette.editor.background,
   },
   separator_visible = {
-    fg = palette.interface.background,
+    fg = palette.editor.background,
     bg = palette.editor.background,
   },
   separator_selected = {
-    fg = palette.interface.background,
+    fg = palette.editor.background,
     bg = palette.editor.background,
   },
   duplicate_selected = {
@@ -120,7 +123,15 @@ return {
   },
   duplicate = {
     fg = "#C1C3C6",
-    bg = palette.interface.popup_window,
+    bg = palette.editor.background,
     italic = false,
+  },
+  indicator_visible = {
+    fg = palette.editor.background,
+    bg = palette.editor.background,
+  },
+  indicator_selected = {
+    fg = palette.editor.background,
+    bg = palette.editor.background,
   },
 }
