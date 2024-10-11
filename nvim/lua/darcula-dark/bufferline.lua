@@ -1,4 +1,38 @@
+local hi = vim.api.nvim_set_hl
 local palette = require("darcula-dark.palette")
+
+-- Disable all diagnostics highlighting exept error
+-- Errros
+hi(0, "BufferLineError", {
+  fg = "#C1C3C6",
+  bg = palette.interface.popup_window,
+  sp = palette.editor.diagnostic.error,
+  undercurl = true,
+})
+hi(0, "BufferLineErrorVisible", {
+  fg = "#C1C3C6",
+  bg = palette.editor.background,
+  sp = palette.editor.diagnostic.error,
+  undercurl = true,
+})
+hi(0, "BufferLineErrorSelected", {
+  fg = palette.interface.text,
+  bg = palette.editor.background,
+  sp = palette.editor.diagnostic.error,
+  undercurl = true,
+})
+-- Warnings
+hi(0, "BufferLineWarning", { fg = "#C1C3C6", bg = palette.interface.popup_window })
+hi(0, "BufferLineWarningVisible", { fg = "#C1C3C6", bg = palette.editor.background })
+hi(0, "BufferLineWarningSelected", { fg = palette.interface.text, bg = palette.editor.background })
+-- Hint
+hi(0, "BufferLineHint", { fg = "#C1C3C6", bg = palette.interface.popup_window })
+hi(0, "BufferLineHintVisible", { fg = "#C1C3C6", bg = palette.editor.background })
+hi(0, "BufferLineHintSelected", { fg = palette.interface.text, bg = palette.editor.background })
+-- Info
+hi(0, "BufferLineInfo", { fg = "#C1C3C6", bg = palette.interface.popup_window })
+hi(0, "BufferLineInfoVisible", { fg = "#C1C3C6", bg = palette.editor.background })
+hi(0, "BufferLineInfoSelected", { fg = palette.interface.text, bg = palette.editor.background })
 
 return {
   fill = {
@@ -47,16 +81,12 @@ return {
     bg = palette.interface.popup_window,
   },
   separator_visible = {
-    bg = palette.editor.background,
     fg = palette.interface.background,
+    bg = palette.editor.background,
   },
   separator_selected = {
-    bg = palette.editor.background,
     fg = palette.interface.background,
-  },
-  trunc_marker = {
-    fg = "#C1C3C6",
-    bg = palette.interface.background,
+    bg = palette.editor.background,
   },
   duplicate_selected = {
     fg = palette.interface.text,

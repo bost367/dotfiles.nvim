@@ -11,6 +11,8 @@ return {
       left_trunc_marker = "",
       right_trunc_marker = "",
       separator_style = "slant",
+      diagnostics = "nvim_lsp",
+      diagnostics_indicator = nil,
     },
     highlights = bufferline_theme,
   },
