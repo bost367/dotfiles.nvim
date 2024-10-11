@@ -66,6 +66,8 @@ hi(0, "@tag.attribute", { fg = palette.lang.default.text })
 hi(0, "@diff.plus", { fg = palette.editor.vcs.added_diff })
 hi(0, "@diff.minus", { fg = palette.editor.vcs.deleted_diff })
 hi(0, "@diff.delta", { fg = palette.editor.vcs.changed_diff })
+hi(0, "@none", { fg = palette.lang.default.text })
+hi(0, "@spell", { sp = palette.editor.diagnostic.spell, undercurl = true })
 
 -- JSON
 hi(0, "@property.json", { fg = palette.lang.default.constant })

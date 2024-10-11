@@ -32,9 +32,6 @@ local kind_icons = {
   TypeParameter = "󰅲 ",
 }
 require("cmp").setup({
-  performance = {
-    max_view_entries = 10,
-  },
   formatting = {
     fields = { cmp.ItemField.Kind, cmp.ItemField.Abbr },
     format = lspkind.cmp_format({

@@ -22,6 +22,8 @@ return {
         "go",
         "proto",
         "dockerfile",
+        "editorconfig",
+        "sql",
       },
       highlight = {
         enable = true,
