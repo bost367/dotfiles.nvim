@@ -1,7 +1,6 @@
 local hi = vim.api.nvim_set_hl
 local palette = require("darcula-dark.palette")
 
--- :h cmp-high
 hi(0, "CmpItemAbbr", { fg = palette.editor.text })
 hi(0, "CmpItemAbbrDeprecated", { fg = palette.editor.text, strikethrough = true })
 hi(0, "CmpItemAbbrMatch", { fg = palette.interface.active_element })

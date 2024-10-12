@@ -23,7 +23,7 @@ return {
     },
   },
   scroll_bar = {
-    background= "#525355",
+    background = "#525355",
     vcs = {
       added_line = "#447152",
       changed_line = "#43698D",
@@ -36,7 +36,6 @@ return {
     search_select = "#BA9752",
     background = "#2B2D30",
     cursor_line = "#2E436E",
-    scroll_bar = "#525355",
     cursor_line_inactive = "#43444A",
     border = "#1E1F22", -- inactive element
     active_element = "#3975F1", -- blue

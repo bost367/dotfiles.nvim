@@ -1,7 +1,6 @@
 local hi = vim.api.nvim_set_hl
 local palette = require("darcula-dark.palette")
 
--- use `:h lsp-semantic-highlight` to see all tokens
 hi(0, "@lsp.type.struct", { fg = palette.lang.default.struct })
 hi(0, "@lsp.type.class", { fg = palette.lang.default.struct })
 hi(0, "@lsp.type.macro", { fg = "#FFC66D" })

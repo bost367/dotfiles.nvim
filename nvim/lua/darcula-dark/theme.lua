@@ -1,7 +1,6 @@
 -- :highlight - see all
 local hi = vim.api.nvim_set_hl
 local palette = require("darcula-dark.palette")
---vim.cmd.colorscheme("darcula-dark")
 
 hi(0, "StaticFunction", { fg = palette.lang.default.function_decaration, italic = true })
 hi(0, "WinSeparator", { fg = palette.interface.background })
@@ -44,6 +43,7 @@ hi(0, "Error", { fg = palette.lang.default.keyword })
 hi(0, "Function", { fg = palette.lang.default.function_decaration })
 hi(0, "Identifier", { fg = palette.lang.default.text })
 hi(0, "Keyword", { fg = palette.lang.default.keyword })
+hi(0, "Statement", { fg = palette.lang.default.keyword })
 hi(0, "Operator", { fg = palette.lang.default.text })
 hi(0, "PreProc", { fg = palette.lang.default.metadata })
 hi(0, "Todo", { fg = palette.lang.default.comment_todo })
