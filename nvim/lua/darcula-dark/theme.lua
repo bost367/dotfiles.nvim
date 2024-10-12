@@ -50,13 +50,16 @@ hi(0, "Todo", { fg = palette.lang.default.comment_todo })
 hi(0, "Type", { fg = palette.lang.default.struct })
 
 -- Diagnostics
-hi(0, "DiagnosticOk", { fg = palette.editor.diagnostic.ok })
 hi(0, "DiagnosticError", { fg = palette.editor.diagnostic.error })
-hi(0, "DiagnosticHint", { fg = palette.editor.diagnostic.warn })
-hi(0, "DiagnosticWarn", { fg = palette.editor.diagnostic.weak_warn })
-hi(0, "DiagnosticInfo", { fg = palette.editor.diagnostic.error })
+hi(0, "DiagnosticWarn", { fg = palette.editor.diagnostic.warn })
+hi(0, "DiagnosticHint", { fg = palette.editor.diagnostic.weak_warn })
+hi(0, "DiagnosticInfo", { fg = palette.editor.diagnostic.info })
+hi(0, "DiagnosticOk", { fg = palette.editor.diagnostic.ok })
 hi(0, "DiagnosticUnnecessary", { fg = palette.editor.diagnostic.unnecessary })
 hi(0, "DiagnosticUnderlineError", { sp = palette.editor.diagnostic.error, undercurl = true })
-hi(0, "DiagnosticUnderlineHint", { sp = palette.editor.diagnostic.warn, undercurl = true })
-hi(0, "DiagnosticUnderlineWarn", { sp = palette.editor.diagnostic.weak_warn, undercurl = true })
-hi(0, "DiagnosticUnderlineInfo", { sp = palette.editor.diagnostic.error, undercurl = true })
+hi(0, "DiagnosticUnderlineWarn", { sp = palette.editor.diagnostic.warn, undercurl = true })
+hi(0, "DiagnosticUnderlineHint", { sp = palette.editor.diagnostic.weak_warn, undercurl = true })
+hi(0, "DiagnosticUnderlineInfo", { sp = palette.editor.diagnostic.info, undercurl = true })
+
+hi(0, "LspInlayHint", { fg = "#868A91", bg = "#2D2E32" })
+

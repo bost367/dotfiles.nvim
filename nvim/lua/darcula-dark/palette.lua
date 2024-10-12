@@ -10,6 +10,7 @@ return {
       error = "#D54D5B",
       warn = "#F2C55C",
       weak_warn = "#857042",
+      info = "#3592C4",
       unnecessary = "#6F737A",
       spell = "#7EC482",
     },

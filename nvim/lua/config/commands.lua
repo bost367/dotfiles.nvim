@@ -1,5 +1,5 @@
 local function augroup(name)
-  return vim.api.nvim_create_augroup("lazyvim_" .. name, { clear = true })
+  return vim.api.nvim_create_augroup("cusrom_" .. name, { clear = true })
 end
 
 vim.api.nvim_create_user_command("Format", function(args)
@@ -28,5 +28,17 @@ vim.api.nvim_create_autocmd("FileType", {
       silent = true,
       desc = "Quit buffer",
     })
+  end,
+})
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  group = augroup("lsp_inline_hints"),
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    if client ~= nil then
+      if client.supports_method("textDocument/inlayHint") or client.server_capabilities.inlayHintProvider then
+        vim.lsp.inlay_hint.enable(true, { bufnr = args.bnfnr })
+      end
+    end
   end,
 })

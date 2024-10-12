@@ -5,7 +5,7 @@ return {
   opts = {
     formatters_by_ft = {
       lua = { "stylua" },
-      rust = { "rustfmt", lsp_format = "fallback" },
+      rust = { "rustfmt" },
       yaml = { "yq" },
       json = { "jq" },
       xml = { "xmllint" },

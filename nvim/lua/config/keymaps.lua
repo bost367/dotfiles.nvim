@@ -14,3 +14,8 @@ map("n", "<D-l>", ":Format <CR>", default_opts)
 map("n", "L", ":BufferLineCycleNext <CR>", default_opts)
 map("n", "H", ":BufferLineCyclePrev <CR>", default_opts)
 map("n", "<D-w>", ":bd<CR>", default_opts)
+
+-- lsp mapping
+map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
+map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { noremap = true, silent = true })

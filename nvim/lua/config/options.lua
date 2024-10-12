@@ -18,7 +18,6 @@ opt.smartindent = true
 opt.wrap = false -- Disable line wrpping
 opt.colorcolumn = "120" --  Set row width size in charcters
 opt.spelllang = { "en_us", "ru" }
-opt.spell = true
 
 -- cursor
 opt.cursorline = true
