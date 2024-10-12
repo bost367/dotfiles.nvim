@@ -1,3 +1,4 @@
+--vim.cmd.colorscheme("darcula-dark")
 require("darcula-dark.theme")
 require("darcula-dark.treesitter")
 require("darcula-dark.lsp")

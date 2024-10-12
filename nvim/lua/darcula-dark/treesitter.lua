@@ -1,7 +1,6 @@
 local hi = vim.api.nvim_set_hl
 local palette = require("darcula-dark.palette")
 
--- use :h `treesitter-highlight-groups` to see all groupd
 hi(0, "@function", { fg = palette.lang.default.function_decaration })
 hi(0, "@function.call", { fg = palette.lang.default.function_call })
 hi(0, "@function.builtin", { fg = palette.lang.default.function_call })
