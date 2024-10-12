@@ -7,15 +7,15 @@ setup_color() {
 }
 
 setup_homebrew() {
-  if ! type "$brew -v" > /dev/null; then
+  if ! type "$brew -v" >/dev/null; then
     echo "${FMT_YELLOW}Brew is already installed.${FMT_RESET}"
   else
     echo "${FMT_YELLOW}Homebrew not found in system.${FMT_YELLOW}"
-      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
 }
 
-# Need to be install primarily: the required by other tools.  
+# Need to be install primarily: the required by other tools.
 setup_required_cli() {
   printf "%s\n" "${FMT_YELLOW}Install required CLIs${FMT_RESET}"
   brew install \
@@ -29,33 +29,33 @@ setup_zsh() {
   export ZDOTDIR="$HOME/.config/zsh"
   brew install zsh
 
-  # Change default zsh directory. All main files will be stored 
-  # in custom directory exept .zshenv: it points to .zshrc and 
-  # load defined variables from .zshenv.  
-  cat << 'EOF' >| ~/.zshenv
+  # Change default zsh directory. All main files will be stored
+  # in custom directory exept .zshenv: it points to .zshrc and
+  # load defined variables from .zshenv.
+  cat <<'EOF' >|~/.zshenv
 export ZDOTDIR=~/.config/zsh
 [[ -f $ZDOTDIR/.zshenv ]] && . $ZDOTDIR/.zshenv
 EOF
-  
+
   # https://stackoverflow.com/questions/15769615/remove-last-login-message-for-new-tabs-in-terminal
   touch .hushlogin
 
   # Install commands autocompletition
   # https://github.com/zsh-users/zsh-autosuggestions
   brew install zsh-autosuggestions
-  echo "source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
-  
+  echo "source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >>${ZDOTDIR:-$HOME}/.zshrc
+
   # Install commands highlighting.
   # Enable highliting whilst they are typed at a zsh.
   # This helps in reviewing commands before running them.
   # https://github.com/zsh-users/zsh-syntax-highlighting
   brew install zsh-syntax-highlighting
-  echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+  echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>${ZDOTDIR:-$HOME}/.zshrc
 
   # Install powerline (beautify prompt for input)
   # https://github.com/romkatv/powerlevel10k
   brew install powerlevel10k
-  echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >> ${ZDOTDIR:-$HOME}/.zshrc
+  echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>${ZDOTDIR:-$HOME}/.zshrc
 }
 
 setup_alacritty() {
@@ -114,4 +114,3 @@ main() {
 }
 
 main
-
