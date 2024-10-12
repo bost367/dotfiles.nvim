@@ -37,14 +37,15 @@ vim.api.nvim_create_autocmd("LspTokenUpdate", {
 hi(0, "MutableLocalVariable", { fg = palette.lang.default.local_variable, underline = true })
 hi(0, "MutableStaticVariable", { fg = palette.lang.default.constant, underline = true })
 hi(0, "MutablelSelfParameter", { fg = palette.lang.default.keyword, underline = true })
+hi(0, "UnsafeCall", { bg = palette.lang.rust.unsafe })
 
 hi(0, "@lsp.type.lifetime.rust", { fg = palette.lang.rust.lifetime })
-hi(0, "@lsp.type.selfTypeKeyword.rust" , { fg = palette.lang.default.keyword })
+hi(0, "@lsp.type.selfTypeKeyword.rust", { fg = palette.lang.default.keyword })
 
--- Underscore mutable variables
 vim.api.nvim_create_autocmd("LspTokenUpdate", {
   callback = function(args)
     local token = args.data.token
+    -- Underscore mutable variables
     if token.modifiers.mutable then
       if token.type == "selfKeyword" then
         vim.lsp.semantic_tokens.highlight_token(token, args.buf, args.data.client_id, "MutablelSelfParameter")

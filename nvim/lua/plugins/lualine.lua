@@ -18,8 +18,8 @@ return {
       lualine_x = {
         {
           "diagnostics",
-          sections = { "error", "hint", "warn", "info" },
-          symbols = { error = " ", warn = " ", info = " ", hint = " " },
+          sections = { "error", "warn", "hint", "info" },
+          symbols = { error = " ", warn = " ", hint = " ", info = " " },
         },
         "encoding",
         "fileformat",
