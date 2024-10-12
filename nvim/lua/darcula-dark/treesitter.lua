@@ -81,3 +81,9 @@ hi(0, "@property.yaml", { fg = palette.lang.default.keyword })
 
 -- Markdow
 hi(0, "@punctuation.special.markdown", { fg = palette.lang.default.keyword })
+
+-- Bash
+hi(0, "@function.call.bash", { fg = "#C57633" })
+hi(0, "@function.builtin.bash", { fg = "#C57633" })
+hi(0, "@keyword.directive.bash", { fg = palette.lang.default.text, bold = true })
+hi(0, "@punctuation.special.bash", { fg = palette.lang.default.keyword })
