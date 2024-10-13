@@ -42,6 +42,26 @@ return {
     fg = "#C1C3C6",
     bg = palette.interface.popup_window,
   },
+  tab = {
+    fg = "#C1C3C6",
+    bg = palette.interface.popup_window,
+  },
+  tab_selected = {
+    fg = palette.interface.text,
+    bg = palette.editor.background,
+  },
+  tab_separator = {
+    fg = palette.interface.background,
+    bg = palette.interface.popup_window,
+  },
+  tab_separator_selected = {
+    fg = palette.interface.background,
+    bg = palette.editor.background,
+  },
+  tab_close = {
+    fg = "#C1C3C6",
+    bg = palette.interface.background,
+  },
   close_button = {
     fg = palette.interface.popup_window,
     bg = palette.interface.popup_window,

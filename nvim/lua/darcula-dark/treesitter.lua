@@ -87,3 +87,6 @@ hi(0, "@function.call.bash", { fg = "#C57633" })
 hi(0, "@function.builtin.bash", { fg = "#C57633" })
 hi(0, "@keyword.directive.bash", { fg = palette.lang.default.text, bold = true })
 hi(0, "@punctuation.special.bash", { fg = palette.lang.default.keyword })
+
+-- Kotlin
+hi(0, "@attribute.kotlin", { fg = palette.lang.default.metadata })
