@@ -1,5 +1,6 @@
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls
 -- https://github.com/luals/lua-language-server
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 require("lspconfig").lua_ls.setup({
   on_init = function(client)
     if client.workspace_folders then
@@ -32,4 +33,5 @@ require("lspconfig").lua_ls.setup({
   settings = {
     Lua = {},
   },
+  capabilities = capabilities,
 })

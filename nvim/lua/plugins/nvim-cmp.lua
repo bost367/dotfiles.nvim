@@ -29,39 +29,49 @@ local kind_icons = {
   TypeParameter = "󰅲 ",
 }
 
+local function cut_width(_, vim_item)
+  -- https://github.com/hrsh7th/nvim-cmp/issues/980#issuecomment-1121773499
+  local label = vim_item.abbr
+  local truncated_label = vim.fn.strcharpart(label, 0, MAX_LABEL_WIDTH)
+  if truncated_label ~= label then
+    vim_item.abbr = truncated_label .. ELLIPSIS_CHAR
+  elseif string.len(label) < MIN_LABEL_WIDTH then
+    local padding = string.rep(" ", MIN_LABEL_WIDTH - string.len(label))
+    vim_item.abbr = label .. padding
+  end
+  -- https://github.com/hrsh7th/nvim-cmp/issues/980#issuecomment-1882213992
+  vim_item.menu = ""
+  return vim_item
+end
+
 return {
   "hrsh7th/nvim-cmp",
   dependencies = {
     "onsails/lspkind.nvim",
     "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-nvim-lua",
+    "hrsh7th/cmp-nvim-lsp-signature-help",
+    "hrsh7th/cmp-buffer",
+    "f3fora/cmp-spell",
   },
   config = function()
     local cmp = require("cmp")
     local lspkind = require("lspkind")
     cmp.setup({
       formatting = {
-        fields = { cmp.ItemField.Kind, cmp.ItemField.Abbr },
+        fields = { cmp.ItemField.Kind, cmp.ItemField.Abbr, cmp.ItemField.Menu },
+        expandable_indicator = false,
         format = lspkind.cmp_format({
           mode = "symbol",
           symbol_map = kind_icons,
-          preset = "default",
-          maxwidth = 50,
-          ellipsis_char = "...",
-          show_labelDetails = true, -- show labelDetails in menu. Disabled by default
-          before = function(entry, vim_item)
-            -- https://github.com/hrsh7th/nvim-cmp/issues/980#issuecomment-1121773499
-            local label = vim_item.abbr
-            local truncated_label = vim.fn.strcharpart(label, 0, MAX_LABEL_WIDTH)
-            if truncated_label ~= label then
-              vim_item.abbr = truncated_label .. ELLIPSIS_CHAR
-            elseif string.len(label) < MIN_LABEL_WIDTH then
-              local padding = string.rep(" ", MIN_LABEL_WIDTH - string.len(label))
-              vim_item.abbr = label .. padding
-            end
-            -- https://github.com/hrsh7th/nvim-cmp/issues/980#issuecomment-1882213992
-            vim_item.menu = ""
-            return vim_item
-          end,
+          show_labelDetails = false,
+          before = cut_width,
+          menu = {
+            nvim_lsp = "[lsp]",
+            nvim_lua = "[lua]",
+            buffer = "[buf]",
+            spell = "[spl]",
+          },
         }),
       },
       window = {
@@ -82,7 +92,16 @@ return {
         ["<CR>"] = cmp.mapping.confirm({ select = true }),
       }),
       sources = {
-        { name = "nvim_lsp" },
+        {
+          name = "nvim_lsp",
+          entry_filter = function(entry, _)
+            return require("cmp.types").lsp.CompletionItemKind[entry:get_kind()] ~= "Snippet"
+          end,
+        },
+        { name = "nvim_lua" },
+        { name = "nvim_lsp_signature_help" },
+        { name = "buffer" },
+        { name = "spell" },
       },
     })
   end,

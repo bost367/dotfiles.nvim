@@ -6,7 +6,7 @@ hi(0, "StaticFunction", { fg = palette.lang.default.function_decaration, italic 
 hi(0, "WinSeparator", { fg = palette.interface.background })
 hi(0, "Pmenu", { bg = palette.interface.background })
 hi(0, "PmenuSel", { bg = palette.interface.cursor_line })
-hi(0, "PmenuSbar", { bg = palette.interface.scroll_bar })
+hi(0, "PmenuSbar", { bg = palette.scroll_bar.background })
 hi(0, "FloatBorder", { bg = palette.interface.background, fg = palette.interface.hint_text })
 hi(0, "Normal", { bg = palette.editor.background, fg = palette.editor.text })
 hi(0, "NormalFloat", { bg = palette.interface.background, fg = palette.interface.text })
@@ -62,4 +62,3 @@ hi(0, "DiagnosticUnderlineHint", { sp = palette.editor.diagnostic.weak_warn, und
 hi(0, "DiagnosticUnderlineInfo", { sp = palette.editor.diagnostic.info, undercurl = true })
 
 hi(0, "LspInlayHint", { fg = "#868A91", bg = "#2D2E32" })
-
