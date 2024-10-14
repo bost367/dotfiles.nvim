@@ -34,6 +34,7 @@ return {
   interface = {
     text = "#DFE1E5",
     hint_text = "#7A7E85",
+    hint_folder = "#6F737A",
     search_select = "#BA9752",
     background = "#2B2D30",
     cursor_line = "#2E436E",
