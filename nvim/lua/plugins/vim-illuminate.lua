@@ -5,6 +5,7 @@ return {
     require("illuminate").configure({
       filetypes_denylist = {
         "qf",
+        "trouble",
       },
     })
   end,
