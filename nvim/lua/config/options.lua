@@ -39,6 +39,7 @@ cmd("filetype plugin indent on") -- Try to recognize filetypes and load rel' plu
 opt.termguicolors = true -- Enable true colors
 vim.diagnostic.config({
   underline = true,
+  virtual_text = false,
   signs = {
     text = {
       [vim.diagnostic.severity.ERROR] = "",

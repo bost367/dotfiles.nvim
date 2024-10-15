@@ -8,6 +8,7 @@ require("darcula-dark.scrollbar")
 require("darcula-dark.illuminate")
 require("darcula-dark.ibl")
 require("darcula-dark.lazy")
+require("darcula-dark.trouble")
 
 local lualine_theme = require("darcula-dark.lualine")
 require("lualine").setup({
