@@ -1,18 +1,6 @@
 return {
   "folke/trouble.nvim",
   cmd = "Trouble",
-  keys = {
-    {
-      "<Bslash>xx",
-      "<cmd>Trouble diagnostics_all toggle<cr>",
-      desc = "Diagnostics (Trouble)",
-    },
-    {
-      "<Bslash>xX",
-      "<cmd>Trouble diagnostics_current_buf toggle<cr>",
-      desc = "Buffer Diagnostics (Trouble)",
-    },
-  },
   opts = {
     focus = true,
     pinned = false,
