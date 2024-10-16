@@ -12,9 +12,9 @@ end
 -- Custom binding
 map({ "n", "x" }, "gh", "_", opts({ desc = "Go to the First Non-blank Character" }))
 map({ "n", "x" }, "gl", "g_", opts({ desc = "Go to the Last Non-blank Character" }))
-map("n", "<D-l>", ":Format <cr>", opts({ desc = "Format Buffer" }))
-map("n", "<C-6>", ":Trouble diagnostics_all toggle<cr>", opts({ desc = "Show All Troules" }))
-map("n", "<C-7>", ":Trouble diagnostics_currrent_buff toggle<cr>", opts({ desc = "Show Troules in Current Buffer" }))
+map("n", "<D-l>", "<cmd>Format <cr>", opts({ desc = "Format Buffer" }))
+map("n", "<C-6>", "<cmd>Trouble diagnostics_all toggle<cr>", opts({ desc = "Show All Troules" }))
+map("n", "<C-7>", "<cmd>Trouble diagnostics_current_buf toggle<cr>", opts({ desc = "Show Troules in Current Buffer" }))
 
 -- Buffers
 map("n", "L", "<cmd>bnext<cr>", opts({ desc = "Next Buffer" }))
