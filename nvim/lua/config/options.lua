@@ -32,6 +32,7 @@ opt.fillchars = { eob = " " } -- Remove '~' character on empty line
 opt.completeopt = { "menu", "menuone", "noselect", "noinsert" }
 opt.clipboard = "unnamedplus" -- Enable OS buffer
 opt.cmdheight = 0 -- Hide current mode from command line
+opt.updatetime = 250
 cmd("syntax enable") -- Syntax highlighting
 cmd("filetype plugin indent on") -- Try to recognize filetypes and load rel' plugins
 
@@ -39,6 +40,7 @@ cmd("filetype plugin indent on") -- Try to recognize filetypes and load rel' plu
 opt.termguicolors = true -- Enable true colors
 vim.diagnostic.config({
   underline = true,
+  float = { border = "rounded" },
   virtual_text = false,
   signs = {
     text = {
