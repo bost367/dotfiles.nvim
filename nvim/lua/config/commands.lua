@@ -1,3 +1,5 @@
+local autocmd = vim.api.nvim_create_autocmd
+
 local function augroup(name)
   return vim.api.nvim_create_augroup("cusrom_" .. name, { clear = true })
 end
@@ -15,7 +17,7 @@ vim.api.nvim_create_user_command("Format", function(args)
 end, { range = true })
 
 -- close some filetypes with <q>
-vim.api.nvim_create_autocmd("FileType", {
+autocmd("FileType", {
   group = augroup("close_with_q"),
   pattern = {
     "help",
@@ -31,7 +33,7 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
-vim.api.nvim_create_autocmd("LspAttach", {
+autocmd("LspAttach", {
   group = augroup("lsp_inline_hints"),
   callback = function(args)
     local client = vim.lsp.get_client_by_id(args.data.client_id)
@@ -40,5 +42,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
         vim.lsp.inlay_hint.enable(true, { bufnr = args.bnfnr })
       end
     end
+  end,
+})
+
+-- show diagnostic message under cursor
+autocmd({ "CursorHold", "CursorHoldI" }, {
+  group = augroup("float_diagnostic_cursor"),
+  callback = function()
+    vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
   end,
 })

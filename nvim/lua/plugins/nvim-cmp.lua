@@ -76,12 +76,14 @@ return {
       },
       window = {
         completion = cmp.config.window.bordered({
-          rorder = "rounded",
-          winhighlight = "Normal:Pmenu,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
+          border = "rounded",
+          scrolloff = 2,
+          scrollbar = false,
+          winhighlight = "Normal:CmpNormal,FloatBorder:CmpFloatBorder,CursorLine:Visual,Search:None",
         }),
         documentation = {
           border = "rounded",
-          winhighlight = "Normal:Pmenu,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
+          winhighlight = "Normal:CmpNormal,FloatBorder:CmpFloatBorder,CursorLine:Visual,Search:None",
         },
       },
       mapping = cmp.mapping.preset.insert({

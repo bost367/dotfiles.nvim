@@ -19,3 +19,7 @@ hi(0, "CmpItemKindFunction", { fg = "#db5c5c" })
 hi(0, "CmpItemKindClass", { fg = "#db5c5c" })
 hi(0, "CmpItemKindInterface", { fg = palette.lang.default.str })
 hi(0, "CmpItemKindModule", { fg = palette.interface.active_element })
+
+-- custom colours. specified via winhighlight attribute im cmp settings
+hi(0, "CmpNormal", { bg = palette.editor.background })
+hi(0, "CmpFloatBorder", { bg = palette.editor.background, fg = palette.interface.hint_folder })
