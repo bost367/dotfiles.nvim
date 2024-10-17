@@ -26,5 +26,12 @@ return {
         "filetype",
       },
     },
+    options = {
+      disabled_filetypes = {
+        "trouble",
+        "DiffviewFileHistory",
+        "DiffviewFiles",
+      },
+    },
   },
 }

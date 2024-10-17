@@ -50,7 +50,6 @@ return {
     search_select = "#BA9752",
     background = "#2B2D30",
     cursor_line = "#2E436E",
-    --cursor_line_inactive = "#43444A",
     border = "#1E1F22", -- inactive element
     active_element = "#3975F1", -- blue
     popup_window = "#393B40",

@@ -6,6 +6,8 @@ return {
       filetypes_denylist = {
         "qf",
         "trouble",
+        "DiffviewFileHistory",
+        "DiffviewFiles",
       },
     })
   end,

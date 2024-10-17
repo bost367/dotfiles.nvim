@@ -42,3 +42,8 @@ map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", opts({ desc = "Escape and Clear 
 -- Gitsign
 map("n", "<D-z>", "<cmd>Gitsigns reset_hunk<cr>", opts({ desc = "Git Discard Changes on Current Line" }))
 map("n", "<D-Z>", "<cmd>Gitsigns reset_buffer<cr>", opts({ desc = "Git Discard Buffer Changes" }))
+
+-- Diffview
+--map("n", "<D-9>", "<cmd>DiffviewFileHistory %<cr>", opts({ desc = "History for the current file" }))
+map("n", "<D-9>", "<cmd>DiffviewFileHistoryToggle<cr>", opts({ desc = "History for the current branch" }))
+map("n", "<D-0>", "<cmd>DiffviewOpenToggle<cr>", opts({ desc = "History for the current branch" }))
