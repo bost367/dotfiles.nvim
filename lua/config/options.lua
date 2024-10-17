@@ -37,7 +37,7 @@ opt.clipboard = "unnamedplus" -- Enable OS buffer
 opt.cmdheight = 0 -- Hide current mode from command line
 opt.updatetime = 250
 opt.fillchars:append({
-  diff = " ", -- Repalce '-' caracter for diff
+  diff = "╱", -- Repalce '-' caracter for diff
   eob = " ", -- Replace '~' character on empty lines in number lines column
 })
 cmd("syntax enable") -- Syntax highlighting

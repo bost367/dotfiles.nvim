@@ -9,6 +9,7 @@ require("darcula-dark.illuminate")
 require("darcula-dark.lazy")
 require("darcula-dark.trouble")
 require("darcula-dark.nvim-tree")
+require("darcula-dark.diffview")
 
 local lualine_theme = require("darcula-dark.lualine")
 require("lualine").setup({
