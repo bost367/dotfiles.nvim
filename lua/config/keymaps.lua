@@ -81,3 +81,8 @@ map("n", "<leader>gdl", gitsigns.preview_hunk_inline, opts({ desc = "Git diff li
 -- NvimTree
 map("n", "<D-1>", "<cmd>ExplorerToggle<cr>", opts({ desc = "Toggle neotree explorer" }))
 map("n", "<D-F1>1", "<cmd>ExplorerReveal<cr>", opts({ nowait = true, desc = "Focus on current file in explorer" }))
+
+-- Diffview
+--map("n", "<D-9>", "<cmd>DiffviewFileHistory %<cr>", opts({ desc = "History for the current file" }))
+map("n", "<D-9>", "<cmd>DiffviewFileHistoryToggle<cr>", opts({ desc = "History for the current branch" }))
+map("n", "<D-0>", "<cmd>DiffviewOpenToggle<cr>", opts({ desc = "History for the current branch" }))

@@ -16,6 +16,24 @@ user_command("Format", function(args)
   require("conform").format({ async = true, lsp_format = "fallback", range = range })
 end, { range = true })
 
+user_command("DiffviewFileHistoryToggle", function(_)
+  local buf_name = vim.api.nvim_buf_get_name(0)
+  if buf_name:find("^diffview") == nil then
+    vim.cmd("DiffviewFileHistory")
+  elseif buf_name:find("(DiffviewFileHistoryPanel)$") ~= nil then
+    vim.cmd("DiffviewClose")
+  end
+end, { desc = "Toggle git history window" })
+
+user_command("DiffviewOpenToggle", function(_)
+  local buf_name = vim.api.nvim_buf_get_name(0)
+  if buf_name:find("^diffview") == nil then
+    vim.cmd("DiffviewOpen")
+  elseif buf_name:find("(DiffviewFilePanel)$") ~= nil then
+    vim.cmd("DiffviewClose")
+  end
+end, { desc = "Toggle current git changes" })
+
 autocmd("FileType", {
   group = custom_group,
   desc = "Close filetypes with <q>",
@@ -31,6 +49,18 @@ autocmd("FileType", {
       silent = true,
       desc = "Quit buffer",
     })
+  end,
+})
+
+autocmd("FileType", {
+  group = custom_group,
+  desc = "Close diffview <q>.",
+  pattern = {
+    "DiffviewFileHistory",
+    "DiffviewFiles",
+  },
+  callback = function(_)
+    vim.keymap.set("n", "q", "<cmd>DiffviewClose<cr>", { desc = "Close Diffview" })
   end,
 })
 

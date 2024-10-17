@@ -42,6 +42,10 @@ return {
       disabled_filetypes = {
         "trouble",
         "NvimTree",
+        "trouble",
+        "NvimTree",
+        "DiffviewFileHistory",
+        "DiffviewFiles",
       },
     },
     sections = {
