@@ -37,6 +37,8 @@ export ZDOTDIR=~/.config/zsh
 [[ -f $ZDOTDIR/.zshenv ]] && . $ZDOTDIR/.zshenv
 EOF
 
+  # Save the terminal space on enter
+  # https://askubuntu.com/questions/1492841/how-to-disable-daily-message-in-ubuntu-22-04-3-lts-message-of-the-day-motd
   # https://stackoverflow.com/questions/15769615/remove-last-login-message-for-new-tabs-in-terminal
   touch .hushlogin
 
@@ -60,9 +62,6 @@ EOF
 
 setup_alacritty() {
   brew install --cask alacritty
-  # Install themes
-  mkdir -p ~/.config/alacritty/themes
-  git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
   # Install nerd fonts
   brew install --cask \
     font-jetbrains-mono \
