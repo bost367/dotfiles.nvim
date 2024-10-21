@@ -27,12 +27,15 @@ opt.scrolloff = 5
 -- line number
 opt.number = true
 opt.numberwidth = 3
-opt.fillchars = { eob = " " } -- Remove '~' character on empty line
 
 opt.completeopt = { "menu", "menuone", "noselect", "noinsert" }
 opt.clipboard = "unnamedplus" -- Enable OS buffer
 opt.cmdheight = 0 -- Hide current mode from command line
 opt.updatetime = 250
+opt.fillchars:append({
+  diff = " ", -- Repalce '-' caracter for diff
+  eob = " ", -- Replace '~' character on empty lines in number lines column
+})
 cmd("syntax enable") -- Syntax highlighting
 cmd("filetype plugin indent on") -- Try to recognize filetypes and load rel' plugins
 

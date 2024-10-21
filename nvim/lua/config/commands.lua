@@ -33,6 +33,7 @@ autocmd("FileType", {
   end,
 })
 
+-- enable type hints
 autocmd("LspAttach", {
   group = augroup("lsp_inline_hints"),
   callback = function(args)

@@ -80,3 +80,8 @@ key = "9"
 mods = "Command"
 action = "ReceiveChar"
 
+[[keyboard.bindings]]
+key = "0"
+mods = "Command"
+action = "ReceiveChar"
+
