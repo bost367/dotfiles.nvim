@@ -1,5 +1,4 @@
-# https://alacritty.org/config-alacritty.html
-
+[general]
 import = [
     "~/.config/alacritty/jetbrains_dark.toml"
 ]
@@ -84,4 +83,3 @@ action = "ReceiveChar"
 key = "0"
 mods = "Command"
 action = "ReceiveChar"
-

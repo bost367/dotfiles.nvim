@@ -28,6 +28,10 @@ opt.scrolloff = 5
 opt.number = true
 opt.numberwidth = 3
 
+-- ignorecase search
+opt.ignorecase = true -- Enable ignore case for searching
+opt.smartcase = true -- Enable smart case for cearching (type uupercase while search to enable)
+
 opt.completeopt = { "menu", "menuone", "noselect", "noinsert" }
 opt.clipboard = "unnamedplus" -- Enable OS buffer
 opt.cmdheight = 0 -- Hide current mode from command line
