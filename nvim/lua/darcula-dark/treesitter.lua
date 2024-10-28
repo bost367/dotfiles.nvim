@@ -65,6 +65,7 @@ hi(0, "@tag.attribute", { fg = palette.lang.default.text })
 hi(0, "@diff.plus", { fg = palette.editor.vcs.added_diff })
 hi(0, "@diff.minus", { fg = palette.editor.vcs.deleted_diff })
 hi(0, "@diff.delta", { fg = palette.editor.vcs.changed_diff })
+hi(0, "@none", { fg = palette.lang.default.text })
 
 -- JSON
 hi(0, "@property.json", { fg = palette.lang.default.constant })
@@ -87,6 +88,10 @@ hi(0, "@function.call.bash", { fg = "#C57633" })
 hi(0, "@function.builtin.bash", { fg = "#C57633" })
 hi(0, "@keyword.directive.bash", { fg = palette.lang.default.text, bold = true })
 hi(0, "@punctuation.special.bash", { fg = palette.lang.default.keyword })
+hi(0, "@variable.builtin.bash", { fg = palette.lang.default.constant })
 
 -- Kotlin
 hi(0, "@attribute.kotlin", { fg = palette.lang.default.metadata })
+
+-- XML
+hi(0, "@punctuation.delimiter.xml", { fg = palette.lang.default.str })
