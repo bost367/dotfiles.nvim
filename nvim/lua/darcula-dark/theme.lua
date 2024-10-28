@@ -13,7 +13,7 @@ hi(0, "NormalFloat", { bg = palette.editor.background, fg = palette.interface.te
 hi(0, "LineNr", { fg = "#4b5059" })
 hi(0, "EndOfBuffer", { fg = "#4b5059" })
 hi(0, "CursorLine", { bg = palette.editor.cursor_line })
-hi(0, "CursorLineNr", { fg = "#a1a3ab" })
+hi(0, "CursorLineNr", { fg = "#a1a3ab", bg = palette.editor.cursor_line })
 hi(0, "ColorColumn", { bg = "#393B40" })
 hi(0, "Visual", { bg = palette.editor.select })
 hi(0, "Search", { bg = palette.editor.search_select })
