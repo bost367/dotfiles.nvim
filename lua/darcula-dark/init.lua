@@ -6,7 +6,6 @@ require("darcula-dark.cmp")
 require("darcula-dark.gitsigns")
 require("darcula-dark.scrollbar")
 require("darcula-dark.illuminate")
-require("darcula-dark.ibl")
 require("darcula-dark.lazy")
 require("darcula-dark.trouble")
 

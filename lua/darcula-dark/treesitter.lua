@@ -62,9 +62,9 @@ hi(0, "@markup.list.unckecked", { fg = palette.lang.default.keyword })
 hi(0, "@punctuation.special", { fg = palette.lang.default.text })
 hi(0, "@tag", { fg = "#D5B778" })
 hi(0, "@tag.attribute", { fg = palette.lang.default.text })
-hi(0, "@diff.plus", { fg = palette.editor.vcs.added_diff })
-hi(0, "@diff.minus", { fg = palette.editor.vcs.deleted_diff })
-hi(0, "@diff.delta", { fg = palette.editor.vcs.changed_diff })
+hi(0, "@diff.plus", { fg = palette.lang.diff.added })
+hi(0, "@diff.minus", { fg = palette.lang.diff.deleted })
+hi(0, "@diff.delta", { fg = palette.lang.diff.changed })
 hi(0, "@none", { fg = palette.lang.default.text })
 
 -- JSON

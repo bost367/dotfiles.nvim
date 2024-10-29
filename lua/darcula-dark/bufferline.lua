@@ -85,15 +85,15 @@ return {
     italic = false,
   },
   modified = {
-    fg = palette.interface.vcs.changed_file,
+    fg = palette.file_manager.vcs.changed_file,
     bg = palette.interface.popup_window,
   },
   modified_visible = {
-    fg = palette.interface.vcs.changed_file,
+    fg = palette.file_manager.vcs.changed_file,
     bg = palette.editor.background,
   },
   modified_selected = {
-    fg = palette.interface.vcs.changed_file,
+    fg = palette.file_manager.vcs.changed_file,
     bg = palette.editor.background,
   },
   separator = {
