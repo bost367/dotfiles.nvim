@@ -14,13 +14,13 @@ return {
       unnecessary = "#6F737A",
       spell = "#7EC482",
     },
+  },
+  gutter_bar = {
+    line_number = "#4b5059",
     vcs = {
       added_line = "#549159",
       changed_line = "#375FAD",
       deleted_line = "#868A91",
-      added_diff = "#2A4436",
-      changed_diff = "#283641",
-      deleted_diff = "#484A4A",
     },
   },
   scroll_bar = {
@@ -29,6 +29,16 @@ return {
       added_line = "#447152",
       changed_line = "#43698D",
       deleted_line = "#656E76",
+    },
+  },
+  file_manager = {
+    vcs = {
+      added_file = "#73BD79",
+      changed_file = "#70AEFF",
+      deleted_file = "#6F737A",
+      ignored_file = "#CF8E6D",
+      staged_file = "#df8984",
+      unknown_file = "#E88F89",
     },
   },
   interface = {
@@ -42,14 +52,6 @@ return {
     border = "#1E1F22", -- inactive element
     active_element = "#3975F1", -- blue
     popup_window = "#393B40",
-    vcs = {
-      added_file = "#73BD79",
-      changed_file = "#70AEFF",
-      deleted_file = "#6F737A",
-      ignored_file = "#CF8E6D",
-      staged_file = "#df8984",
-      unknown_file = "#E88F89",
-    },
   },
   lang = {
     default = {
@@ -73,6 +75,11 @@ return {
     },
     rust = {
       lifetime = "#20999D",
+    },
+    diff = {
+      added = "#2A4436",
+      changed = "#283641",
+      deleted = "#484A4A",
     },
   },
 }
