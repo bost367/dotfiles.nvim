@@ -36,9 +36,10 @@ return {
       added_file = "#73BD79",
       changed_file = "#70AEFF",
       deleted_file = "#6F737A",
-      ignored_file = "#CF8E6D",
-      staged_file = "#df8984",
+      ignored_file = "#D69A6B",
+      staged_file = "#Df8984",
       unknown_file = "#E88F89",
+      merge_conflict_file = "#DE6A66",
     },
   },
   interface = {
@@ -79,6 +80,7 @@ return {
     diff = {
       added = "#2A4436",
       changed = "#283641",
+      changed_important = "#385570",
       deleted = "#484A4A",
     },
   },
