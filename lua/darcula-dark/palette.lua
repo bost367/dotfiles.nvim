@@ -7,7 +7,7 @@ return {
     under_corsour = "#373B39",
     diagnostic = {
       ok = "#5B9761",
-      error = "#D54D5B",
+      error = "#FA6675",
       warn = "#F2C55C",
       weak_warn = "#857042",
       info = "#3592C4",
@@ -31,6 +31,10 @@ return {
       changed_line = "#43698D",
       deleted_line = "#656E76",
     },
+    diagnostic = {
+      error = "#D54D5B",
+      warn = "#F2C55C",
+    },
   },
   file_manager = {
     vcs = {
@@ -45,12 +49,11 @@ return {
   },
   interface = {
     text = "#DFE1E5",
-    hint_text = "#7A7E85",
+    hint_text = "#6F737A",
     hint_folder = "#6F737A",
     search_select = "#BA9752",
     background = "#2B2D30",
     cursor_line = "#2E436E",
-    --cursor_line_inactive = "#43444A",
     border = "#1E1F22", -- inactive element
     active_element = "#3975F1", -- blue
     popup_window = "#393B40",

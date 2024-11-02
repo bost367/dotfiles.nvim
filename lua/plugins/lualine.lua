@@ -26,5 +26,10 @@ return {
         "filetype",
       },
     },
+    options = {
+      disabled_filetypes = {
+        "trouble",
+      },
+    },
   },
 }

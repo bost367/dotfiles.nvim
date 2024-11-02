@@ -1,11 +1,11 @@
 local hi = vim.api.nvim_set_hl
 local palette = require("darcula-dark.palette")
 
-hi(0, "ScrollbarHandle", { bg = palette.scroll_bar.background, fg = palette.interface.scroll_bar })
-hi(0, "ScrollbarError", { fg = palette.editor.diagnostic.error })
-hi(0, "ScrollbarErrorHandle", { bg = palette.scroll_bar.background, fg = palette.editor.diagnostic.error })
-hi(0, "ScrollbarWarn", { fg = palette.editor.diagnostic.warn })
-hi(0, "ScrollbarWarnHandle", { bg = palette.scroll_bar.background, fg = palette.editor.diagnostic.warn })
+hi(0, "ScrollbarHandle", { bg = palette.scroll_bar.background, fg = palette.scroll_bar.scroll_bar })
+hi(0, "ScrollbarError", { fg = palette.scroll_bar.diagnostic.error })
+hi(0, "ScrollbarErrorHandle", { bg = palette.scroll_bar.background, fg = palette.scroll_bar.diagnostic.error })
+hi(0, "ScrollbarWarn", { fg = palette.scroll_bar.diagnostic.warn })
+hi(0, "ScrollbarWarnHandle", { bg = palette.scroll_bar.background, fg = palette.scroll_bar.diagnostic.warn })
 hi(0, "ScrollbarInfo", { fg = palette.editor.diagnostic.info })
 hi(0, "ScrollbarInfoHandle", { bg = palette.scroll_bar.background, fg = palette.editor.diagnostic.info })
 hi(0, "ScrollbarHint", { fg = palette.editor.diagnostic.weak_warn })
