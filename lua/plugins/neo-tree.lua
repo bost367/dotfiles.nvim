@@ -72,6 +72,22 @@ return {
       },
     },
     filesystem = {
+      components = {
+        name = function(config, node)
+          local highlightt
+          if node.path:find("/lsp/") ~= nil then
+            highlightt = "NeoTreeCustomTestComponent"
+          elseif node.name == "lsp" then
+            highlightt = "NeoTreeCustomTestComponent"
+          else
+            highlightt = "NeoTreeFileName"
+          end
+          return {
+            text = node.name,
+            highlight = highlightt,
+          }
+        end,
+      },
       filtered_items = {
         hide_dotfiles = false,
         hide_gitignored = false,

@@ -40,3 +40,4 @@ hi(0, "NeoTreeStatsHeader", { fg = palette.interface.hint_text, bold = true })
 -- NeoTreeVertSplit          |hl-VertSplit| override in Neo-tree window.
 -- NeoTreeEndOfBuffer        |hl-EndOfBuffer| override in Neo-tree window.
 -- NeoTreeSymbolicLinkTarget Symbolic link target.
+hi(0, "NeoTreeCustomTestComponent", { fg = palette.interface.text, bg = "#273828" })
