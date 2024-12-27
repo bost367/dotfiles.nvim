@@ -24,6 +24,7 @@ return {
         "dockerfile",
         "editorconfig",
         "sql",
+        "just",
       },
       highlight = {
         enable = true,
