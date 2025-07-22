@@ -1,5 +1,9 @@
 -- :h key-notation
 local map = vim.keymap.set
+local trouble = require("trouble")
+local mini_bufremove = require("mini.bufremove")
+local vim_lsp = require("vim.lsp")
+local gitsigns = require("gitsigns")
 
 local function opts(arg)
   return {
@@ -14,19 +18,19 @@ end
 map({ "n", "x" }, "gh", "_", opts({ desc = "Go to the First Non-blank Character" }))
 map({ "n", "x" }, "gl", "g_", opts({ desc = "Go to the Last Non-blank Character" }))
 map("n", "<D-l>", "<cmd>Format <cr>", opts({ desc = "Format Buffer" }))
-map("n", "<D-6>", "<cmd>Trouble diagnostics_all toggle<cr>", opts({ desc = "Show All Troules" }))
-map("n", "<D-7>", "<cmd>Trouble diagnostics_current_buf toggle<cr>", opts({ desc = "Show Troules in Current Buffer" }))
+map("n", "<D-6>", function() trouble.diagnostics_all({ toggle = true }) end, opts({ desc = "Show All Troubles" }))
+map("n", "<D-7>", function() trouble.diagnostics_current_buf({ toggle = true }) end, opts({ desc = "Show Troules in Current Buffer" }))
 
 -- Buffers
 map("n", "L", "<cmd>bnext<cr>", opts({ desc = "Next Buffer" }))
 map("n", "H", "<cmd>bprevious<cr>", opts({ desc = "Prev Buffer" }))
-map("n", "<D-w>", "<cmd>lua MiniBufremove.delete(0)<cr>", opts({ desc = "Close Buffer" }))
+map("n", "<D-w>", function() mini_bufremove.delete(0) end, opts({ desc = "Close Buffer" }))
 
 -- LSP mapping
-map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts({ desc = "Go to Declaration" }))
-map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", opts({ desc = "Go to Definition" }))
-map("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts({ desc = "Go to References" }))
-map("n", "<D-Enter>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts({ desc = "Fix Suggestion" }))
+map("n", "gD", vim_lsp.buf.declaration, opts({ desc = "Go to Declaration" }))
+map("n", "gd", vim_lsp.buf.definition, opts({ desc = "Go to Definition" }))
+map("n", "gr", vim_lsp.buf.references, opts({ desc = "Go to References" }))
+map("n", "<D-Enter>", vim_lsp.buf.code_action, opts({ desc = "Fix Suggestion" }))
 
 -- Resize window using <ctrl> arrow keys
 map("n", "<C-Up>", "<cmd>resize +2<cr>", opts({ desc = "Increase Window Height" }))
@@ -38,8 +42,8 @@ map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", opts({ desc = "Increase Win
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", opts({ desc = "Escape and Clear hlsearch" }))
 
 -- Gitsign
-map("n", "<D-z>", "<cmd>Gitsigns reset_hunk<cr>", opts({ desc = "Git Discard Changes on Current Line" }))
-map("n", "<D-Z>", "<cmd>Gitsigns reset_buffer<cr>", opts({ desc = "Git Discard Buffer Changes" }))
+map("n", "<D-z>", gitsigns.reset_hunk, opts({ desc = "Git Discard Changes on Current Line" }))
+map("n", "<D-Z>", gitsigns.reset_buffer, opts({ desc = "Git Discard Buffer Changes" }))
 
 -- NvimTree
 map("n", "<D-1>", "<cmd>ExplorerToggle<cr>", opts({ desc = "Toggle neotree explorer" }))
