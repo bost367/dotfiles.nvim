@@ -4,6 +4,7 @@ local trouble = require("trouble")
 local mini_bufremove = require("mini.bufremove")
 local vim_lsp = require("vim.lsp")
 local gitsigns = require("gitsigns")
+local telescope = require("telescope.builtin")
 
 local function opts(arg)
   return {
