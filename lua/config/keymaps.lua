@@ -27,10 +27,25 @@ map("n", "H", "<cmd>bprevious<cr>", opts({ desc = "Prev Buffer" }))
 map("n", "<D-w>", function() mini_bufremove.delete(0) end, opts({ desc = "Close Buffer" }))
 
 -- LSP mapping
-map("n", "gD", vim_lsp.buf.declaration, opts({ desc = "Go to Declaration" }))
-map("n", "gd", vim_lsp.buf.definition, opts({ desc = "Go to Definition" }))
-map("n", "gr", vim_lsp.buf.references, opts({ desc = "Go to References" }))
-map("n", "<D-Enter>", vim_lsp.buf.code_action, opts({ desc = "Fix Suggestion" }))
+-- map("n", "gD", vim_lsp.buf.declaration, opts({ desc = "Go to Declaration" }))
+-- map("n", "gd", vim_lsp.buf.definition, opts({ desc = "Go to Definition" }))
+-- map("n", "gr", vim_lsp.buf.references, opts({ desc = "Go to References" }))
+-- map("n", "<D-Enter>", vim_lsp.buf.code_action, opts({ desc = "Fix Suggestion" }))
+
+local fzf = require("fzf-lua")
+
+fzf.setup({
+  lsp = {
+    -- Настройка для LSP-действий
+    code_actions = {
+      previewer = "codeaction", -- или "codeaction_native" для использования нативного превью fzf
+    },
+  },
+})
+
+-- Маппинг для вызова LSP references
+vim.keymap.set("n", "gr", function() fzf.lsp_references() end, { desc = "Go to References" })
+vim.keymap.set("n", "gd", function() fzf.lsp_definitions() end, { desc = "Go to References" })
 
 -- Resize window using <ctrl> arrow keys
 map("n", "<C-Up>", "<cmd>resize +2<cr>", opts({ desc = "Increase Window Height" }))
