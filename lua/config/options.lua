@@ -42,6 +42,7 @@ opt.fillchars:append({
 })
 cmd("syntax enable") -- Syntax highlighting
 cmd("filetype plugin indent on") -- Try to recognize filetypes and load rel' plugins
+cmd.colorscheme("darcula-dark")
 
 -- colour pallete
 opt.termguicolors = true -- Enable true colors
