@@ -2,9 +2,7 @@ local autocmd = vim.api.nvim_create_autocmd
 local user_command = vim.api.nvim_create_user_command
 local nvim_tree_api = require("nvim-tree.api")
 
-local function augroup(name)
-  return vim.api.nvim_create_augroup("cusrom_" .. name, { clear = true })
-end
+local custom_group = vim.api.nvim_create_augroup("Custom auto-commands", { clear = true })
 
 user_command("Format", function(args)
   local range = nil
@@ -19,8 +17,8 @@ user_command("Format", function(args)
 end, { range = true })
 
 autocmd("FileType", {
-  group = augroup("close_with_q"),
-  desc = "Dlose filetypes with <q>",
+  group = custom_group,
+  desc = "Close filetypes with <q>",
   pattern = {
     "help",
     "gitsigns-blame",
@@ -37,8 +35,9 @@ autocmd("FileType", {
 })
 
 autocmd("LspAttach", {
-  group = augroup("lsp_inline_hints"),
+  group = custom_group,
   desc = "Enable LSP type hints.",
+  --- @type fun(args: table)
   callback = function(args)
     local client = vim.lsp.get_client_by_id(args.data.client_id)
     if client ~= nil then
@@ -50,7 +49,7 @@ autocmd("LspAttach", {
 })
 
 autocmd({ "CursorHold", "CursorHoldI" }, {
-  group = augroup("float_diagnostic_cursor"),
+  group = custom_group,
   desc = "Show diagnostic message under cursor.",
   callback = function()
     vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
@@ -58,7 +57,7 @@ autocmd({ "CursorHold", "CursorHoldI" }, {
 })
 
 autocmd({ "BufWinEnter" }, {
-  group = augroup("cursor_last_position"),
+  group = custom_group,
   desc = "Return cursor to where it was last time closing the file.",
   pattern = "*",
   command = 'silent! normal! g`"zv',
