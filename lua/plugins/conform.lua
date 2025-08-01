@@ -10,6 +10,7 @@ return {
       yaml = { "yq" },
       json = { "jq" },
       xml = { "xmllint" },
+      proto = { "buf" },
       ["_"] = { "trim_whitespace", "trim_newlines" },
     },
   },
