@@ -95,3 +95,6 @@ hi(0, "@attribute.kotlin", { fg = palette.lang.default.metadata })
 
 -- XML
 hi(0, "@punctuation.delimiter.xml", { fg = palette.lang.default.str })
+
+-- Protobuf
+hi(0, "@string.special.proto", { fg = palette.lang.default.str })
