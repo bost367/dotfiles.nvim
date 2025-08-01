@@ -33,7 +33,7 @@ vim.api.nvim_create_autocmd("LspTokenUpdate", {
   end,
 })
 
--- Rust
+-- Rust (rust-analyzer)
 hi(0, "MutableLocalVariable", { fg = palette.lang.default.local_variable, underline = true })
 hi(0, "MutableStaticVariable", { fg = palette.lang.default.constant, underline = true })
 hi(0, "MutablelSelfParameter", { fg = palette.lang.default.keyword, underline = true })
@@ -57,3 +57,8 @@ vim.api.nvim_create_autocmd("LspTokenUpdate", {
     end
   end,
 })
+
+-- Protobuf (buf)
+-- hi(0, "@lsp.type.variable.proto", { fg = palette.lang.default.property })
+hi(0, "@lsp.type.type.proto", { fg = palette.lang.default.keyword })
+hi(0, "@lsp.type.decorator.proto", { fg = palette.lang.default.struct })
