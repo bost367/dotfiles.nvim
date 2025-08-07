@@ -13,6 +13,7 @@ return {
           "rust_analyzer",
           "bashls",
           "buf",
+          "taplo",
         },
       },
     },

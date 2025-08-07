@@ -11,7 +11,13 @@ return {
       json = { "jq" },
       xml = { "xmllint" },
       proto = { "buf" },
+      toml = { "taplo" },
       ["_"] = { "trim_whitespace", "trim_newlines" },
+    },
+    formatters = {
+      taplo = {
+        args = { "format", "--option", "array_auto_collapse=false", "-" },
+      },
     },
   },
 }
