@@ -15,6 +15,11 @@ return {
           "buf",
           "taplo",
         },
+        automatic_enable = {
+          exclude = {
+            "rust_analyzer",
+          },
+        },
       },
     },
   },
