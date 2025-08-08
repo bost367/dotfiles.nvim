@@ -98,3 +98,7 @@ hi(0, "@punctuation.delimiter.xml", { fg = palette.lang.default.str })
 
 -- Protobuf
 hi(0, "@string.special.proto", { fg = palette.lang.default.str })
+
+-- Justfile
+hi(0, "@variable.just", { link = "@constant" })
+hi(0, "@function.just", { link = "@function" })
