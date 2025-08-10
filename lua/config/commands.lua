@@ -48,14 +48,6 @@ autocmd("LspAttach", {
   end,
 })
 
-autocmd({ "CursorHold", "CursorHoldI" }, {
-  group = custom_group,
-  desc = "Show diagnostic message under cursor.",
-  callback = function()
-    vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
-  end,
-})
-
 autocmd({ "BufWinEnter" }, {
   group = custom_group,
   desc = "Return cursor to where it was last time closing the file.",

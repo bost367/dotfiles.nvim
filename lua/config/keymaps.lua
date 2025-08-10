@@ -17,6 +17,13 @@ end
 map({ "n", "x" }, "gh", "_", opts({ desc = "Go to the First Non-blank Character" }))
 map({ "n", "x" }, "gl", "g_", opts({ desc = "Go to the Last Non-blank Character" }))
 map("n", "<D-l>", "<cmd>Format <cr>", opts({ desc = "Format Buffer" }))
+map("n", "tt", function()
+  vim.diagnostic.open_float({
+    focusable = false,
+    close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+    scope = "cursor",
+  })
+end, opts({ desc = "Show diagnostic popup" }))
 
 map("n", "<D-6>", function()
   trouble.diagnostics_all({ toggle = true })
@@ -33,7 +40,6 @@ map("n", "<D-w>", function()
   mini_bufremove.delete(0)
 end, opts({ desc = "Close Buffer" }))
 
--- Fzf-lua
 local fzf = require("fzf-lua")
 
 vim.keymap.set("n", "ff", function()
@@ -59,10 +65,6 @@ end, { desc = "Go to definition" })
 vim.keymap.set("n", "gI", function()
   fzf.lsp_implementations({ ignore_current_line = true })
 end, { desc = "Go to implementation" })
-
-vim.keymap.set("n", "<D-Enter>", function()
-  fzf.code_action()
-end, { desc = "Code action" })
 
 -- Resize window using <ctrl> arrow keys
 map("n", "<C-Up>", "<cmd>resize +2<cr>", opts({ desc = "Increase Window Height" }))
