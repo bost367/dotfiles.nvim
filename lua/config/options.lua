@@ -35,7 +35,7 @@ opt.smartcase = true -- Enable smart case for cearching (type uupercase while se
 opt.completeopt = { "menu", "menuone", "noselect", "noinsert" }
 opt.clipboard = "unnamedplus" -- Enable OS buffer
 opt.cmdheight = 0 -- Hide current mode from command line
-opt.updatetime = 250
+opt.updatetime = 250 -- Delay microseconds (e.g for pop up appearance)
 opt.fillchars:append({
   diff = " ", -- Repalce '-' caracter for diff
   eob = " ", -- Replace '~' character on empty lines in number lines column
@@ -47,9 +47,13 @@ cmd.colorscheme("darcula-dark")
 -- colour pallete
 opt.termguicolors = true -- Enable true colors
 vim.diagnostic.config({
+  severity_sort = true,
   underline = true,
-  float = { border = "rounded" },
-  virtual_text = false,
+  virtual_text = true,
+  float = {
+    source = true,
+    border = "rounded",
+  },
   signs = {
     text = {
       [vim.diagnostic.severity.ERROR] = "",

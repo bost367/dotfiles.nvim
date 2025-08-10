@@ -9,8 +9,11 @@ return {
     diagnostic = {
       ok = "#5B9761",
       error = "#FA6675",
+      error_message = "#BC5460",
       warn = "#F2C55C",
+      warn_message = "#AC914B",
       weak_warn = "#857042",
+      weak_warn_messag = "#7A7E85",
       info = "#3592C4",
       unnecessary = "#6F737A",
       spell = "#7EC482",
