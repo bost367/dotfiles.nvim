@@ -1,0 +1,18 @@
+local hi = vim.api.nvim_set_hl
+local palette = require("darcula-dark.palette")
+
+hi(0, "FzfLuaNormal", { bg = palette.editor.background })
+hi(0, "FzfLuaBorder", { bg = palette.editor.background, fg = palette.editor.separator })
+hi(0, "FzfLuaTitle", { fg = palette.interface.text })
+hi(0, "FzfLuaTitleFlags", { fg = palette.interface.hint_text })
+hi(0, "FzfLuaCursor", { bg = palette.editor.select })
+hi(0, "FzfLuaPreviewNormal", { bg = palette.editor.background })
+hi(0, "FzfLuaPreviewBorder", { bg = palette.editor.background, fg = palette.editor.separator })
+hi(0, "FzfLuaScrollBorderFull", { bg = palette.scroll_bar.background })
+hi(0, "FzfLuaHeaderText", { fg = palette.interface.hint_text })
+hi(0, "FzfLuaPathColNr", { fg = palette.interface.hint_text })
+hi(0, "FzfLuaPathLineNr", { fg = palette.interface.hint_text })
+hi(0, "FzfLuaBufFlagCur", { bg = palette.interface.active_element })
+hi(0, "FzfLuaDirPart", { fg = palette.interface.hint_text })
+hi(0, "FzfLuaFilePart", { fg = palette.interface.text })
+hi(0, "FzfLuaLivePrompt", { bg = palette.editor.background })
