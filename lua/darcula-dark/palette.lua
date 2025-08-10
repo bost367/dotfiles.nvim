@@ -1,6 +1,7 @@
 return {
   editor = {
-    background = "#1E2022",
+    background = "#1E1F22",
+    separator = "#393B41", -- split dark windows
     cursor_line = "#26282E",
     select = "#214283",
     search_select = "#114957",
