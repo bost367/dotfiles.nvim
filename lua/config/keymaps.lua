@@ -14,9 +14,9 @@ local function opts(arg)
 end
 
 -- Custom binding
-map({ "n", "x" }, "gh", "_", opts({ desc = "Go to the First Non-blank Character" }))
-map({ "n", "x" }, "gl", "g_", opts({ desc = "Go to the Last Non-blank Character" }))
-map("n", "<D-l>", "<cmd>Format <cr>", opts({ desc = "Format Buffer" }))
+map({ "n", "x" }, "gh", "_", opts({ desc = "Go to the first non-blank character" }))
+map({ "n", "x" }, "gl", "g_", opts({ desc = "Go to the last non-blank character" }))
+map("n", "<D-l>", vim.cmd.Format, opts({ desc = "Format buffer" }))
 map("n", "tt", function()
   vim.diagnostic.open_float({
     focusable = false,
@@ -27,18 +27,18 @@ end, opts({ desc = "Show diagnostic popup" }))
 
 map("n", "<D-6>", function()
   trouble.diagnostics_all({ toggle = true })
-end, opts({ desc = "Show All Troubles" }))
+end, opts({ desc = "Show all troubles" }))
 
 map("n", "<D-7>", function()
   trouble.diagnostics_current_buf({ toggle = true })
-end, opts({ desc = "Show Troules in Current Buffer" }))
+end, opts({ desc = "Show troules in current buffer" }))
 
 -- Buffers managment
-map("n", "L", "<cmd>bnext<cr>", opts({ desc = "Next Buffer" }))
-map("n", "H", "<cmd>bprevious<cr>", opts({ desc = "Prev Buffer" }))
+map("n", "L", "<cmd>bnext<cr>", opts({ desc = "Next buffer" }))
+map("n", "H", "<cmd>bprevious<cr>", opts({ desc = "Prev buffer" }))
 map("n", "<D-w>", function()
   mini_bufremove.delete(0)
-end, opts({ desc = "Close Buffer" }))
+end, opts({ desc = "Close buffer" }))
 
 local fzf = require("fzf-lua")
 
@@ -67,17 +67,17 @@ vim.keymap.set("n", "gI", function()
 end, { desc = "Go to implementation" })
 
 -- Resize window using <ctrl> arrow keys
-map("n", "<C-Up>", "<cmd>resize +2<cr>", opts({ desc = "Increase Window Height" }))
-map("n", "<C-Down>", "<cmd>resize -2<cr>", opts({ desc = "Decrease Window Height" }))
-map("n", "<C-Left>", "<cmd>vertical resize -2<cr>", opts({ desc = "Decrease Window Width" }))
-map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", opts({ desc = "Increase Window Width" }))
+map("n", "<C-Up>", "<cmd>resize +2<cr>", opts({ desc = "Increase window height" }))
+map("n", "<C-Down>", "<cmd>resize -2<cr>", opts({ desc = "Decrease window height" }))
+map("n", "<C-Left>", "<cmd>vertical resize -2<cr>", opts({ desc = "Decrease window width" }))
+map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", opts({ desc = "Increase window width" }))
 
 -- Clear search with <esc>
-map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", opts({ desc = "Escape and Clear hlsearch" }))
+map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", opts({ desc = "Escape and clear hlsearch" }))
 
 -- Gitsign
-map("n", "<D-z>", gitsigns.reset_hunk, opts({ desc = "Git Discard Changes on Current Line" }))
-map("n", "<D-Z>", gitsigns.reset_buffer, opts({ desc = "Git Discard Buffer Changes" }))
+map("n", "<D-z>", gitsigns.reset_hunk, opts({ desc = "Git discard changes on current line" }))
+map("n", "<D-Z>", gitsigns.reset_buffer, opts({ desc = "Git discard buffer changes" }))
 
 -- NvimTree
 map("n", "<D-1>", "<cmd>ExplorerToggle<cr>", opts({ desc = "Toggle neotree explorer" }))

@@ -40,12 +40,13 @@ opt.fillchars:append({
   diff = " ", -- Repalce '-' caracter for diff
   eob = " ", -- Replace '~' character on empty lines in number lines column
 })
-cmd("syntax enable") -- Syntax highlighting
 cmd("filetype plugin indent on") -- Try to recognize filetypes and load rel' plugins
-cmd.colorscheme("darcula-dark")
 
 -- colour pallete
 opt.termguicolors = true -- Enable true colors
+cmd("syntax enable") -- Syntax highlighting
+cmd.colorscheme("darcula-dark")
+
 vim.diagnostic.config({
   severity_sort = true,
   underline = true,
