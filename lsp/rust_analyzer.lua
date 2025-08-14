@@ -1,7 +1,12 @@
-require("config.lazy")
-require("config.options")
-require("config.keymaps")
-require("config.commands")
+-- vim.lsp.config("rust_analyzer", {
+--   settings = {
+--     ["rust-analyzer"] = {
+--       check = {
+--         command = "check",
+--       },
+--     },
+--   },
+-- })
 
 -- vim.g.rustaceanvim = {
 --   server = {
