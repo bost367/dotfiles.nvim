@@ -3,7 +3,7 @@ local hi = vim.api.nvim_set_hl
 local palette = require("darcula-dark.palette")
 
 hi(0, "StaticFunction", { fg = palette.lang.default.function_decaration, italic = true })
-hi(0, "WinSeparator", { fg = palette.interface.background })
+hi(0, "WinSeparator", { fg = palette.editor.separator })
 hi(0, "Pmenu", { bg = palette.interface.background })
 hi(0, "PmenuSel", { bg = palette.interface.cursor_line })
 hi(0, "PmenuSbar", { bg = palette.scroll_bar.background })
