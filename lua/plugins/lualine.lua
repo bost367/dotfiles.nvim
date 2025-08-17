@@ -1,4 +1,13 @@
 -- Status bar
+
+local function readonly_mode()
+  if vim.bo.readonly then
+    return " "
+  else
+    return " "
+  end
+end
+
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = {
@@ -34,6 +43,7 @@ return {
         "fileformat",
         "encoding",
         "lsp_status",
+        readonly_mode,
       },
       lualine_z = {},
     },
