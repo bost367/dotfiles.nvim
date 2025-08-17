@@ -5,32 +5,37 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   opts = {
+    options = {
+      globalstatus = true,
+      section_separators = "",
+      component_separators = "",
+      disabled_filetypes = {
+        "trouble",
+        "NvimTree",
+      },
+    },
     sections = {
+      lualine_a = {
+        { "mode", fmt = string.lower },
+      },
       lualine_b = {
-        { "branch", icon = " ", draw_empty = true },
+        { "branch", icon = "" },
       },
-      lualine_c = {
-        {
-          "diff",
-          symbols = { added = "● ", modified = "● ", removed = "● " },
-        },
-      },
+      lualine_c = {},
       lualine_x = {
         {
           "diagnostics",
           sections = { "error", "warn", "hint", "info" },
           symbols = { error = " ", warn = " ", hint = " ", info = " " },
         },
-        "encoding",
+      },
+      lualine_y = {
+        "location",
         "fileformat",
-        "filetype",
+        "encoding",
+        "lsp_status",
       },
-    },
-    options = {
-      disabled_filetypes = {
-        "trouble",
-        "NvimTree",
-      },
+      lualine_z = {},
     },
   },
 }
