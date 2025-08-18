@@ -2,7 +2,6 @@
 local map = vim.keymap.set
 local trouble = require("trouble")
 local mini_bufremove = require("mini.bufremove")
-local gitsigns = require("gitsigns")
 
 local function opts(arg)
   return {
@@ -40,7 +39,14 @@ map("n", "<D-w>", function()
   mini_bufremove.delete(0)
 end, opts({ desc = "Close buffer" }))
 
+-- Fzf
 local fzf = require("fzf-lua")
+vim.keymap.set("n", "fd", fzf.diagnostics_workspace, { desc = "Find diagnostics" })
+vim.keymap.set("n", "fo", fzf.lsp_workspace_symbols, { desc = "Find workspace symb[o]ls" })
+vim.keymap.set("n", "fd", fzf.diagnostics_workspace, { desc = "Find diagnostics" })
+vim.keymap.set("n", "gD", fzf.lsp_declarations, { desc = "Go to [D]eclarations (e.g. interface method)" })
+vim.keymap.set("n", "gI", fzf.lsp_implementations, { desc = "Go to implementation" })
+vim.keymap.set("n", "gd", fzf.lsp_definitions, { desc = "Go to definition" })
 
 vim.keymap.set("n", "ff", function()
   local project_root = vim.fs.root(0, { ".git" })
@@ -52,19 +58,9 @@ vim.keymap.set("n", "fif", function()
   fzf.live_grep({ cwd = project_root })
 end, { desc = "Find in files" })
 
-vim.keymap.set("n", "fd", fzf.diagnostics_workspace, { desc = "Find diagnostics" })
-
 vim.keymap.set("n", "gr", function()
   fzf.lsp_references({ ignore_current_line = true })
 end, { nowait = true, desc = "Go to references" })
-
-vim.keymap.set("n", "gd", function()
-  fzf.lsp_definitions({ ignore_current_line = true })
-end, { desc = "Go to definition" })
-
-vim.keymap.set("n", "gI", function()
-  fzf.lsp_implementations({ ignore_current_line = true })
-end, { desc = "Go to implementation" })
 
 -- Resize window using <ctrl> arrow keys
 map("n", "<C-Up>", "<cmd>resize +2<cr>", opts({ desc = "Increase window height" }))
@@ -76,6 +72,7 @@ map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", opts({ desc = "Increase win
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", opts({ desc = "Escape and clear hlsearch" }))
 
 -- Gitsign
+local gitsigns = require("gitsigns")
 map("n", "<D-z>", gitsigns.reset_hunk, opts({ desc = "Git discard changes on current line" }))
 map("n", "<D-Z>", gitsigns.reset_buffer, opts({ desc = "Git discard buffer changes" }))
 
