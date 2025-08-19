@@ -26,7 +26,7 @@ hi(0, "NvimTreeModifiedIcon", { fg = palette.file_manager.vcs.changed_file })
 hi(0, "NvimTreeModifiedFileHL", { fg = palette.file_manager.vcs.changed_file })
 hi(0, "NvimTreeModifiedFolderHL", { fg = palette.file_manager.vcs.changed_file })
 
-local folder_hl = "#CED0D6"
+local folder_hl = palette.icon
 hi(0, "NvimTreeFolderIcon", { fg = folder_hl })
 hi(0, "NvimTreeOpenedFolderIcon", { fg = folder_hl })
 hi(0, "NvimTreeClosedFolderIcon", { fg = folder_hl })

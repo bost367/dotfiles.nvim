@@ -3,7 +3,7 @@ local palette = require("darcula-dark.palette")
 
 hi(0, "@lsp.type.struct", { fg = palette.lang.default.struct })
 hi(0, "@lsp.type.class", { fg = palette.lang.default.struct })
-hi(0, "@lsp.type.macro", { fg = "#FFC66D" })
+hi(0, "@lsp.type.macro", { fg = palette.lang.rust.macro })
 hi(0, "@lsp.type.decorator", { fg = palette.lang.default.metainfo })
 hi(0, "@lsp.type.method", { fg = palette.lang.default.function_call })
 hi(0, "@lsp.typemod.method.declaration", { fg = palette.lang.default.function_decaration })
@@ -59,6 +59,5 @@ vim.api.nvim_create_autocmd("LspTokenUpdate", {
 })
 
 -- Protobuf (buf)
--- hi(0, "@lsp.type.variable.proto", { fg = palette.lang.default.property })
 hi(0, "@lsp.type.type.proto", { fg = palette.lang.default.keyword })
 hi(0, "@lsp.type.decorator.proto", { fg = palette.lang.default.struct })

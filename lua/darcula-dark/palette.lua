@@ -1,5 +1,6 @@
 return {
   icon = "#CED0D6", -- almost any icon: gradle, git, services etc.
+  link = "#56A8F5", -- url or open new window
   editor = {
     background = "#1E1F22",
     separator = "#393B41", -- split dark windows
@@ -21,7 +22,7 @@ return {
     },
   },
   gutter_bar = {
-    line_number = "#4b5059",
+    line_number = "#4B5059",
     vcs = {
       added_line = "#549159",
       changed_line = "#52423D",
@@ -81,15 +82,21 @@ return {
       comment = "#7A7E85",
       comment_documentation = "#5F826B",
       comment_todo = "#8BB33D",
+      inline_hint_type_bg = "#2D2E32",
+      inline_hint_type_fg = "#868A91",
     },
     rust = {
       lifetime = "#20999D",
+      macro = "#FFC66D",
     },
     diff = {
       added = "#2A4436",
       changed = "#283641",
       changed_important = "#385570",
       deleted = "#484A4A",
+    },
+    bash = {
+      builtin = "#C57633",
     },
   },
 }
