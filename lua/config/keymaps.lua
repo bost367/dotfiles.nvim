@@ -24,11 +24,11 @@ map("n", "tt", function()
   })
 end, opts({ desc = "Show diagnostic popup" }))
 
-map("n", "<D-6>", function()
+map("n", "<leader>6", function()
   trouble.diagnostics_all({ toggle = true })
 end, opts({ desc = "Show all troubles" }))
 
-map("n", "<D-7>", function()
+map("n", "<leader>7", function()
   trouble.diagnostics_current_buf({ toggle = true })
 end, opts({ desc = "Show troules in current buffer" }))
 
@@ -73,8 +73,10 @@ map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", opts({ desc = "Escape and clear 
 
 -- Gitsign
 local gitsigns = require("gitsigns")
-map("n", "<D-z>", gitsigns.reset_hunk, opts({ desc = "Git discard changes on current line" }))
-map("n", "<D-Z>", gitsigns.reset_buffer, opts({ desc = "Git discard buffer changes" }))
+map("n", "<leader>z", gitsigns.reset_hunk, opts({ desc = "Git discard changes on current line" }))
+map("n", "<leader>Z", gitsigns.reset_buffer, opts({ desc = "Git discard buffer changes" }))
+map("n", "<leader>gdb", gitsigns.diffthis, opts({ desc = "Git diff buffer" }))
+map("n", "<leader>gdl", gitsigns.preview_hunk_inline, opts({ desc = "Git diff line" }))
 
 -- NvimTree
 map("n", "<D-1>", "<cmd>ExplorerToggle<cr>", opts({ desc = "Toggle neotree explorer" }))
