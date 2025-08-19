@@ -14,6 +14,7 @@ return {
         "rust",
         "kotlin",
         "java",
+        "groovy",
         "json",
         "toml",
         "yaml",
