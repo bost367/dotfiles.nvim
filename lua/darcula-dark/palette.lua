@@ -3,7 +3,7 @@ return {
   link = "#56A8F5", -- url or open new window
   editor = {
     background = "#1E1F22",
-    separator = "#393B41", -- split dark windows
+    separator = "#393B40", -- split dark windows
     cursor_line = "#26282E",
     select = "#214283",
     search_select = "#114957",
