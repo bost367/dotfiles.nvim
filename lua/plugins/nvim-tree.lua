@@ -13,9 +13,6 @@ local function custom_on_attach(bufnr)
   vim.keymap.set("n", "h", api.node.navigate.parent_close, opts("Close Directiry"))
 end
 
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 return {
   "nvim-tree/nvim-tree.lua",
   version = "*",

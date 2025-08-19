@@ -47,6 +47,12 @@ opt.termguicolors = true -- Enable true colors
 cmd("syntax enable") -- Syntax highlighting
 cmd.colorscheme("darcula-dark")
 
+-- disable netrw plugin (builtin filemanager)
+-- WARNING: Disabling netrw might cause issues with other plugins or
+-- functionalities that rely on it, such as opening tar files or remote filesystems.
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.diagnostic.config({
   severity_sort = true,
   underline = true,
