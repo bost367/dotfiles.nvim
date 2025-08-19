@@ -1,5 +1,26 @@
 -- Status bar
 
+--- @type table<string,string>
+local modes = {
+  ["NORMAL"] = " ",
+  ["INSERT"] = " ",
+  ["VISUAL"] = "󰒉 ",
+  ["COMMAND"] = " ",
+  ["REPLACE"] = " ",
+}
+
+--- @param mode string
+--- @return string
+local function buffer_mode(mode)
+  local icon = modes[mode]
+  if icon ~= nil then
+    return icon
+  else
+    return ""
+  end
+end
+
+--- @return string
 local function readonly_mode()
   if vim.bo.readonly then
     return " "
@@ -25,7 +46,7 @@ return {
     },
     sections = {
       lualine_a = {
-        { "mode", fmt = string.lower },
+        { "mode", fmt = buffer_mode },
       },
       lualine_b = {
         { "branch", icon = "" },
