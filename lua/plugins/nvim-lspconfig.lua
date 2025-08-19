@@ -14,6 +14,7 @@ return {
           "bashls",
           "buf",
           "taplo",
+          "yamlls",
         },
         automatic_enable = {
           exclude = {
