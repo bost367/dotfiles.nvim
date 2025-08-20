@@ -10,6 +10,10 @@ return {
             check = {
               command = "check",
             },
+            inlayHints = {
+              closingBraceHints = { enable = false },
+              parameterHints = { enable = false },
+            },
           },
         },
       },
