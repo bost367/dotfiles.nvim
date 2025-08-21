@@ -29,7 +29,28 @@ local kind_icons = {
   TypeParameter = "󰅲 ",
 }
 
-local function cut_width(_, vim_item)
+local function printTable(t, indent)
+  indent = indent or 0
+  local spaces = string.rep("  ", indent)
+
+  for k, v in pairs(t) do
+    if type(v) == "table" then
+      print(spaces .. k .. ":")
+      printTable(v, indent + 1)
+    else
+      print(spaces .. k .. ": " .. tostring(v))
+    end
+  end
+end
+
+local function cut_width(entry, vim_item)
+  -- printTable(entry, 2)
+  -- for key, value in pairs(entry) do
+  --   print(key .. " = " .. tostring(value)) -- Concatenate and print
+  -- end
+  -- print(entry)
+  print(entry.detail)
+  print("end-------------------------------------------------------------")
   -- https://github.com/hrsh7th/nvim-cmp/issues/980#issuecomment-1121773499
   local label = vim_item.abbr
   local truncated_label = vim.fn.strcharpart(label, 0, MAX_LABEL_WIDTH)
