@@ -27,6 +27,7 @@ return {
           "jsonls",
           "just",
           "ts_ls",
+          "kotlin_lsp",
         },
         automatic_enable = {
           exclude = {
