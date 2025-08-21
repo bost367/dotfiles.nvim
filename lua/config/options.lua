@@ -32,6 +32,7 @@ opt.numberwidth = 3
 opt.ignorecase = true -- Enable ignore case for searching
 opt.smartcase = true -- Enable smart case for cearching (type uupercase while search to enable)
 
+opt.winborder = "rounded" -- Make every window rounded
 opt.completeopt = { "menu", "menuone", "noselect", "noinsert" }
 opt.clipboard = "unnamedplus" -- Enable OS buffer
 opt.cmdheight = 0 -- Hide current mode from command line
