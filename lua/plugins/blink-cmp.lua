@@ -45,8 +45,15 @@ return {
       providers = {
         lsp = { name = "lsp" },
         buffer = { name = "buf" },
+        cmdline = { name = "cmd" },
       },
     },
+    -- components = {
+    --   source_name = {
+    --     ellipsis = true, -- alignment
+    --     width = { fill = true },
+    --   },
+    -- },
     appereance = {
       -- dosnot work
       kind_icons = {
