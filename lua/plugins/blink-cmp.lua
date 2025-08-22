@@ -52,7 +52,7 @@ return {
     --     width = { fill = true },
     --   },
     -- },
-    appereance = {
+    appearance = {
       -- dosnot work
       kind_icons = {
         Text = " ",
