@@ -4,7 +4,7 @@ return {
   opts = {
     hide_if_all_visible = false,
     handle = {
-      blend = 80,
+      blend = 0,
     },
     handlers = {
       cursor = false,
