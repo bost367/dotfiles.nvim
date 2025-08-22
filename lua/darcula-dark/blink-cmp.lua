@@ -1,13 +1,12 @@
 local hi = vim.api.nvim_set_hl
 local palette = require("darcula-dark.palette")
 
-hi(0, "BlinkCmpMenu", { bg = palette.editor.background, fg = palette.editor.text })
+hi(0, "BlinkCmpMenu", { bg = palette.editor.background, fg = "#B6BFB8" })
 hi(0, "BlinkCmpMenuBorder", { bg = palette.editor.background, fg = palette.editor.separator })
--- hi(0, "BlinkCmpScrollBarThumb", { fg = palette.scroll_bar. })
-hi(0, "BlinkCmpScrollBarGutter", { fg = "#000000" }) -- find what is it
+hi(0, "BlinkCmpScrollBarGutter", { fg = "#616264" })
 hi(0, "BlinkCmpLabel", { fg = palette.editor.text })
 hi(0, "BlinkCmpLabelDeprecated", { fg = palette.editor.text, strikethrough = true })
-hi(0, "BlinkCmpLabelMatch", { fg = palette.interface.active_element }) -- checkcagain
+hi(0, "BlinkCmpLabelMatch", { fg = "#538AF7" }) -- checkcagain
 -- hi(0, "BlinkCmpLabelDetail", { fg = palette.interface.hint_text })  -- has no effect
 -- hi(0, "BlinkCmpLabelDescription", { fg = palette.interface.hint_text }) -- has no effect
 hi(0, "BlinkCmpSource", { fg = palette.interface.hint_text })

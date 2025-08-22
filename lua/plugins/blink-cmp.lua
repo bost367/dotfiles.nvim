@@ -4,7 +4,7 @@ return {
   opts = {
     keymap = {
       preset = "none",
-      ["<C-Space>"] = { "show", "show_documentation" },
+      ["<C-Space>"] = { "show" },
       ["<C-k>"] = { "select_prev" },
       ["<C-j>"] = { "select_next" },
       ["<CR>"] = { "accept", "fallback" },
@@ -13,23 +13,17 @@ return {
     },
     completion = {
       documentation = { auto_show = true },
-      keyword = {
-        -- range = "full",
-      },
       list = {
-        -- max_items = 10,
         selection = {
           auto_insert = false,
         },
       },
       menu = {
         min_width = 45,
-        max_height = 25,
-        scrolloff = 5,
-        -- Whether to automatically show the window when new completion items are available
-        auto_show = true,
+        max_height = 15,
+        scrolloff = 2,
+        -- scrollbar = false,
         draw = {
-          -- align_to = "none",
           padding = 1,
           columns = {
             { "kind_icon", "label", gap = 1 },
@@ -46,14 +40,7 @@ return {
         cmdline = { name = "cmd" },
       },
     },
-    -- components = {
-    --   source_name = {
-    --     ellipsis = true, -- alignment
-    --     width = { fill = true },
-    --   },
-    -- },
     appearance = {
-      -- dosnot work
       kind_icons = {
         Text = " ",
         Method = "󰰑 ",
