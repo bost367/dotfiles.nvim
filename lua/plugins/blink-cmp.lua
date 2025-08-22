@@ -1,7 +1,5 @@
 return {
   "saghen/blink.cmp",
-  -- optional: provides snippets for the snippet source
-  dependencies = { "rafamadriz/friendly-snippets" },
   version = "1.*",
   opts = {
     keymap = {
@@ -9,7 +7,7 @@ return {
       ["<C-Space>"] = { "show", "show_documentation" },
       ["<C-k>"] = { "select_prev" },
       ["<C-j>"] = { "select_next" },
-      -- ["<CR>"] = { "accept" },
+      ["<CR>"] = { "accept", "fallback" },
       -- ["???"] = { "scroll_documentation_up" },
       -- ["??"] = { "scroll_documentation_down" },
     },
