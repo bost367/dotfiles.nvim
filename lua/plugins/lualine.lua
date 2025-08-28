@@ -16,7 +16,7 @@ local function buffer_mode(mode)
   if icon ~= nil then
     return icon
   else
-    return ""
+    return mode
   end
 end
 
