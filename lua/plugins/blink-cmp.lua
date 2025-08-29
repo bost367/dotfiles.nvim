@@ -24,16 +24,31 @@ return {
         scrolloff = 2,
         scrollbar = false,
         draw = {
+          align_to = "none",
           padding = 1,
           columns = {
             { "kind_icon", "label", "label_description", gap = 1 },
             { "source_name" },
           },
+          -- columns = {
+          --   { "kind_icon", "label_detailsss", gap = 1 },
+          --   { "source_name" },
+          -- },
+          components = {
+            -- https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/
+            -- lua/blink/cmp/types.lua
+            label_detailsss = {
+              text = function(ctx)
+                -- return ctx.item.detail
+                return ctx.item.labelDetails
+              end,
+            },
+          },
         },
       },
     },
     sources = {
-      default = { "lsp", "buffer" },
+      default = { "lsp" },
       providers = {
         lsp = { name = "lsp" },
         buffer = { name = "buf" },
