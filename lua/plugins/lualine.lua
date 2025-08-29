@@ -5,7 +5,8 @@ local modes = {
   ["NORMAL"] = " ",
   ["INSERT"] = " ",
   ["VISUAL"] = "󰒉 ",
-  ["COMMAND"] = " ",
+  ["COMMAND"] = " ",
+  ["TERMINAL"] = " ",
   ["REPLACE"] = " ",
 }
 
