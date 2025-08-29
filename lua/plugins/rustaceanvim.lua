@@ -14,6 +14,9 @@ return {
               closingBraceHints = { enable = false },
               parameterHints = { enable = false },
             },
+            completion = {
+              fullFunctionSignatures = { enable = true },
+            },
           },
         },
       },
