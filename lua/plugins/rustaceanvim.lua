@@ -16,6 +16,7 @@ return {
             },
             completion = {
               fullFunctionSignatures = { enable = true },
+              callable = { snippets = "add_parentheses" },
             },
           },
         },
