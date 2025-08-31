@@ -46,7 +46,10 @@ vim.keymap.set("n", "fo", fzf.lsp_workspace_symbols, { desc = "Find workspace sy
 vim.keymap.set("n", "fd", fzf.diagnostics_workspace, { desc = "Find diagnostics" })
 vim.keymap.set("n", "gD", fzf.lsp_declarations, { desc = "Go to [D]eclarations (e.g. interface method)" })
 vim.keymap.set("n", "gI", fzf.lsp_implementations, { desc = "Go to implementation" })
-vim.keymap.set("n", "gd", fzf.lsp_definitions, { desc = "Go to definition" })
+
+vim.keymap.set("n", "gd", function()
+  fzf.lsp_definitions({ ignore_current_line = true })
+end, { nowait = true, desc = "Go to definition" })
 
 vim.keymap.set("n", "ff", function()
   local project_root = vim.fs.root(0, { ".git" })
