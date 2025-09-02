@@ -33,6 +33,7 @@ vim.lsp.config("lua_ls", {
           -- here.
           "${3rd}/luv/library",
           -- '${3rd}/busted/library'
+          "~/.local/share/nvim/lazy/blink.cmp/lua",
         },
         -- Or pull in all of 'runtimepath'.
         -- NOTE: this is a lot slower and will cause issues when working on
