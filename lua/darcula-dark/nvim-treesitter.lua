@@ -98,3 +98,6 @@ hi(0, "@punctuation.delimiter.xml", { fg = palette.lang.default.str })
 
 -- Protobuf
 hi(0, "@string.special.proto", { fg = palette.lang.default.str })
+
+-- Rust
+hi(0, "@function.macro.rust", { fg = palette.lang.default.metadata })

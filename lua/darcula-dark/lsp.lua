@@ -22,6 +22,8 @@ hi(0, "@lsp.type.formatSpecifier", { fg = palette.lang.default.keyword })
 hi(0, "@lsp.type.operator", { fg = palette.lang.default.keyword })
 hi(0, "@lsp.type.builtinType", { fg = palette.lang.default.keyword })
 hi(0, "@lsp.type.label", { fg = palette.lang.default.label })
+-- https://github.com/stsewd/tree-sitter-comment/issues/22#issuecomment-1575804439
+hi(0, "@lsp.type.comment", {})
 
 -- Highlight & Italic static function declaration and invocation
 vim.api.nvim_create_autocmd("LspTokenUpdate", {
@@ -34,29 +36,14 @@ vim.api.nvim_create_autocmd("LspTokenUpdate", {
 })
 
 -- Rust (rust-analyzer)
-hi(0, "MutableLocalVariable", { fg = palette.lang.default.local_variable, underline = true })
-hi(0, "MutableStaticVariable", { fg = palette.lang.default.constant, underline = true })
-hi(0, "MutablelSelfParameter", { fg = palette.lang.default.keyword, underline = true })
-hi(0, "UnsafeCall", { bg = palette.lang.rust.unsafe })
-
 hi(0, "@lsp.type.lifetime.rust", { fg = palette.lang.rust.lifetime })
-hi(0, "@lsp.type.selfTypeKeyword.rust", { fg = palette.lang.default.keyword })
-
-vim.api.nvim_create_autocmd("LspTokenUpdate", {
-  callback = function(args)
-    local token = args.data.token
-    -- Underscore mutable variables
-    if token.modifiers.mutable then
-      if token.type == "selfKeyword" then
-        vim.lsp.semantic_tokens.highlight_token(token, args.buf, args.data.client_id, "MutablelSelfParameter")
-      elseif token.type == "variable" then
-        vim.lsp.semantic_tokens.highlight_token(token, args.buf, args.data.client_id, "MutableLocalVariable")
-      elseif token.type == "static" then
-        vim.lsp.semantic_tokens.highlight_token(token, args.buf, args.data.client_id, "MutableStaticVariable")
-      end
-    end
-  end,
-})
+hi(0, "@lsp.typemod.method.unsafe.rust", { bg = palette.lang.rust.unsafe })
+hi(0, "@lsp.typemod.function.unsafe.rust", { bg = palette.lang.rust.unsafe })
+hi(0, "@lsp.typemod.static.unsafe.rust", { bg = palette.lang.rust.unsafe })
+hi(0, "@lsp.typemod.selfKeyword.mutable.rust", { underline = true })
+hi(0, "@lsp.typemod.parameter.mutable.rust", { underline = true })
+hi(0, "@lsp.typemod.variable.mutable.rust", { underline = true })
+hi(0, "@lsp.typemod.static.mutable.rust", { underline = true })
 
 -- Protobuf (buf)
 hi(0, "@lsp.type.type.proto", { fg = palette.lang.default.keyword })

@@ -1,6 +1,7 @@
 return {
   icon = "#CED0D6", -- almost any icon: gradle, git, services etc.
   link = "#56A8F5", -- url or open new window
+  dirty_blue = "#2E436E", -- same as coursor line
   editor = {
     background = "#1E1F22",
     separator = "#393B40", -- split dark windows
@@ -88,6 +89,7 @@ return {
     rust = {
       lifetime = "#20999D",
       macro = "#FFC66D",
+      unsafe = "#4D3E3E",
     },
     diff = {
       added = "#2A4436",
