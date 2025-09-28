@@ -3,7 +3,7 @@ local hi = vim.api.nvim_set_hl
 local grey_text = "#9B9DA5"
 
 hi(0, "LuaLineDiffAdd", { fg = palette.file_manager.vcs.added_file })
-hi(0, "LuaLineDiffChange", { fg = palette.file_manager.vcs.changed_file })
+hi(0, "LuaLineDiffChange", { fg = palette.file_manager.vcs.modified_file })
 hi(0, "LuaLineDiffDelete", { fg = palette.file_manager.vcs.deleted_file })
 
 return {
