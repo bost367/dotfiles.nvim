@@ -46,11 +46,11 @@ return {
   file_manager = {
     vcs = {
       added_file = "#73BD79",
-      changed_file = "#70AEFF",
+      modified_file = "#70AEFF",
       deleted_file = "#6F737A",
       ignored_file = "#D69A6B",
       staged_file = "#Df8984",
-      unknown_file = "#E88F89",
+      untracked_file = "#E88F89",
       merge_conflict_file = "#DE6A66",
     },
   },

@@ -132,19 +132,19 @@ return {
   },
   -- modified file indicator
   modified = {
-    fg = palette.file_manager.vcs.changed_file,
+    fg = palette.file_manager.vcs.modified_file,
     bg = palette.editor.background,
     sp = palette.editor.separator,
     underline = true,
   },
   modified_visible = {
-    fg = palette.file_manager.vcs.changed_file,
+    fg = palette.file_manager.vcs.modified_file,
     bg = palette.editor.background,
     sp = palette.editor.separator,
     underline = true,
   },
   modified_selected = {
-    fg = palette.file_manager.vcs.changed_file,
+    fg = palette.file_manager.vcs.modified_file,
     bg = palette.editor.background,
     sp = palette.editor.separator,
     underline = true,
