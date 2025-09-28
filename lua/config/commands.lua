@@ -47,28 +47,30 @@ autocmd("LspAttach", {
   end,
 })
 
-autocmd({ "BufWinEnter" }, {
+autocmd("BufWinEnter", {
   group = custom_group,
   desc = "Return cursor to where it was last time closing the file.",
   pattern = "*",
   command = 'silent! normal! g`"zv',
 })
 
-local function prodject_dir()
-  local git_dir = vim.fn.finddir(".git", ".;")
-  if git_dir ~= "" then
-    return git_dir .. "/.."
-  else
-    local file_name = vim.api.nvim_buf_get_name(0)
-    return vim.fn.fnamemodify(file_name, ":p:h")
-  end
-end
+autocmd("BufEnter", {
+  group = custom_group,
+  desc = "Change cwd to git root directory if repository exests.",
+  pattern = "*",
+  callback = function()
+    local root = vim.fs.root(0, ".git")
+    if root then
+      vim.api.nvim_set_current_dir(root)
+    end
+  end,
+})
 
 local is_explorer_init = false
 user_command("ExplorerToggle", function()
   if not is_explorer_init then
     is_explorer_init = true
-    nvim_tree_api.tree.open({ path = prodject_dir() })
+    nvim_tree_api.tree.open()
   elseif not nvim_tree_api.tree.is_visible() then
     nvim_tree_api.tree.open()
   elseif nvim_tree_api.tree.is_tree_buf() then
