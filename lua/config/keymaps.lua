@@ -51,15 +51,8 @@ vim.keymap.set("n", "gd", function()
   fzf.lsp_definitions({ ignore_current_line = true })
 end, { nowait = true, desc = "Go to definition" })
 
-vim.keymap.set("n", "ff", function()
-  local project_root = vim.fs.root(0, { ".git" })
-  fzf.files({ cwd = project_root })
-end, { desc = "Find files" })
-
-vim.keymap.set("n", "fif", function()
-  local project_root = vim.fs.root(0, { ".git" })
-  fzf.live_grep({ cwd = project_root })
-end, { desc = "Find in files" })
+vim.keymap.set("n", "ff", fzf.files, { desc = "Find files" })
+vim.keymap.set("n", "fif", fzf.live_grep, { desc = "Find in files" })
 
 vim.keymap.set("n", "gr", function()
   fzf.lsp_references({ ignore_current_line = true })
