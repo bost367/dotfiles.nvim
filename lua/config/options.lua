@@ -48,6 +48,8 @@ opt.termguicolors = true -- Enable true colors
 cmd("syntax enable") -- Syntax highlighting
 cmd.colorscheme("darcula-dark")
 
+opt.swapfile = false -- Disable swap files
+
 -- disable netrw plugin (builtin filemanager)
 -- WARNING: Disabling netrw might cause issues with other plugins or
 -- functionalities that rely on it, such as opening tar files or remote filesystems.

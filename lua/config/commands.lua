@@ -1,6 +1,5 @@
 local autocmd = vim.api.nvim_create_autocmd
 local user_command = vim.api.nvim_create_user_command
-local nvim_tree_api = require("nvim-tree.api")
 
 local custom_group = vim.api.nvim_create_augroup("Custom auto-commands", { clear = true })
 
@@ -66,20 +65,3 @@ autocmd("BufEnter", {
   end,
 })
 
-local is_explorer_init = false
-user_command("ExplorerToggle", function()
-  if not is_explorer_init then
-    is_explorer_init = true
-    nvim_tree_api.tree.open()
-  elseif not nvim_tree_api.tree.is_visible() then
-    nvim_tree_api.tree.open()
-  elseif nvim_tree_api.tree.is_tree_buf() then
-    nvim_tree_api.tree.close()
-  else
-    nvim_tree_api.tree.focus()
-  end
-end, {})
-
-user_command("ExplorerReveal", function()
-  nvim_tree_api.tree.find_file({ open = true, focus = true })
-end, {})
