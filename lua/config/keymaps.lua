@@ -15,7 +15,7 @@ end
 -- Custom binding
 map({ "n", "x" }, "gh", "_", opts({ desc = "Go to the first non-blank character" }))
 map({ "n", "x" }, "gl", "g_", opts({ desc = "Go to the last non-blank character" }))
-map("n", "<D-l>", vim.cmd.Format, opts({ desc = "Format buffer" }))
+map("n", "<leader>l", vim.cmd.Format, opts({ desc = "Format buffer" }))
 map("n", "tt", function()
   vim.diagnostic.open_float({
     focusable = false,
@@ -41,28 +41,35 @@ end, opts({ desc = "Close buffer" }))
 
 -- Fzf
 local fzf = require("fzf-lua")
-vim.keymap.set("n", "fd", fzf.diagnostics_workspace, { desc = "Find diagnostics" })
-vim.keymap.set("n", "fo", fzf.lsp_workspace_symbols, { desc = "Find workspace symb[o]ls" })
-vim.keymap.set("n", "fd", fzf.diagnostics_workspace, { desc = "Find diagnostics" })
-vim.keymap.set("n", "gD", fzf.lsp_declarations, { desc = "Go to [D]eclarations (e.g. interface method)" })
-vim.keymap.set("n", "gI", fzf.lsp_implementations, { desc = "Go to implementation" })
+map("n", "fd", fzf.diagnostics_workspace, { desc = "Find diagnostics" })
+map("n", "fo", fzf.lsp_workspace_symbols, { desc = "Find workspace symb[o]ls" })
+map("n", "fd", fzf.diagnostics_workspace, { desc = "Find diagnostics" })
+map("n", "gD", fzf.lsp_declarations, { desc = "Go to [D]eclarations (e.g. interface method)" })
+map("n", "gI", fzf.lsp_implementations, { desc = "Go to implementation" })
+map("n", "ff", fzf.files, { desc = "Find files" })
+map("n", "fif", fzf.live_grep, { desc = "Find in files" })
+map("n", "<M-CR>", fzf.lsp_code_actions, { desc = "LSP code action" })
 
-vim.keymap.set("n", "gd", function()
+map("n", "gr", function()
+  fzf.lsp_references({ ignore_current_line = true })
+end, { nowait = true, desc = "Go to references" })
+
+map("n", "gd", function()
   fzf.lsp_definitions({ ignore_current_line = true })
 end, { nowait = true, desc = "Go to definition" })
 
-vim.keymap.set("n", "ff", fzf.files, { desc = "Find files" })
-vim.keymap.set("n", "fif", fzf.live_grep, { desc = "Find in files" })
-
-vim.keymap.set("n", "gr", function()
-  fzf.lsp_references({ ignore_current_line = true })
-end, { nowait = true, desc = "Go to references" })
+map("n", "<leader>r", vim.lsp.buf.rename, { desc = "LSP rename" })
 
 -- Resize window using <ctrl> arrow keys
 map("n", "<C-Up>", "<cmd>resize +2<cr>", opts({ desc = "Increase window height" }))
 map("n", "<C-Down>", "<cmd>resize -2<cr>", opts({ desc = "Decrease window height" }))
 map("n", "<C-Left>", "<cmd>vertical resize -2<cr>", opts({ desc = "Decrease window width" }))
 map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", opts({ desc = "Increase window width" }))
+
+map("n", "<C-k>", "<cmd>wincmd k<cr>", opts({ desc = "Move cursor to window below current" }))
+map("n", "<C-j>", "<cmd>wincmd j<cr>", opts({ desc = "Move cursor to window above current" }))
+map("n", "<C-h>", "<cmd>wincmd h<cr>", opts({ desc = "Move cursor to window left of current" }))
+map("n", "<C-l>", "<cmd>wincmd l<cr>", opts({ desc = "Move cursor to window right of current" }))
 
 -- Clear search with <esc>
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", opts({ desc = "Escape and clear hlsearch" }))
@@ -75,5 +82,8 @@ map("n", "<leader>gdb", gitsigns.diffthis, opts({ desc = "Git diff buffer" }))
 map("n", "<leader>gdl", gitsigns.preview_hunk_inline, opts({ desc = "Git diff line" }))
 
 -- NvimTree
-map("n", "<D-1>", "<cmd>ExplorerToggle<cr>", opts({ desc = "Toggle neotree explorer" }))
-map("n", "<D-F1>1", "<cmd>ExplorerReveal<cr>", opts({ nowait = true, desc = "Focus on current file in explorer" }))
+local nvim_tree = require("nvim-tree.api")
+map("n", "<leader>1", nvim_tree.tree.toggle, opts({ desc = "Toggle neotree explorer" }))
+map("n", "<leader>!", function()
+  nvim_tree.tree.find_file({ open = true, focus = true })
+end, opts({ desc = "Focus on current file in explorer" }))
