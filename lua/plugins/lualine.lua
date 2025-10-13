@@ -42,7 +42,6 @@ return {
       component_separators = "",
       disabled_filetypes = {
         "trouble",
-        "NvimTree",
       },
     },
     sections = {
