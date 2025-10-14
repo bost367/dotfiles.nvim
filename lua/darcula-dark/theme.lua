@@ -33,6 +33,7 @@ hi(0, "SpellBad", { sp = palette.editor.diagnostic.spell, undercurl = true })
 hi(0, "SpellCap", { sp = palette.editor.diagnostic.spell, undercurl = true })
 hi(0, "SpellLocal", { sp = palette.editor.diagnostic.spell, undercurl = true })
 hi(0, "SpellRare", { sp = palette.editor.diagnostic.spell, undercurl = true })
+hi(0, "Folded", { bg = palette.editor.fold.bg, fg = palette.editor.fold.fg })
 
 -- Language
 hi(0, "Comment", { fg = palette.lang.default.comment })
