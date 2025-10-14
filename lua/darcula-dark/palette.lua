@@ -9,6 +9,10 @@ return {
     select = "#214283",
     search_select = "#114957",
     under_corsour = "#373B39",
+    fold = {
+      bg = "#393B41",
+      fg = "#868991",
+    },
     diagnostic = {
       ok = "#5B9761",
       error = "#FA6675",
@@ -49,6 +53,7 @@ return {
       modified_file = "#70AEFF",
       deleted_file = "#6F737A",
       ignored_file = "#D69A6B",
+      merged_file = "#CF84CF",
       staged_file = "#Df8984",
       untracked_file = "#E88F89",
       merge_conflict_file = "#DE6A66",
