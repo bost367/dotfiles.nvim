@@ -19,9 +19,6 @@ hi(0, "NvimTreeEmptyFolderName", { fg = palette.interface.text })
 hi(0, "NvimTreeOpenedFolderName", { fg = palette.interface.text })
 hi(0, "NvimTreeSymlinkFolderName", { fg = palette.interface.text })
 
-hi(0, "NvimTreeFileIcon", { fg = palette.interface.text })
-hi(0, "NvimTreeSymlinkIcon", { fg = palette.interface.text })
-
 hi(0, "NvimTreeModifiedIcon", { fg = palette.file_manager.vcs.modified_file })
 hi(0, "NvimTreeModifiedFileHL", { fg = palette.file_manager.vcs.modified_file })
 hi(0, "NvimTreeModifiedFolderHL", { fg = palette.file_manager.vcs.modified_file })
@@ -32,6 +29,8 @@ hi(0, "NvimTreeOpenedFolderIcon", { fg = folder_hl })
 hi(0, "NvimTreeClosedFolderIcon", { fg = folder_hl })
 hi(0, "NvimTreeFolderArrowClosed", { fg = folder_hl })
 hi(0, "NvimTreeFolderArrowOpen", { fg = folder_hl })
+hi(0, "NvimTreeFileIcon", { fg = folder_hl })
+hi(0, "NvimTreeSymlinkIcon", { fg = folder_hl })
 
 hi(0, "NvimTreeGitDeletedIcon", { fg = palette.file_manager.vcs.deleted_file })
 hi(0, "NvimTreeGitDirtyIcon", { fg = palette.file_manager.vcs.modified_file })
@@ -53,3 +52,6 @@ hi(0, "NvimTreeGitFolderIgnoredHL", { fg = palette.file_manager.vcs.ignored_file
 hi(0, "NvimTreeGitFolderNewHL", { fg = palette.file_manager.vcs.untracked_file })
 hi(0, "NvimTreeGitFolderRenamedHL", { fg = palette.file_manager.vcs.modified_file })
 hi(0, "NvimTreeGitFolderStagedHL", { fg = palette.file_manager.vcs.added_file })
+
+hi(0, "NvimTreeLiveFilterPrefix", { fg = folder_hl, bg = palette.editor.background })
+hi(0, "NvimTreeLiveFilterValue", { fg = palette.interface.text })

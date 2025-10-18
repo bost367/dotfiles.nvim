@@ -61,6 +61,13 @@ return {
       git_ignored = false,
       custom = { "^.git$" },
     },
+    live_filter = {
+      prefix = " : ",
+    },
+    actions = {
+      use_system_clipboard = true,
+      change_dir = { enable = false },
+    },
     ui = {
       confirm = {
         default_yes = true,
