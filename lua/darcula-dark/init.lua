@@ -1,4 +1,5 @@
 require("darcula-dark.blink-cmp")
+require("darcula-dark.diffview")
 require("darcula-dark.fzf-lua")
 require("darcula-dark.gitsigns")
 require("darcula-dark.lazy")

@@ -88,3 +88,28 @@ map("n", "<leader>1", nvim_tree.tree.toggle, opts({ desc = "Toggle neotree explo
 map("n", "<leader>!", function()
   nvim_tree.tree.find_file({ open = true, focus = true })
 end, opts({ desc = "Focus on current file in explorer" }))
+
+-- Diffview
+local function toggle_diffview(cmd)
+  if next(require("diffview.lib").views) == nil then
+    vim.cmd(cmd)
+  else
+    vim.cmd("DiffviewClose")
+  end
+end
+
+-- map("n", "<leader>9", "<cmd>DiffviewFileHistory<cr>", opts({ desc = "History for the current file" }))
+map("n", "<leader>9", function()
+  toggle_diffview("DiffviewFileHistory")
+end, opts({ desc = "Open git log" }))
+map("n", "<leader>0", function()
+  toggle_diffview("DiffviewOpen")
+end, opts({ desc = "Open current changes" }))
+
+-- This can be used to step through the changes of a single file (the current file).
+-- vim.keymap.set(
+-- 	'n',
+-- 	',hf',
+-- 	'<cmd>DiffviewFileHistory --follow %<cr>',
+-- 	{ desc = 'File history' }
+-- )

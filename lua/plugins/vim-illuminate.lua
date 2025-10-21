@@ -7,6 +7,9 @@ return {
         "qf",
         "trouble",
         "NvimTree",
+        "DiffviewFileHistory",
+        "DiffviewFiles",
+        "git",
       },
     })
   end,

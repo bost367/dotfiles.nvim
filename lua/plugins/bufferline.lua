@@ -19,6 +19,11 @@ return {
       offsets = {
         {
           filetype = "NvimTree",
+          separator = false,
+        },
+        {
+          filetype = "DiffviewFiles",
+          separator = false,
         },
       },
     },

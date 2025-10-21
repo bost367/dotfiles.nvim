@@ -97,8 +97,8 @@ return {
       unsafe = "#4D3E3E",
     },
     diff = {
-      added = "#2A4436",
-      changed = "#283641",
+      added = "#294436",
+      changed = "#283541",
       changed_important = "#385570",
       deleted = "#484A4A",
     },

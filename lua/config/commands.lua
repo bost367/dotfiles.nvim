@@ -22,6 +22,7 @@ autocmd("FileType", {
     "help",
     "gitsigns-blame",
     "qf",
+    "git",
   },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
@@ -29,6 +30,20 @@ autocmd("FileType", {
       buffer = event.buf,
       silent = true,
       desc = "Quit buffer",
+    })
+  end,
+})
+
+autocmd("FileType", {
+  group = custom_group,
+  desc = "Close diffview <q>.",
+  pattern = {
+    "DiffviewFileHistory",
+    "DiffviewFiles",
+  },
+  callback = function(_)
+    vim.keymap.set("n", "q", "<cmd>DiffviewClose<cr>", {
+      desc = "Close Diffview",
     })
   end,
 })
@@ -64,4 +79,3 @@ autocmd("BufEnter", {
     end
   end,
 })
-
