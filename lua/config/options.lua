@@ -38,7 +38,7 @@ opt.clipboard = "unnamedplus" -- Enable OS buffer
 opt.cmdheight = 0 -- Hide current mode from command line
 opt.updatetime = 250 -- Delay microseconds (e.g for pop up appearance)
 opt.fillchars:append({
-  diff = " ", -- Repalce '-' caracter for diff
+  diff = "╱", -- Repalce '-' caracter for diff
   eob = " ", -- Replace '~' character on empty lines in number lines column
 })
 cmd("filetype plugin indent on") -- Try to recognize filetypes and load rel' plugins

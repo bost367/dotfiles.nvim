@@ -9,6 +9,9 @@ return {
         "NvimTree",
         "lazy",
         "mason",
+        "DiffviewFileHistory",
+        "DiffviewFiles",
+        "git",
       },
     })
   end,
