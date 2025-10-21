@@ -19,10 +19,6 @@ hi(0, "Visual", { bg = palette.editor.select })
 hi(0, "Search", { bg = palette.editor.search_select })
 hi(0, "CurSearch", { bg = palette.editor.select })
 hi(0, "Title", { fg = palette.interface.text, bold = true })
-hi(0, "DiffAdd", { bg = palette.lang.diff.added })
-hi(0, "DiffChange", { bg = palette.lang.diff.changed })
-hi(0, "DiffDelete", { bg = palette.lang.diff.deleted })
-hi(0, "DiffText", { bg = palette.lang.diff.changed_important })
 hi(0, "ErrorMsg", { fg = palette.editor.diagnostic.error })
 hi(0, "WarningMesage", { fg = palette.editor.diagnostic.warn })
 hi(0, "Special", { fg = palette.lang.default.keyword })
@@ -35,6 +31,13 @@ hi(0, "SpellLocal", { sp = palette.editor.diagnostic.spell, undercurl = true })
 hi(0, "SpellRare", { sp = palette.editor.diagnostic.spell, undercurl = true })
 hi(0, "Folded", { bg = palette.editor.fold.bg, fg = palette.editor.fold.fg })
 hi(0, "NonText", { fg = palette.editor.separator })
+
+-- Diff files
+-- https://github.com/neovim/neovim/issues/9800
+hi(0, "DiffAdd", { bg = palette.lang.diff.added })
+hi(0, "DiffChange", { bg = palette.lang.diff.changed })
+hi(0, "DiffDelete", { bg = palette.lang.diff.deleted })
+hi(0, "DiffText", { bg = palette.lang.diff.changed_important })
 
 -- Language
 hi(0, "Comment", { fg = palette.lang.default.comment })

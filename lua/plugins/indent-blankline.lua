@@ -11,5 +11,8 @@ return {
       show_end = false,
       show_exact_scope = true,
     },
+    exclude = {
+      filetypes = { "git" },
+    },
   },
 }
