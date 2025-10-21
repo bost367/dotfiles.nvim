@@ -52,3 +52,16 @@ hi(0, "gitHead", { fg = palette.lang.default.text })
 -- help menu
 hi(0, "DiffviewDim1", { fg = palette.interface.hint_text }) -- git log option
 hi(0, "DiffviewSecondary", { fg = palette.interface.hint_text }) -- hot key combination
+
+-- hi(0, "DiffviewFileHistoryPanel", { fg = palette.interface.background })
+-- hi(0, "DiffviewReflogSelector", { fg = palette.editor.diagnostic.error })
+-- hi(0, "DiffviewEndOfBuffer", { fg = palette.editor.diagnostic.error })
+-- hi(0, "gitDiff", { fg = palette.lang.default.text })
+-- hi(0, "diffRemoved", { fg = palette.file_manager.vcs.deleted_file })
+-- hi(0, "diffAdded", { fg = palette.file_manager.vcs.added_file })
+-- hi(0, "diffChanged", { fg = palette.file_manager.vcs.modified_file })
+-- hi(0, "gitDiffMege", { fg = palette.file_manager.vcs.modified_file })
+-- hi(0, "gitNotesHeader", { fg = palette.file_manager.vcs.modified_file })
+-- hi(0, "DiffviewStatusLineNC", { bg = palette.editor.diagnostic.error })
+-- hi(0, "DiffviewStatusLine", { bg = palette.editor.diagnostic.error })
+-- hi(0, "DiffviewSignColumn", { bg = palette.editor.diagnostic.error })
