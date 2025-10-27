@@ -1,13 +1,10 @@
 local function custom_on_attach(bufnr)
   local api = require("nvim-tree.api")
-
   local function opts(desc)
     return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
   end
-
   -- default mappings
   api.config.mappings.default_on_attach(bufnr)
-
   -- custom mappings
   vim.keymap.set("n", "l", api.node.open.edit, opts("Open"))
   vim.keymap.set("n", "h", api.node.navigate.parent_close, opts("Close Directiry"))
@@ -16,9 +13,24 @@ end
 return {
   "nvim-tree/nvim-tree.lua",
   version = "*",
-  lazy = false,
   dependencies = {
     "nvim-tree/nvim-web-devicons",
+  },
+  keys = {
+    {
+      "<leader>1",
+      function()
+        require("nvim-tree.api").tree.toggle()
+      end,
+      desc = "Toggle neotree explorer",
+    },
+    {
+      "<leader>!",
+      function()
+        require("nvim-tree.api").tree.find_file({ open = true, focus = true })
+      end,
+      desc = "Focus on current file in explorer",
+    },
   },
   opts = {
     on_attach = custom_on_attach,

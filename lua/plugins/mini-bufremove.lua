@@ -4,4 +4,13 @@
 return {
   "echasnovski/mini.bufremove",
   version = "*",
+  keys = {
+    {
+      "<D-w>",
+      function()
+        require("mini.bufremove").delete(0)
+      end,
+      desc = "Close buffer",
+    },
+  },
 }
