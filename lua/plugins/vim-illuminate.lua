@@ -7,6 +7,8 @@ return {
         "qf",
         "trouble",
         "NvimTree",
+        "lazy",
+        "mason",
       },
     })
   end,

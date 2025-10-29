@@ -5,6 +5,7 @@ return {
     hide_if_all_visible = false,
     handle = {
       blend = 0,
+      highlight = "ScrollbarHandle",
     },
     handlers = {
       cursor = false,
@@ -14,9 +15,9 @@ return {
       "dropbar_menu",
       "dropbar_menu_fzf",
       "DressingInput",
-      "noice",
       "prompt",
       "NvimTree",
+      "lazy",
     },
     marks = {
       Error = {
