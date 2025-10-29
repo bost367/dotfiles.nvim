@@ -36,7 +36,7 @@ return {
     },
   },
   scroll_bar = {
-    background = "#525355",
+    background = "#464648",
     vcs = {
       added_line = "#447152",
       changed_line = "#43698D",
@@ -49,14 +49,14 @@ return {
   },
   file_manager = {
     vcs = {
-      added_file = "#73BD79",
-      modified_file = "#70AEFF",
-      deleted_file = "#6F737A",
-      ignored_file = "#D69A6B",
-      merged_file = "#CF84CF",
+      added_file = "#629755",
+      modified_file = "#6897BB",
+      deleted_file = "#6C6C6C",
+      ignored_file = "#848504",
+      merged_file = "#9876AA",
       staged_file = "#Df8984",
-      untracked_file = "#E88F89",
-      merge_conflict_file = "#DE6A66",
+      untracked_file = "#D1675A",
+      merge_conflict_file = "#D5756C",
     },
   },
   interface = {
@@ -66,7 +66,7 @@ return {
     background = "#2B2D30",
     cursor_line = "#2E436E",
     border = "#1E1F22", -- inactive element
-    active_element = "#3975F1", -- blue
+    active_element = "#3574F1", -- blue
     popup_window = "#393B40",
   },
   lang = {
@@ -97,8 +97,8 @@ return {
       unsafe = "#4D3E3E",
     },
     diff = {
-      added = "#2A4436",
-      changed = "#283641",
+      added = "#294436",
+      changed = "#283541",
       changed_important = "#385570",
       deleted = "#484A4A",
     },

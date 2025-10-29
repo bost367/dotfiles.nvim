@@ -1,7 +1,7 @@
 local hi = vim.api.nvim_set_hl
 local palette = require("darcula-dark.palette")
 
-hi(0, "ScrollbarHandle", { bg = palette.scroll_bar.background, fg = palette.scroll_bar.scroll_bar })
+hi(0, "ScrollbarHandle", { bg = palette.scroll_bar.background })
 hi(0, "ScrollbarError", { fg = palette.scroll_bar.diagnostic.error })
 hi(0, "ScrollbarErrorHandle", { bg = palette.scroll_bar.background, fg = palette.scroll_bar.diagnostic.error })
 hi(0, "ScrollbarWarn", { fg = palette.scroll_bar.diagnostic.warn })

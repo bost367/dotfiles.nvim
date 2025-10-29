@@ -8,6 +8,7 @@ autocmd("FileType", {
     "help",
     "gitsigns-blame",
     "qf",
+    "mason",
   },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
