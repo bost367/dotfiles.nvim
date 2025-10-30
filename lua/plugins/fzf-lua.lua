@@ -19,6 +19,14 @@ return {
       desc = "Find in files",
     },
     {
+      "fif",
+      function()
+        require("fzf-lua").grep_visual()
+      end,
+      mode = "v",
+      desc = "Find visual selection in files",
+    },
+    {
       "fo",
       function()
         require("fzf-lua").lsp_workspace_symbols()
