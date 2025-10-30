@@ -21,12 +21,17 @@ opt.spelllang = { "en_us", "ru" }
 
 -- cursor
 opt.cursorline = true
-opt.ruler = true -- Show cursor position in status bar
 opt.scrolloff = 5
 
--- line number
+-- gutter
 opt.number = true
 opt.numberwidth = 3
+opt.signcolumn = "yes"
+opt.statuscolumn = "%l %s│"
+opt.ruler = true -- Show cursor position in status bar
+-- vim.o.signcolumn = 'auto' -- this is what you seem to be using.
+-- vim.o.signcolumn = 3 -- will use 3 columns.
+-- vim.o.signcolumn = 'number' -- will display signs in the number column.
 
 -- ignorecase search
 opt.ignorecase = true -- Enable ignore case for searching
