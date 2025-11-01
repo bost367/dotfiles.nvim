@@ -31,6 +31,7 @@ hi(0, "SpellLocal", { sp = palette.editor.diagnostic.spell, undercurl = true })
 hi(0, "SpellRare", { sp = palette.editor.diagnostic.spell, undercurl = true })
 hi(0, "Folded", { bg = palette.editor.fold.bg, fg = palette.editor.fold.fg })
 hi(0, "NonText", { fg = palette.editor.separator })
+hi(0, "StatusLine", { bg = palette.editor.background })
 
 -- Diff files
 -- https://github.com/neovim/neovim/issues/9800
