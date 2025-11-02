@@ -9,9 +9,9 @@ hi(0, "@lsp.type.method", { fg = palette.lang.default.function_call })
 hi(0, "@lsp.typemod.method.declaration", { fg = palette.lang.default.function_decaration })
 hi(0, "@lsp.typemod.function.declaration", { fg = palette.lang.default.function_decaration })
 hi(0, "@lsp.type.function", { fg = palette.lang.default.function_call })
-hi(0, "@lsp.type.number", { fg = palette.lang.default.digit })
-hi(0, "@lsp.type.namespace", { fg = palette.lang.default.text })
-hi(0, "@lsp.type.parameter", { fg = palette.lang.default.text })
+hi(0, "@lsp.type.number", { fg = palette.lang.default.number })
+hi(0, "@lsp.type.namespace", { fg = palette.lang.default.foreground })
+hi(0, "@lsp.type.parameter", { fg = palette.lang.default.foreground })
 hi(0, "@lsp.type.property", { fg = palette.lang.default.constant })
 hi(0, "@lsp.type.variable", { fg = palette.lang.default.local_variable })
 hi(0, "@lsp.type.keyword", { fg = palette.lang.default.keyword })
@@ -29,6 +29,7 @@ hi(0, "@lsp.type.comment", {})
 vim.api.nvim_create_autocmd("LspTokenUpdate", {
   callback = function(args)
     local token = args.data.token
+    hi(0, "StaticFunction", { fg = palette.lang.default.function_decaration, italic = true })
     if token.type == "function" and token.modifiers.static then
       vim.lsp.semantic_tokens.highlight_token(token, args.buf, args.data.client_id, "StaticFunction")
     end

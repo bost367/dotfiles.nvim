@@ -1,13 +1,16 @@
 return {
   icon = "#CED0D6", -- almost any icon: gradle, git, services etc.
   link = "#56A8F5", -- url or open new window
-  dirty_blue = "#2E436E", -- same as coursor line
+  hint_text = "#6F737A",
+  -- dirty_blue = "#2E436E", -- same as coursor line
   editor = {
     background = "#1E1F22",
+    foreground = "#BCBEC4",
     separator = "#393B40", -- split dark windows
     cursor_line = "#26282E",
-    select = "#214283",
-    search_select = "#114957",
+    selected_area = "#214283",
+    current_match = "#214283",
+    matching_text = "#124957",
     under_corsour = "#373B39",
     fold = {
       bg = "#393B41",
@@ -28,6 +31,8 @@ return {
   },
   gutter_bar = {
     line_number = "#4B5059",
+    cursor_line_fg = "#A1A3AB",
+    cursor_line_bg = "#26282E",
     vcs = {
       added_line = "#549159",
       changed_line = "#52423D",
@@ -60,21 +65,18 @@ return {
     },
   },
   interface = {
-    text = "#DFE1E5",
-    hint_text = "#6F737A",
-    search_select = "#BA9752",
     background = "#2B2D30",
+    foreground = "#DFE1E5",
+    search_select = "#BA9752",
     cursor_line = "#2E436E",
-    border = "#1E1F22", -- inactive element
     active_element = "#3574F1", -- blue
-    popup_window = "#393B40",
   },
   lang = {
     default = {
-      text = "#BCBEC4",
-      str = "#6AAB73",
+      foreground = "#BCBEC4",
+      string = "#6AAB73",
       keyword = "#CF8E6D",
-      digit = "#2AACB8",
+      number = "#2AACB8",
       function_decaration = "#00AAFF",
       function_call = "#BCBEC4",
       property = "#C77DBB",
@@ -83,13 +85,12 @@ return {
       generic = "#16BAAC",
       struct = "#BCBEC4",
       local_variable = "#BCBEC4",
-      argument = "#BCBEC4", -- function, constructure, etc.
       label = "#32B8AF",
       comment = "#7A7E85",
       comment_documentation = "#5F826B",
       comment_todo = "#8BB33D",
-      inline_hint_type_bg = "#2D2E32",
-      inline_hint_type_fg = "#868A91",
+      inline_hint_bg = "#2D2E32",
+      inline_hint_fg = "#868A91",
     },
     rust = {
       lifetime = "#20999D",

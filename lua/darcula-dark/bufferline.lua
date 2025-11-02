@@ -19,7 +19,7 @@ hi(0, "BufferLineErrorVisible", {
   undercurl = true,
 })
 hi(0, "BufferLineErrorSelected", {
-  fg = palette.interface.text,
+  fg = palette.interface.foreground,
   bg = palette.editor.background,
   sp = palette.editor.diagnostic.error,
   undercurl = true,
@@ -65,7 +65,7 @@ return {
     underline = true,
   },
   buffer_selected = {
-    fg = palette.interface.text,
+    fg = palette.interface.foreground,
     bg = palette.editor.background,
     sp = palette.editor.separator,
     underline = true,
@@ -119,13 +119,13 @@ return {
     underline = true,
   },
   close_button_visible = {
-    fg = palette.interface.hint_text,
+    fg = palette.hint_text,
     bg = palette.editor.background,
     sp = palette.editor.separator,
     underline = true,
   },
   close_button_selected = {
-    fg = palette.interface.hint_text,
+    fg = palette.hint_text,
     bg = palette.editor.background,
     sp = palette.editor.separator,
     underline = true,
@@ -158,7 +158,7 @@ return {
     italic = false,
   },
   duplicate_selected = {
-    fg = palette.interface.text,
+    fg = palette.interface.foreground,
     bg = palette.editor.background,
     sp = palette.editor.separator,
     underline = true,
@@ -179,7 +179,7 @@ return {
     underline = true,
   },
   tab_selected = {
-    fg = palette.interface.text,
+    fg = palette.interface.foreground,
     bg = palette.editor.background,
     sp = palette.editor.separator,
     underline = true,
