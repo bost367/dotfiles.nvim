@@ -1,23 +1,23 @@
 local hi = vim.api.nvim_set_hl
 local palette = require("darcula-dark.palette")
 
-hi(0, "NvimTreeNormal", { bg = palette.interface.background })
+hi(0, "NvimTreeNormal", { bg = palette.interface.background, fg = palette.interface.foreground })
 hi(0, "NvimTreeWinSeparator", { fg = palette.editor.background })
 hi(0, "NvimTreeCursorLine", { bg = palette.interface.cursor_line })
 hi(0, "NvimTreeNormalFloat", { bg = palette.interface.background })
 
-hi(0, "NvimTreeHiddenDisplay", { fg = palette.interface.hint_text })
+hi(0, "NvimTreeHiddenDisplay", { fg = palette.hint_text })
 
-hi(0, "NvimTreeImageFile", { fg = palette.interface.text })
-hi(0, "NvimTreeSpecialFile", { fg = palette.interface.text })
-hi(0, "NvimTreeSymlink", { fg = palette.interface.text })
-hi(0, "NvimTreeExecFile", { fg = palette.interface.text })
+hi(0, "NvimTreeImageFile", { fg = palette.interface.foreground })
+hi(0, "NvimTreeSpecialFile", { fg = palette.interface.foreground })
+hi(0, "NvimTreeSymlink", { fg = palette.interface.foreground })
+hi(0, "NvimTreeExecFile", { fg = palette.interface.foreground })
 
-hi(0, "NvimTreeRootFolder", { fg = palette.interface.text, bold = true })
-hi(0, "NvimTreeFolderName", { fg = palette.interface.text })
-hi(0, "NvimTreeEmptyFolderName", { fg = palette.interface.text })
-hi(0, "NvimTreeOpenedFolderName", { fg = palette.interface.text })
-hi(0, "NvimTreeSymlinkFolderName", { fg = palette.interface.text })
+hi(0, "NvimTreeRootFolder", { fg = palette.interface.foreground, bold = true })
+hi(0, "NvimTreeFolderName", { fg = palette.interface.foreground })
+hi(0, "NvimTreeEmptyFolderName", { fg = palette.interface.foreground })
+hi(0, "NvimTreeOpenedFolderName", { fg = palette.interface.foreground })
+hi(0, "NvimTreeSymlinkFolderName", { fg = palette.interface.foreground })
 
 hi(0, "NvimTreeModifiedIcon", { fg = palette.file_manager.vcs.modified_file })
 hi(0, "NvimTreeModifiedFileHL", { fg = palette.file_manager.vcs.modified_file })
@@ -54,4 +54,4 @@ hi(0, "NvimTreeGitFolderRenamedHL", { fg = palette.file_manager.vcs.modified_fil
 hi(0, "NvimTreeGitFolderStagedHL", { fg = palette.file_manager.vcs.added_file })
 
 hi(0, "NvimTreeLiveFilterPrefix", { fg = folder_hl, bg = palette.editor.background })
-hi(0, "NvimTreeLiveFilterValue", { fg = palette.interface.text })
+hi(0, "NvimTreeLiveFilterValue", { fg = palette.interface.foreground })
