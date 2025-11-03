@@ -1,36 +1,43 @@
-local hi = vim.api.nvim_set_hl
+local M = {}
 local palette = require("darcula-dark.palette")
 
-hi(0, "BlinkCmpMenu", { bg = palette.editor.background, fg = "#B6BFB8" })
-hi(0, "BlinkCmpMenuBorder", { bg = palette.editor.background, fg = palette.editor.separator })
-hi(0, "BlinkCmpMenuSelection", { bg = palette.interface.cursor_line })
-hi(0, "BlinkCmpScrollBarGutter", { fg = "#616264" })
-hi(0, "BlinkCmpLabel", { fg = palette.editor.foreground })
-hi(0, "BlinkCmpLabelDeprecated", { fg = palette.editor.foreground, strikethrough = true })
-hi(0, "BlinkCmpLabelMatch", { fg = "#538AF7" })
-hi(0, "BlinkCmpLabelDetail", { fg = palette.hint_text })
-hi(0, "BlinkCmpLabelDescription", { fg = palette.hint_text })
-hi(0, "BlinkCmpSource", { fg = palette.hint_text })
-hi(0, "BlinkCmpDoc", { bg = palette.editor.background, fg = palette.editor.separator })
-hi(0, "BlinkCmpDocBorder", { bg = palette.editor.background, fg = palette.editor.separator })
-hi(0, "BlinkCmpDocSeparator", { bg = palette.editor.background, fg = palette.editor.separator })
-hi(0, "BlinkCmpDocCursorLine", { bg = palette.editor.background, fg = palette.editor.separator })
+---@return table<any,Highliht>
+function M.groups()
+  return {
+    BlinkCmpMenu = { bg = palette.editor.background, fg = "#B6BFB8" },
+    BlinkCmpMenuBorder = { bg = palette.editor.background, fg = palette.editor.separator },
+    BlinkCmpMenuSelection = { bg = palette.interface.cursor_line },
+    BlinkCmpScrollBarGutter = { fg = "#616264" },
+    BlinkCmpLabel = { fg = palette.editor.foreground },
+    BlinkCmpLabelDeprecated = { fg = palette.editor.foreground, strikethrough = true },
+    BlinkCmpLabelMatch = { fg = "#538AF7" },
+    BlinkCmpLabelDetail = { fg = palette.hint_text },
+    BlinkCmpLabelDescription = { fg = palette.hint_text },
+    BlinkCmpSource = { fg = palette.hint_text },
+    BlinkCmpDoc = { bg = palette.editor.background, fg = palette.editor.separator },
+    BlinkCmpDocBorder = { bg = palette.editor.background, fg = palette.editor.separator },
+    BlinkCmpDocSeparator = { bg = palette.editor.background, fg = palette.editor.separator },
+    BlinkCmpDocCursorLine = { bg = palette.editor.background, fg = palette.editor.separator },
 
--- Icon colors
-hi(0, "BlinkCmpKind", { bg = palette.editor.background })
-hi(0, "BlinkCmpKindText", { fg = palette.icon })
-hi(0, "BlinkCmpKindVariable", { fg = palette.lang.default.keyword })
-hi(0, "BlinkCmpKindField", { fg = palette.lang.default.constant })
-hi(0, "BlinkCmpKindProperty", { fg = palette.lang.default.constant })
-hi(0, "BlinkCmpKindEnum", { fg = palette.lang.default.constant })
-hi(0, "BlinkCmpKindKeyword", { fg = palette.lang.default.keyword })
-hi(0, "BlinkCmpKindEnumMember", { fg = palette.lang.default.string })
-hi(0, "BlinkCmpKindConstant", { fg = palette.lang.default.keyword })
-hi(0, "BlinkCmpKindStruct", { fg = palette.lang.default.constant })
-hi(0, "BlinkCmpKindMethod", { fg = "#db5c5c" })
-hi(0, "BlinkCmpKindFunction", { fg = "#db5c5c" })
-hi(0, "BlinkCmpKindClass", { fg = "#db5c5c" })
-hi(0, "BlinkCmpKindInterface", { fg = palette.lang.default.string })
-hi(0, "BlinkCmpKindModule", { fg = palette.interface.active_element })
-hi(0, "BlinkCmpKindSnippet", { fg = palette.icon })
-hi(0, "BlinkCmpKindFolder", { fg = palette.icon })
+    -- Icon colors
+    BlinkCmpKind = { bg = palette.editor.background },
+    BlinkCmpKindText = { fg = palette.icon },
+    BlinkCmpKindVariable = { fg = palette.lang.default.keyword },
+    BlinkCmpKindField = { fg = palette.lang.default.constant },
+    BlinkCmpKindProperty = { fg = palette.lang.default.constant },
+    BlinkCmpKindEnum = { fg = palette.lang.default.constant },
+    BlinkCmpKindKeyword = { fg = palette.lang.default.keyword },
+    BlinkCmpKindEnumMember = { fg = palette.lang.default.string },
+    BlinkCmpKindConstant = { fg = palette.lang.default.keyword },
+    BlinkCmpKindStruct = { fg = palette.lang.default.constant },
+    BlinkCmpKindMethod = { fg = "#db5c5c" },
+    BlinkCmpKindFunction = { fg = "#db5c5c" },
+    BlinkCmpKindClass = { fg = "#db5c5c" },
+    BlinkCmpKindInterface = { fg = palette.lang.default.string },
+    BlinkCmpKindModule = { fg = palette.interface.active_element },
+    BlinkCmpKindSnippet = { fg = palette.icon },
+    BlinkCmpKindFolder = { fg = palette.icon },
+  }
+end
+
+return M

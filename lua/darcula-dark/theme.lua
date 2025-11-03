@@ -1,77 +1,83 @@
--- :highlight - see all
-local hi = vim.api.nvim_set_hl
+local M = {}
 local palette = require("darcula-dark.palette")
 
-hi(0, "Normal", { bg = palette.editor.background, fg = palette.editor.foreground })
-hi(0, "NormalFloat", { bg = palette.editor.background, fg = palette.interface.foreground })
-hi(0, "FloatBorder", { bg = palette.editor.background, fg = palette.editor.separator })
-hi(0, "WinSeparator", { fg = palette.editor.separator })
-hi(0, "Pmenu", { bg = palette.interface.background })
-hi(0, "PmenuSel", { bg = palette.interface.cursor_line })
-hi(0, "PmenuSbar", { bg = palette.scroll_bar.background })
-hi(0, "LineNr", { fg = palette.gutter_bar.line_number })
-hi(0, "EndOfBuffer", { fg = palette.gutter_bar.line_number })
-hi(0, "CursorLine", { bg = palette.editor.cursor_line })
-hi(0, "CursorLineNr", { fg = palette.gutter_bar.cursor_line_fg, bg = palette.gutter_bar.cursor_line_bg })
-hi(0, "ColorColumn", { bg = palette.editor.separator })
-hi(0, "Visual", { bg = palette.editor.selected_area })
-hi(0, "Search", { bg = palette.editor.matching_text })
-hi(0, "CurSearch", { bg = palette.editor.current_match })
-hi(0, "Title", { fg = palette.interface.foreground, bold = true })
-hi(0, "ErrorMsg", { fg = palette.editor.diagnostic.error })
-hi(0, "WarningMesage", { fg = palette.editor.diagnostic.warn })
-hi(0, "Special", { fg = palette.lang.default.keyword })
-hi(0, "MsgArea", { bg = palette.interface.background, fg = palette.interface.foreground })
-hi(0, "Question", { fg = palette.hint_text })
-hi(0, "Directory", { fg = palette.hint_text })
-hi(0, "SpellBad", { sp = palette.editor.diagnostic.spell, undercurl = true })
-hi(0, "SpellCap", { sp = palette.editor.diagnostic.spell, undercurl = true })
-hi(0, "SpellLocal", { sp = palette.editor.diagnostic.spell, undercurl = true })
-hi(0, "SpellRare", { sp = palette.editor.diagnostic.spell, undercurl = true })
-hi(0, "Folded", { bg = palette.editor.fold.bg, fg = palette.editor.fold.fg })
-hi(0, "NonText", { fg = palette.editor.separator })
-hi(0, "StatusLine", { bg = palette.editor.background })
+---@return table<any,Highliht>
+function M.groups()
+  return {
+    Normal = { bg = palette.editor.background, fg = palette.editor.foreground },
+    NormalFloat = { bg = palette.editor.background, fg = palette.interface.foreground },
+    FloatBorder = { bg = palette.editor.background, fg = palette.editor.separator },
+    WinSeparator = { fg = palette.editor.separator },
+    Pmenu = { bg = palette.interface.background },
+    PmenuSel = { bg = palette.interface.cursor_line },
+    PmenuSbar = { bg = palette.scroll_bar.background },
+    LineNr = { fg = palette.gutter_bar.line_number },
+    EndOfBuffer = { fg = palette.gutter_bar.line_number },
+    CursorLine = { bg = palette.editor.cursor_line },
+    CursorLineNr = { fg = palette.gutter_bar.cursor_line_fg, bg = palette.gutter_bar.cursor_line_bg },
+    ColorColumn = { bg = palette.editor.separator },
+    Visual = { bg = palette.editor.selected_area },
+    Search = { bg = palette.editor.matching_text },
+    CurSearch = { bg = palette.editor.current_match },
+    Title = { fg = palette.interface.foreground, bold = true },
+    ErrorMsg = { fg = palette.editor.diagnostic.error },
+    WarningMesage = { fg = palette.editor.diagnostic.warn },
+    Special = { fg = palette.lang.default.keyword },
+    MsgArea = { bg = palette.interface.background, fg = palette.interface.foreground },
+    Question = { fg = palette.hint_text },
+    Directory = { fg = palette.hint_text },
+    SpellBad = { sp = palette.editor.diagnostic.spell, undercurl = true },
+    SpellCap = { sp = palette.editor.diagnostic.spell, undercurl = true },
+    SpellLocal = { sp = palette.editor.diagnostic.spell, undercurl = true },
+    SpellRare = { sp = palette.editor.diagnostic.spell, undercurl = true },
+    Folded = { bg = palette.editor.fold.bg, fg = palette.editor.fold.fg },
+    NonText = { fg = palette.editor.separator },
+    StatusLine = { bg = palette.editor.background },
 
--- Diff files
--- https://github.com/neovim/neovim/issues/9800
-hi(0, "DiffAdd", { bg = palette.lang.diff.added })
-hi(0, "DiffChange", { bg = palette.lang.diff.changed })
-hi(0, "DiffDelete", { bg = palette.lang.diff.deleted })
-hi(0, "DiffText", { bg = palette.lang.diff.changed_important })
+    -- Diff files
+    -- https://github.com/neovim/neovim/issues/9800
+    DiffAdd = { bg = palette.lang.diff.added },
+    DiffChange = { bg = palette.lang.diff.changed },
+    DiffDelete = { bg = palette.lang.diff.deleted },
+    DiffText = { bg = palette.lang.diff.changed_important },
 
--- Language
-hi(0, "Comment", { fg = palette.lang.default.comment })
-hi(0, "Character", { fg = palette.lang.default.string })
-hi(0, "String", { fg = palette.lang.default.string })
-hi(0, "Number", { fg = palette.lang.default.number })
-hi(0, "Float", { fg = palette.lang.default.number })
-hi(0, "Constant", { fg = palette.lang.default.constant })
-hi(0, "Error", { fg = palette.lang.default.keyword })
-hi(0, "Function", { fg = palette.lang.default.function_decaration })
-hi(0, "Identifier", { fg = palette.lang.default.foreground })
-hi(0, "Keyword", { fg = palette.lang.default.keyword })
-hi(0, "Statement", { fg = palette.lang.default.keyword })
-hi(0, "Operator", { fg = palette.lang.default.foreground })
-hi(0, "PreProc", { fg = palette.lang.default.metadata })
-hi(0, "Todo", { fg = palette.lang.default.comment_todo })
-hi(0, "Type", { fg = palette.lang.default.struct })
+    -- Language
+    Comment = { fg = palette.lang.default.comment },
+    Character = { fg = palette.lang.default.string },
+    String = { fg = palette.lang.default.string },
+    Number = { fg = palette.lang.default.number },
+    Float = { fg = palette.lang.default.number },
+    Constant = { fg = palette.lang.default.constant },
+    Error = { fg = palette.lang.default.keyword },
+    Function = { fg = palette.lang.default.function_decaration },
+    Identifier = { fg = palette.lang.default.foreground },
+    Keyword = { fg = palette.lang.default.keyword },
+    Statement = { fg = palette.lang.default.keyword },
+    Operator = { fg = palette.lang.default.foreground },
+    PreProc = { fg = palette.lang.default.metadata },
+    Todo = { fg = palette.lang.default.comment_todo },
+    Type = { fg = palette.lang.default.struct },
 
--- Diagnostics
-hi(0, "DiagnosticError", { fg = palette.editor.diagnostic.error })
-hi(0, "DiagnosticWarn", { fg = palette.editor.diagnostic.warn })
-hi(0, "DiagnosticHint", { fg = palette.editor.diagnostic.weak_warn })
-hi(0, "DiagnosticInfo", { fg = palette.editor.diagnostic.info })
-hi(0, "DiagnosticOk", { fg = palette.editor.diagnostic.ok })
+    -- Diagnostics
+    DiagnosticError = { fg = palette.editor.diagnostic.error },
+    DiagnosticWarn = { fg = palette.editor.diagnostic.warn },
+    DiagnosticHint = { fg = palette.editor.diagnostic.weak_warn },
+    DiagnosticInfo = { fg = palette.editor.diagnostic.info },
+    DiagnosticOk = { fg = palette.editor.diagnostic.ok },
 
-hi(0, "DiagnosticVirtualTextError", { fg = palette.editor.diagnostic.error_message, italic = true })
-hi(0, "DiagnosticVirtualTextWarn", { fg = palette.editor.diagnostic.warn_message, italic = true })
-hi(0, "DiagnosticVirtualTextHint", { fg = palette.editor.diagnostic.weak_warn_messag, italic = true })
-hi(0, "DiagnosticVirtualTextInfo", { fg = palette.editor.diagnostic.info, italic = true })
+    DiagnosticVirtualTextError = { fg = palette.editor.diagnostic.error_message, italic = true },
+    DiagnosticVirtualTextWarn = { fg = palette.editor.diagnostic.warn_message, italic = true },
+    DiagnosticVirtualTextHint = { fg = palette.editor.diagnostic.weak_warn_messag, italic = true },
+    DiagnosticVirtualTextInfo = { fg = palette.editor.diagnostic.info, italic = true },
 
-hi(0, "DiagnosticUnnecessary", { fg = palette.editor.diagnostic.unnecessary })
-hi(0, "DiagnosticUnderlineError", { sp = palette.editor.diagnostic.error, undercurl = true })
-hi(0, "DiagnosticUnderlineWarn", { sp = palette.editor.diagnostic.warn, undercurl = true })
-hi(0, "DiagnosticUnderlineHint", { sp = palette.editor.diagnostic.weak_warn, undercurl = true })
-hi(0, "DiagnosticUnderlineInfo", { sp = palette.editor.diagnostic.info, undercurl = true })
+    DiagnosticUnnecessary = { fg = palette.editor.diagnostic.unnecessary },
+    DiagnosticUnderlineError = { sp = palette.editor.diagnostic.error, undercurl = true },
+    DiagnosticUnderlineWarn = { sp = palette.editor.diagnostic.warn, undercurl = true },
+    DiagnosticUnderlineHint = { sp = palette.editor.diagnostic.weak_warn, undercurl = true },
+    DiagnosticUnderlineInfo = { sp = palette.editor.diagnostic.info, undercurl = true },
 
-hi(0, "LspInlayHint", { fg = palette.lang.default.inline_hint_fg, bg = palette.lang.default.inline_hint_bg })
+    LspInlayHint = { fg = palette.lang.default.inline_hint_fg, bg = palette.lang.default.inline_hint_bg },
+  }
+end
+
+return M

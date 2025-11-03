@@ -1,8 +1,15 @@
-local hi = vim.api.nvim_set_hl
+local M = {}
 local palette = require("darcula-dark.palette")
 
-hi(0, "MasonHighlightBlockBold", { bg = palette.interface.active_element })
-hi(0, "MasonMutedBlock", { bg = palette.interface.background })
-hi(0, "MasonMuted", { fg = palette.hint_text })
-hi(0, "MasonHighlight", { fg = palette.link })
-hi(0, "MasonHighlightBlock", { bg = palette.interface.active_element })
+---@return table<any,Highliht>
+function M.groups()
+  return {
+    MasonHighlightBlockBold = { bg = palette.interface.active_element },
+    MasonMutedBlock = { bg = palette.interface.background },
+    MasonMuted = { fg = palette.hint_text },
+    MasonHighlight = { fg = palette.link },
+    MasonHighlightBlock = { bg = palette.interface.active_element },
+  }
+end
+
+return M

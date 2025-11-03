@@ -1,57 +1,64 @@
-local hi = vim.api.nvim_set_hl
+local M = {}
 local palette = require("darcula-dark.palette")
-
-hi(0, "NvimTreeNormal", { bg = palette.interface.background, fg = palette.interface.foreground })
-hi(0, "NvimTreeWinSeparator", { fg = palette.editor.background })
-hi(0, "NvimTreeCursorLine", { bg = palette.interface.cursor_line })
-hi(0, "NvimTreeNormalFloat", { bg = palette.interface.background })
-
-hi(0, "NvimTreeHiddenDisplay", { fg = palette.hint_text })
-
-hi(0, "NvimTreeImageFile", { fg = palette.interface.foreground })
-hi(0, "NvimTreeSpecialFile", { fg = palette.interface.foreground })
-hi(0, "NvimTreeSymlink", { fg = palette.interface.foreground })
-hi(0, "NvimTreeExecFile", { fg = palette.interface.foreground })
-
-hi(0, "NvimTreeRootFolder", { fg = palette.interface.foreground, bold = true })
-hi(0, "NvimTreeFolderName", { fg = palette.interface.foreground })
-hi(0, "NvimTreeEmptyFolderName", { fg = palette.interface.foreground })
-hi(0, "NvimTreeOpenedFolderName", { fg = palette.interface.foreground })
-hi(0, "NvimTreeSymlinkFolderName", { fg = palette.interface.foreground })
-
-hi(0, "NvimTreeModifiedIcon", { fg = palette.file_manager.vcs.modified_file })
-hi(0, "NvimTreeModifiedFileHL", { fg = palette.file_manager.vcs.modified_file })
-hi(0, "NvimTreeModifiedFolderHL", { fg = palette.file_manager.vcs.modified_file })
-
 local folder_hl = palette.icon
-hi(0, "NvimTreeFolderIcon", { fg = folder_hl })
-hi(0, "NvimTreeOpenedFolderIcon", { fg = folder_hl })
-hi(0, "NvimTreeClosedFolderIcon", { fg = folder_hl })
-hi(0, "NvimTreeFolderArrowClosed", { fg = folder_hl })
-hi(0, "NvimTreeFolderArrowOpen", { fg = folder_hl })
-hi(0, "NvimTreeFileIcon", { fg = folder_hl })
-hi(0, "NvimTreeSymlinkIcon", { fg = folder_hl })
 
-hi(0, "NvimTreeGitDeletedIcon", { fg = palette.file_manager.vcs.deleted_file })
-hi(0, "NvimTreeGitDirtyIcon", { fg = palette.file_manager.vcs.modified_file })
-hi(0, "NvimTreeGitIgnoredIcon", { fg = palette.file_manager.vcs.ignored_file })
-hi(0, "NvimTreeGitNewIcon", { fg = palette.file_manager.vcs.untracked_file })
-hi(0, "NvimTreeGitRenamedIcon", { fg = palette.file_manager.vcs.modified_file })
-hi(0, "NvimTreeGitStagedIcon", { fg = palette.file_manager.vcs.added_file })
+---@return table<any,Highliht>
+function M.groups()
+  return {
+    NvimTreeNormal = { bg = palette.interface.background, fg = palette.interface.foreground },
+    NvimTreeWinSeparator = { fg = palette.editor.background },
+    NvimTreeCursorLine = { bg = palette.interface.cursor_line },
+    NvimTreeNormalFloat = { bg = palette.interface.background },
 
-hi(0, "NvimTreeGitFileDeletedHL", { fg = palette.file_manager.vcs.deleted_file })
-hi(0, "NvimTreeGitFileDirtyHL", { fg = palette.file_manager.vcs.modified_file })
-hi(0, "NvimTreeGitFileIgnoredHL", { fg = palette.file_manager.vcs.ignored_file })
-hi(0, "NvimTreeGitFileNewHL", { fg = palette.file_manager.vcs.untracked_file })
-hi(0, "NvimTreeGitFileRenamedHL", { fg = palette.file_manager.vcs.modified_file })
-hi(0, "NvimTreeGitFileStagedHL", { fg = palette.file_manager.vcs.added_file })
+    NvimTreeHiddenDisplay = { fg = palette.hint_text },
 
-hi(0, "NvimTreeGitFolderDeletedHL", { fg = palette.file_manager.vcs.deleted_file })
-hi(0, "NvimTreeGitFolderDirtyHL", { fg = palette.file_manager.vcs.modified_file })
-hi(0, "NvimTreeGitFolderIgnoredHL", { fg = palette.file_manager.vcs.ignored_file })
-hi(0, "NvimTreeGitFolderNewHL", { fg = palette.file_manager.vcs.untracked_file })
-hi(0, "NvimTreeGitFolderRenamedHL", { fg = palette.file_manager.vcs.modified_file })
-hi(0, "NvimTreeGitFolderStagedHL", { fg = palette.file_manager.vcs.added_file })
+    NvimTreeImageFile = { fg = palette.interface.foreground },
+    NvimTreeSpecialFile = { fg = palette.interface.foreground },
+    NvimTreeSymlink = { fg = palette.interface.foreground },
+    NvimTreeExecFile = { fg = palette.interface.foreground },
 
-hi(0, "NvimTreeLiveFilterPrefix", { fg = folder_hl, bg = palette.editor.background })
-hi(0, "NvimTreeLiveFilterValue", { fg = palette.interface.foreground })
+    NvimTreeRootFolder = { fg = palette.interface.foreground, bold = true },
+    NvimTreeFolderName = { fg = palette.interface.foreground },
+    NvimTreeEmptyFolderName = { fg = palette.interface.foreground },
+    NvimTreeOpenedFolderName = { fg = palette.interface.foreground },
+    NvimTreeSymlinkFolderName = { fg = palette.interface.foreground },
+
+    NvimTreeModifiedIcon = { fg = palette.file_manager.vcs.modified_file },
+    NvimTreeModifiedFileHL = { fg = palette.file_manager.vcs.modified_file },
+    NvimTreeModifiedFolderHL = { fg = palette.file_manager.vcs.modified_file },
+
+    NvimTreeFolderIcon = { fg = folder_hl },
+    NvimTreeOpenedFolderIcon = { fg = folder_hl },
+    NvimTreeClosedFolderIcon = { fg = folder_hl },
+    NvimTreeFolderArrowClosed = { fg = folder_hl },
+    NvimTreeFolderArrowOpen = { fg = folder_hl },
+    NvimTreeFileIcon = { fg = folder_hl },
+    NvimTreeSymlinkIcon = { fg = folder_hl },
+
+    NvimTreeGitDeletedIcon = { fg = palette.file_manager.vcs.deleted_file },
+    NvimTreeGitDirtyIcon = { fg = palette.file_manager.vcs.modified_file },
+    NvimTreeGitIgnoredIcon = { fg = palette.file_manager.vcs.ignored_file },
+    NvimTreeGitNewIcon = { fg = palette.file_manager.vcs.untracked_file },
+    NvimTreeGitRenamedIcon = { fg = palette.file_manager.vcs.modified_file },
+    NvimTreeGitStagedIcon = { fg = palette.file_manager.vcs.added_file },
+
+    NvimTreeGitFileDeletedHL = { fg = palette.file_manager.vcs.deleted_file },
+    NvimTreeGitFileDirtyHL = { fg = palette.file_manager.vcs.modified_file },
+    NvimTreeGitFileIgnoredHL = { fg = palette.file_manager.vcs.ignored_file },
+    NvimTreeGitFileNewHL = { fg = palette.file_manager.vcs.untracked_file },
+    NvimTreeGitFileRenamedHL = { fg = palette.file_manager.vcs.modified_file },
+    NvimTreeGitFileStagedHL = { fg = palette.file_manager.vcs.added_file },
+
+    NvimTreeGitFolderDeletedHL = { fg = palette.file_manager.vcs.deleted_file },
+    NvimTreeGitFolderDirtyHL = { fg = palette.file_manager.vcs.modified_file },
+    NvimTreeGitFolderIgnoredHL = { fg = palette.file_manager.vcs.ignored_file },
+    NvimTreeGitFolderNewHL = { fg = palette.file_manager.vcs.untracked_file },
+    NvimTreeGitFolderRenamedHL = { fg = palette.file_manager.vcs.modified_file },
+    NvimTreeGitFolderStagedHL = { fg = palette.file_manager.vcs.added_file },
+
+    NvimTreeLiveFilterPrefix = { fg = folder_hl, bg = palette.editor.background },
+    NvimTreeLiveFilterValue = { fg = palette.interface.foreground },
+  }
+end
+
+return M

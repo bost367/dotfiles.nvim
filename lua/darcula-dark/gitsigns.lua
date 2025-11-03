@@ -1,7 +1,14 @@
-local hi = vim.api.nvim_set_hl
+local M = {}
 local palette = require("darcula-dark.palette")
 
-hi(0, "GitSignsAdd", { fg = palette.gutter_bar.vcs.added_line })
-hi(0, "GitSignsChange", { fg = palette.gutter_bar.vcs.changed_line })
-hi(0, "GitSignsDelete", { fg = palette.gutter_bar.vcs.deleted_line })
-hi(0, "GitSignsChangedelete", { fg = palette.gutter_bar.vcs.changed_delete_line })
+---@return table<any,Highliht>
+function M.groups()
+  return {
+    GitSignsAdd = { fg = palette.gutter_bar.vcs.added_line },
+    GitSignsChange = { fg = palette.gutter_bar.vcs.changed_line },
+    GitSignsDelete = { fg = palette.gutter_bar.vcs.deleted_line },
+    GitSignsChangedelete = { fg = palette.gutter_bar.vcs.changed_delete_line },
+  }
+end
+
+return M

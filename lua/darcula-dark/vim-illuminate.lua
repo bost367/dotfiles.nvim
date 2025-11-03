@@ -1,6 +1,13 @@
-local hi = vim.api.nvim_set_hl
+local M = {}
 local palette = require("darcula-dark.palette")
 
-hi(0, "IlluminatedWordText", { bg = palette.editor.under_corsour })
-hi(0, "IlluminatedWordRead", { bg = palette.editor.under_corsour })
-hi(0, "IlluminatedWordWrite", { bg = palette.editor.under_corsour })
+---@return table<any,Highliht>
+function M.groups()
+  return {
+    IlluminatedWordText = { bg = palette.editor.under_corsour },
+    IlluminatedWordRead = { bg = palette.editor.under_corsour },
+    IlluminatedWordWrite = { bg = palette.editor.under_corsour },
+  }
+end
+
+return M

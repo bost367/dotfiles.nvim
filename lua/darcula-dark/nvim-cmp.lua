@@ -1,25 +1,32 @@
-local hi = vim.api.nvim_set_hl
+local M = {}
 local palette = require("darcula-dark.palette")
 
-hi(0, "CmpItemAbbr", { fg = palette.editor.foreground })
-hi(0, "CmpItemAbbrDeprecated", { fg = palette.editor.foreground, strikethrough = true })
-hi(0, "CmpItemAbbrMatch", { fg = palette.interface.active_element })
-hi(0, "CmpItemAbbrMatchFuzzy", { fg = palette.interface.active_element })
-hi(0, "CmpItemMenu", { fg = palette.hint_text })
-hi(0, "CmpItemKind", { fg = palette.editor.foreground })
-hi(0, "CmpItemKindVariable", { fg = palette.lang.default.keyword })
-hi(0, "CmpItemKindField", { fg = palette.lang.default.constant })
-hi(0, "CmpItemKindProperty", { fg = palette.lang.default.constant })
-hi(0, "CmpItemKindEnum", { fg = palette.lang.default.constant })
-hi(0, "CmpItemKindEnumMember", { fg = palette.lang.default.string })
-hi(0, "CmpItemKindConstant", { fg = palette.lang.default.keyword })
-hi(0, "CmpItemKindStruct", { fg = palette.lang.default.constant })
-hi(0, "CmpItemKindMethod", { fg = "#db5c5c" })
-hi(0, "CmpItemKindFunction", { fg = "#db5c5c" })
-hi(0, "CmpItemKindClass", { fg = "#db5c5c" })
-hi(0, "CmpItemKindInterface", { fg = palette.lang.default.string })
-hi(0, "CmpItemKindModule", { fg = palette.interface.active_element })
+---@return table<any,Highliht>
+function M.groups()
+  return {
+    CmpItemAbbr = { fg = palette.editor.foreground },
+    CmpItemAbbrDeprecated = { fg = palette.editor.foreground, strikethrough = true },
+    CmpItemAbbrMatch = { fg = palette.interface.active_element },
+    CmpItemAbbrMatchFuzzy = { fg = palette.interface.active_element },
+    CmpItemMenu = { fg = palette.hint_text },
+    CmpItemKind = { fg = palette.editor.foreground },
+    CmpItemKindVariable = { fg = palette.lang.default.keyword },
+    CmpItemKindField = { fg = palette.lang.default.constant },
+    CmpItemKindProperty = { fg = palette.lang.default.constant },
+    CmpItemKindEnum = { fg = palette.lang.default.constant },
+    CmpItemKindEnumMember = { fg = palette.lang.default.string },
+    CmpItemKindConstant = { fg = palette.lang.default.keyword },
+    CmpItemKindStruct = { fg = palette.lang.default.constant },
+    CmpItemKindMethod = { fg = "#db5c5c" },
+    CmpItemKindFunction = { fg = "#db5c5c" },
+    CmpItemKindClass = { fg = "#db5c5c" },
+    CmpItemKindInterface = { fg = palette.lang.default.string },
+    CmpItemKindModule = { fg = palette.interface.active_element },
 
--- custom colours. specified via winhighlight attribute im cmp settings
-hi(0, "CmpNormal", { bg = palette.editor.background })
-hi(0, "CmpFloatBorder", { bg = palette.editor.background, fg = palette.editor.separator })
+    -- custom colours. specified via winhighlight attribute im cmp settings
+    CmpNormal = { bg = palette.editor.background },
+    CmpFloatBorder = { bg = palette.editor.background, fg = palette.editor.separator },
+  }
+end
+
+return M
