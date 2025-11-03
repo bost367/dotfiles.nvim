@@ -8,9 +8,9 @@ function M.groups()
     DiffviewFolderName = { fg = palette.interface.foreground },
     DiffviewFolderSign = { fg = palette.interface.foreground },
     DiffviewCursorLine = { bg = palette.interface.cursor_line },
-    DiffviewDiffAddAsDelete = { bg = palette.lang.diff.deleted },
+    DiffviewDiffAddAsDelete = { bg = palette.syntax.diff.deleted },
     DiffviewWinSeparator = { bg = palette.editor.background, fg = palette.editor.background },
-    DiffviewDiffDeleteDim = { fg = palette.lang.diff.deleted },
+    DiffviewDiffDeleteDim = { fg = palette.syntax.diff.deleted },
 
     -- tiitles
     DiffviewFilePanelRootPath = { fg = palette.interface.foreground, bold = true },
@@ -36,20 +36,20 @@ function M.groups()
     DiffviewFilePanelInsertions = { fg = palette.file_manager.vcs.added_file },
     DiffviewFilePanelDeletions = { fg = palette.file_manager.vcs.deleted_file },
     DiffviewFilePanelConflicts = { fg = palette.file_manager.vcs.merge_conflict_file },
-    DiffviewFilePanelCounter = { fg = palette.lang.default.foreground },
-    DiffviewHash = { fg = palette.lang.default.foreground },
+    DiffviewFilePanelCounter = { fg = palette.syntax.default.foreground },
+    DiffviewHash = { fg = palette.syntax.default.foreground },
     DiffviewReference = { fg = palette.interface.search_select },
     DiffviewNonText = { fg = "#42454B" },
 
     -- commit message pop-up
     gitKeyword = { fg = palette.hint_text },
-    gitHashAbbrev = { fg = palette.lang.default.foreground },
+    gitHashAbbrev = { fg = palette.syntax.default.foreground },
     gitIdentityHeader = { fg = palette.hint_text },
-    gitIdentity = { fg = palette.lang.default.foreground },
+    gitIdentity = { fg = palette.syntax.default.foreground },
     gitEmail = { fg = palette.link },
     gitEmailDelimiter = { fg = palette.link },
     gitDateHeader = { fg = palette.hint_text },
-    gitHead = { fg = palette.lang.default.foreground },
+    gitHead = { fg = palette.syntax.default.foreground },
 
     -- help menu
     DiffviewDim1 = { fg = palette.hint_text }, -- git log option
