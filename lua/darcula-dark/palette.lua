@@ -71,7 +71,7 @@ return {
     cursor_line = "#2E436E",
     active_element = "#3574F1", -- blue
   },
-  lang = {
+  syntax = {
     default = {
       foreground = "#BCBEC4",
       string = "#6AAB73",

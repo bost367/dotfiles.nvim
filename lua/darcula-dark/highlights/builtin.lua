@@ -22,7 +22,7 @@ function M.groups()
     Title = { fg = palette.interface.foreground, bold = true },
     ErrorMsg = { fg = palette.editor.diagnostic.error },
     WarningMesage = { fg = palette.editor.diagnostic.warn },
-    Special = { fg = palette.lang.default.keyword },
+    Special = { fg = palette.syntax.default.keyword },
     MsgArea = { bg = palette.interface.background, fg = palette.interface.foreground },
     Question = { fg = palette.hint_text },
     Directory = { fg = palette.hint_text },
@@ -36,27 +36,27 @@ function M.groups()
 
     -- Diff files
     -- https://github.com/neovim/neovim/issues/9800
-    DiffAdd = { bg = palette.lang.diff.added },
-    DiffChange = { bg = palette.lang.diff.changed },
-    DiffDelete = { bg = palette.lang.diff.deleted },
-    DiffText = { bg = palette.lang.diff.changed_important },
+    DiffAdd = { bg = palette.syntax.diff.added },
+    DiffChange = { bg = palette.syntax.diff.changed },
+    DiffDelete = { bg = palette.syntax.diff.deleted },
+    DiffText = { bg = palette.syntax.diff.changed_important },
 
     -- Language
-    Comment = { fg = palette.lang.default.comment },
-    Character = { fg = palette.lang.default.string },
-    String = { fg = palette.lang.default.string },
-    Number = { fg = palette.lang.default.number },
-    Float = { fg = palette.lang.default.number },
-    Constant = { fg = palette.lang.default.constant },
-    Error = { fg = palette.lang.default.keyword },
-    Function = { fg = palette.lang.default.function_decaration },
-    Identifier = { fg = palette.lang.default.foreground },
-    Keyword = { fg = palette.lang.default.keyword },
-    Statement = { fg = palette.lang.default.keyword },
-    Operator = { fg = palette.lang.default.foreground },
-    PreProc = { fg = palette.lang.default.metadata },
-    Todo = { fg = palette.lang.default.comment_todo },
-    Type = { fg = palette.lang.default.struct },
+    Comment = { fg = palette.syntax.default.comment },
+    Character = { fg = palette.syntax.default.string },
+    String = { fg = palette.syntax.default.string },
+    Number = { fg = palette.syntax.default.number },
+    Float = { fg = palette.syntax.default.number },
+    Constant = { fg = palette.syntax.default.constant },
+    Error = { fg = palette.syntax.default.keyword },
+    Function = { fg = palette.syntax.default.function_decaration },
+    Identifier = { fg = palette.syntax.default.foreground },
+    Keyword = { fg = palette.syntax.default.keyword },
+    Statement = { fg = palette.syntax.default.keyword },
+    Operator = { fg = palette.syntax.default.foreground },
+    PreProc = { fg = palette.syntax.default.metadata },
+    Todo = { fg = palette.syntax.default.comment_todo },
+    Type = { fg = palette.syntax.default.struct },
 
     -- Diagnostics
     DiagnosticError = { fg = palette.editor.diagnostic.error },
@@ -76,7 +76,7 @@ function M.groups()
     DiagnosticUnderlineHint = { sp = palette.editor.diagnostic.weak_warn, undercurl = true },
     DiagnosticUnderlineInfo = { sp = palette.editor.diagnostic.info, undercurl = true },
 
-    LspInlayHint = { fg = palette.lang.default.inline_hint_fg, bg = palette.lang.default.inline_hint_bg },
+    LspInlayHint = { fg = palette.syntax.default.inline_hint_fg, bg = palette.syntax.default.inline_hint_bg },
   }
 end
 
