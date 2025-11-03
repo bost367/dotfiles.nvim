@@ -1,11 +1,3 @@
-require("darcula-dark.highlights.lsp")
-require("darcula-dark.highlights.plugins.nvim-treesitter")
-require("lualine").setup({
-  options = {
-    theme = require("darcula-dark.highlights.plugins.specials.lualine"),
-  },
-})
-
 --- @type table<string>
 local plugins = {
   "plugins.blink-cmp",
@@ -18,7 +10,9 @@ local plugins = {
   "plugins.nvim-cmp",
   "plugins.nvim-scrollbar",
   "plugins.nvim-tree",
+  "plugins.nvim-treesitter",
   "theme",
+  "lsp",
   "plugins.trouble",
   "plugins.vim-illuminate",
 }
@@ -31,3 +25,9 @@ for _, plugin in pairs(plugins) do
     vim.api.nvim_set_hl(0, name, highlight)
   end
 end
+
+require("lualine").setup({
+  options = {
+    theme = require("darcula-dark.highlights.plugins.specials.lualine"),
+  },
+})
