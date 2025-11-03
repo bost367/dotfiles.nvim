@@ -1,4 +1,3 @@
-local bufferline_theme = require("darcula-dark.highlights.plugins.specials.bufferline")
 return {
   "akinsho/bufferline.nvim",
   version = "*",
@@ -27,6 +26,6 @@ return {
         },
       },
     },
-    highlights = bufferline_theme,
+    highlights = require("darcula-dark.highlights.plugins.specials.bufferline"),
   },
 }

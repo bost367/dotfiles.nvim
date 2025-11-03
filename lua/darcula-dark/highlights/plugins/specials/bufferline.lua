@@ -1,48 +1,28 @@
-local hi = vim.api.nvim_set_hl
 local palette = require("darcula-dark.palette")
 local not_selected = "#C1C3C6"
-
--- Colours must be load before bufferline loading
-hi(0, "TabLineSel", { bg = palette.interface.active_element })
+local hi = vim.api.nvim_set_hl
 
 -- Errros
-hi(0, "BufferLineError", {
-  fg = not_selected,
-  bg = palette.editor.background,
-  sp = palette.editor.diagnostic.error,
-  undercurl = true,
-})
-hi(0, "BufferLineErrorVisible", {
-  fg = not_selected,
-  bg = palette.editor.background,
-  sp = palette.editor.diagnostic.error,
-  undercurl = true,
-})
-hi(0, "BufferLineErrorSelected", {
-  fg = palette.interface.foreground,
-  bg = palette.editor.background,
-  sp = palette.editor.diagnostic.error,
-  undercurl = true,
-})
--- Disable all diagnostics highlighting exept error
--- Warnings
-hi(0, "BufferLineHideDiagnosticHinst", {
+local hide_diagnostics_hl = {
   fg = not_selected,
   bg = palette.editor.background,
   sp = palette.editor.separator,
   underline = true,
-})
-hi(0, "BufferLineWarning", { link = "BufferLineHideDiagnosticHinst" })
-hi(0, "BufferLineWarningVisible", { link = "BufferLineHideDiagnosticHinst" })
-hi(0, "BufferLineWarningSelected", { link = "BufferLineHideDiagnosticHinst" })
+}
+
+-- Hide next diagnostics to avoid noisy hints
+-- Warnings
+hi(0, "BufferLineWarning", hide_diagnostics_hl)
+hi(0, "BufferLineWarningVisible", hide_diagnostics_hl)
+hi(0, "BufferLineWarningSelected", hide_diagnostics_hl)
 -- Hint
-hi(0, "BufferLineHint", { link = "BufferLineHideDiagnosticHinst" })
-hi(0, "BufferLineHintVisible", { link = "BufferLineHideDiagnosticHinst" })
-hi(0, "BufferLineHintSelected", { link = "BufferLineHideDiagnosticHinst" })
+hi(0, "BufferLineHint", hide_diagnostics_hl)
+hi(0, "BufferLineHintVisible", hide_diagnostics_hl)
+hi(0, "BufferLineHintSelected", hide_diagnostics_hl)
 -- Info
-hi(0, "BufferLineInfo", { link = "BufferLineHideDiagnosticHinst" })
-hi(0, "BufferLineInfoVisible", { link = "BufferLineHideDiagnosticHinst" })
-hi(0, "BufferLineInfoSelected", { link = "BufferLineHideDiagnosticHinst" })
+hi(0, "BufferLineInfo", hide_diagnostics_hl)
+hi(0, "BufferLineInfoVisible", hide_diagnostics_hl)
+hi(0, "BufferLineInfoSelected", hide_diagnostics_hl)
 
 return {
   -- empty space after buffers
@@ -202,5 +182,30 @@ return {
     bg = palette.editor.background,
     sp = palette.editor.separator,
     underline = true,
+  },
+  -- errors
+  error = {
+    fg = not_selected,
+    bg = palette.editor.background,
+    sp = palette.editor.diagnostic.error,
+    undercurl = true,
+    italic = false,
+    bold = false,
+  },
+  error_visible = {
+    fg = not_selected,
+    bg = palette.editor.background,
+    sp = palette.editor.diagnostic.error,
+    undercurl = true,
+    italic = false,
+    bold = false,
+  },
+  error_selected = {
+    fg = palette.interface.foreground,
+    bg = palette.editor.background,
+    sp = palette.editor.diagnostic.error,
+    undercurl = true,
+    italic = false,
+    bold = false,
   },
 }

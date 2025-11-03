@@ -1,33 +1,31 @@
 --- @type table<string>
 local plugins = {
-  "plugins.blink-cmp",
-  "plugins.diffview",
-  "plugins.fzf-lua",
-  "plugins.gitsigns",
-  "plugins.indent-blankline",
-  "plugins.lazy",
-  "plugins.mason",
-  "plugins.nvim-cmp",
-  "plugins.nvim-scrollbar",
-  "plugins.nvim-tree",
-  "plugins.nvim-treesitter",
-  "theme",
-  "lsp",
-  "plugins.trouble",
-  "plugins.vim-illuminate",
+  "blink-cmp",
+  "diffview",
+  "fzf-lua",
+  "gitsigns",
+  "indent-blankline",
+  "lazy",
+  "mason",
+  "nvim-cmp",
+  "nvim-scrollbar",
+  "nvim-tree",
+  "nvim-treesitter",
+  "trouble",
+  "vim-illuminate",
 }
 
-for _, plugin in pairs(plugins) do
-  ---@type table<any, Highliht>
-  local groups = require("darcula-dark.highlights." .. plugin).groups()
+---@param filename string
+local function colorize(filename)
+  local groups = require("darcula-dark.highlights." .. filename).groups()
   for name, highlight in pairs(groups) do
-    ---@diagnostic disable: param-type-mismatch
     vim.api.nvim_set_hl(0, name, highlight)
   end
 end
 
-require("lualine").setup({
-  options = {
-    theme = require("darcula-dark.highlights.plugins.specials.lualine"),
-  },
-})
+colorize("builtin")
+colorize("semantic-tokens")
+
+for _, plugin in pairs(plugins) do
+  colorize("plugins." .. plugin)
+end

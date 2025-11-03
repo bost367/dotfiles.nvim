@@ -37,6 +37,7 @@ return {
   },
   opts = {
     options = {
+      theme = require("darcula-dark.highlights.plugins.specials.lualine"),
       globalstatus = true,
       section_separators = "",
       component_separators = "",
