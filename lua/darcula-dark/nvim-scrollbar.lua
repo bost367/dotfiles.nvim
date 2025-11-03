@@ -1,18 +1,25 @@
-local hi = vim.api.nvim_set_hl
+local M = {}
 local palette = require("darcula-dark.palette")
 
-hi(0, "ScrollbarHandle", { bg = palette.scroll_bar.background })
-hi(0, "ScrollbarError", { fg = palette.scroll_bar.diagnostic.error })
-hi(0, "ScrollbarErrorHandle", { bg = palette.scroll_bar.background, fg = palette.scroll_bar.diagnostic.error })
-hi(0, "ScrollbarWarn", { fg = palette.scroll_bar.diagnostic.warn })
-hi(0, "ScrollbarWarnHandle", { bg = palette.scroll_bar.background, fg = palette.scroll_bar.diagnostic.warn })
-hi(0, "ScrollbarInfo", { fg = palette.editor.diagnostic.info })
-hi(0, "ScrollbarInfoHandle", { bg = palette.scroll_bar.background, fg = palette.editor.diagnostic.info })
-hi(0, "ScrollbarHint", { fg = palette.editor.diagnostic.weak_warn })
-hi(0, "ScrollbarHintHandle", { bg = palette.scroll_bar.background, fg = palette.editor.diagnostic.weak_warn })
-hi(0, "ScrollbarGitAdd", { fg = palette.scroll_bar.vcs.added_line })
-hi(0, "ScrollbarGitAddHandle", { bg = palette.scroll_bar.background, fg = palette.scroll_bar.vcs.added_line })
-hi(0, "ScrollbarGitChange", { fg = palette.scroll_bar.vcs.changed_line })
-hi(0, "ScrollbarGitChangeHandle", { bg = palette.scroll_bar.background, fg = palette.scroll_bar.vcs.changed_line })
-hi(0, "ScrollbarGitDelete", { fg = palette.scroll_bar.vcs.deleted_line })
-hi(0, "ScrollbarGitDeleteHandle", { bg = palette.scroll_bar.background, fg = palette.scroll_bar.vcs.deleted_line })
+---@return table<any,Highliht>
+function M.groups()
+  return {
+    ScrollbarHandle = { bg = palette.scroll_bar.background },
+    ScrollbarError = { fg = palette.scroll_bar.diagnostic.error },
+    ScrollbarErrorHandle = { bg = palette.scroll_bar.background, fg = palette.scroll_bar.diagnostic.error },
+    ScrollbarWarn = { fg = palette.scroll_bar.diagnostic.warn },
+    ScrollbarWarnHandle = { bg = palette.scroll_bar.background, fg = palette.scroll_bar.diagnostic.warn },
+    ScrollbarInfo = { fg = palette.editor.diagnostic.info },
+    ScrollbarInfoHandle = { bg = palette.scroll_bar.background, fg = palette.editor.diagnostic.info },
+    ScrollbarHint = { fg = palette.editor.diagnostic.weak_warn },
+    ScrollbarHintHandle = { bg = palette.scroll_bar.background, fg = palette.editor.diagnostic.weak_warn },
+    ScrollbarGitAdd = { fg = palette.scroll_bar.vcs.added_line },
+    ScrollbarGitAddHandle = { bg = palette.scroll_bar.background, fg = palette.scroll_bar.vcs.added_line },
+    ScrollbarGitChange = { fg = palette.scroll_bar.vcs.changed_line },
+    ScrollbarGitChangeHandle = { bg = palette.scroll_bar.background, fg = palette.scroll_bar.vcs.changed_line },
+    ScrollbarGitDelete = { fg = palette.scroll_bar.vcs.deleted_line },
+    ScrollbarGitDeleteHandle = { bg = palette.scroll_bar.background, fg = palette.scroll_bar.vcs.deleted_line },
+  }
+end
+
+return M

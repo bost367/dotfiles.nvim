@@ -1,22 +1,33 @@
-require("darcula-dark.blink-cmp")
-require("darcula-dark.diffview")
-require("darcula-dark.fzf-lua")
-require("darcula-dark.gitsigns")
-require("darcula-dark.indent-blankline")
-require("darcula-dark.lazy")
 require("darcula-dark.lsp")
-local lualine_theme = require("darcula-dark.lualine")
-require("darcula-dark.mason")
-require("darcula-dark.nvim-cmp")
-require("darcula-dark.nvim-scrollbar")
-require("darcula-dark.nvim-tree")
 require("darcula-dark.nvim-treesitter")
-require("darcula-dark.vim-illuminate")
-require("darcula-dark.theme")
-require("darcula-dark.trouble")
-
 require("lualine").setup({
   options = {
-    theme = lualine_theme,
+    theme = require("darcula-dark.lualine"),
   },
 })
+
+--- @type table<string>
+local plugins = {
+  "blink-cmp",
+  "diffview",
+  "fzf-lua",
+  "gitsigns",
+  "indent-blankline",
+  "lazy",
+  "mason",
+  "nvim-cmp",
+  "nvim-scrollbar",
+  "nvim-tree",
+  "theme",
+  "trouble",
+  "vim-illuminate",
+}
+
+for _, plugin in pairs(plugins) do
+  ---@type table<any, Highliht>
+  local groups = require("darcula-dark." .. plugin).groups()
+  for name, highlight in pairs(groups) do
+    ---@diagnostic disable: param-type-mismatch
+    vim.api.nvim_set_hl(0, name, highlight)
+  end
+end

@@ -1,21 +1,28 @@
-local hi = vim.api.nvim_set_hl
+local M = {}
 local palette = require("darcula-dark.palette")
-
 local match_in_preview = "#2d5436"
-hi(0, "FzfLuaNormal", { bg = palette.editor.background })
-hi(0, "FzfLuaBorder", { bg = palette.editor.background, fg = palette.editor.separator })
-hi(0, "FzfLuaTitle", { fg = palette.interface.foreground })
-hi(0, "FzfLuaTitleFlags", { fg = palette.hint_text })
-hi(0, "FzfLuaCursor", { bg = match_in_preview })
-hi(0, "FzfLuaSearch", { bg = match_in_preview })
-hi(0, "FzfLuaPreviewNormal", { bg = palette.editor.background })
-hi(0, "FzfLuaPreviewBorder", { bg = palette.editor.background, fg = palette.editor.separator })
-hi(0, "FzfLuaScrollBorderFull", { bg = palette.scroll_bar.background })
-hi(0, "FzfLuaHeaderText", { fg = palette.hint_text })
-hi(0, "FzfLuaPathColNr", { fg = palette.hint_text })
-hi(0, "FzfLuaPathLineNr", { fg = palette.hint_text })
-hi(0, "FzfLuaBufFlagCur", { bg = match_in_preview })
-hi(0, "FzfLuaDirPart", { fg = palette.hint_text })
-hi(0, "FzfLuaFilePart", { fg = palette.interface.foreground })
-hi(0, "FzfLuaLivePrompt", { bg = palette.editor.background })
-hi(0, "FzfLuaHeaderBind", { fg = palette.hint_text })
+
+---@return table<any,Highliht>
+function M.groups()
+  return {
+    FzfLuaNormal = { bg = palette.editor.background },
+    FzfLuaBorder = { bg = palette.editor.background, fg = palette.editor.separator },
+    FzfLuaTitle = { fg = palette.interface.foreground },
+    FzfLuaTitleFlags = { fg = palette.hint_text },
+    FzfLuaCursor = { bg = match_in_preview },
+    FzfLuaSearch = { bg = match_in_preview },
+    FzfLuaPreviewNormal = { bg = palette.editor.background },
+    FzfLuaPreviewBorder = { bg = palette.editor.background, fg = palette.editor.separator },
+    FzfLuaScrollBorderFull = { bg = palette.scroll_bar.background },
+    FzfLuaHeaderText = { fg = palette.hint_text },
+    FzfLuaPathColNr = { fg = palette.hint_text },
+    FzfLuaPathLineNr = { fg = palette.hint_text },
+    FzfLuaBufFlagCur = { bg = match_in_preview },
+    FzfLuaDirPart = { fg = palette.hint_text },
+    FzfLuaFilePart = { fg = palette.interface.foreground },
+    FzfLuaLivePrompt = { bg = palette.editor.background },
+    FzfLuaHeaderBind = { fg = palette.hint_text },
+  }
+end
+
+return M

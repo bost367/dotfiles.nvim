@@ -1,54 +1,60 @@
-local hi = vim.api.nvim_set_hl
+local M = {}
 local palette = require("darcula-dark.palette")
 
-hi(0, "DiffviewNormal", { bg = palette.interface.background })
-hi(0, "DiffviewFolderName", { fg = palette.interface.foreground })
-hi(0, "DiffviewFolderSign", { fg = palette.interface.foreground })
-hi(0, "DiffviewCursorLine", { bg = palette.interface.cursor_line })
-hi(0, "DiffviewDiffAddAsDelete", { bg = palette.lang.diff.deleted })
-hi(0, "DiffviewWinSeparator", { bg = palette.editor.background, fg = palette.editor.background })
-hi(0, "DiffviewDiffDeleteDim", { fg = palette.lang.diff.deleted })
+---@return table<any,Highliht>
+function M.groups()
+  return {
+    DiffviewNormal = { bg = palette.interface.background },
+    DiffviewFolderName = { fg = palette.interface.foreground },
+    DiffviewFolderSign = { fg = palette.interface.foreground },
+    DiffviewCursorLine = { bg = palette.interface.cursor_line },
+    DiffviewDiffAddAsDelete = { bg = palette.lang.diff.deleted },
+    DiffviewWinSeparator = { bg = palette.editor.background, fg = palette.editor.background },
+    DiffviewDiffDeleteDim = { fg = palette.lang.diff.deleted },
 
--- tiitles
-hi(0, "DiffviewFilePanelRootPath", { fg = palette.interface.foreground, bold = true })
-hi(0, "DiffviewFilePanelTitle", { fg = palette.interface.foreground, bold = true })
-hi(0, "DiffviewFilePanelConflicts", { fg = palette.interface.foreground, bold = true })
+    -- tiitles
+    DiffviewFilePanelRootPath = { fg = palette.interface.foreground, bold = true },
+    DiffviewFilePanelTitle = { fg = palette.interface.foreground, bold = true },
 
--- file status
-hi(0, "DiffviewStatusAdded", { fg = palette.file_manager.vcs.added_file })
-hi(0, "DiffviewStatusModified", { fg = palette.file_manager.vcs.modified_file })
-hi(0, "DiffviewStatusRenamed", { fg = palette.file_manager.vcs.modified_file })
-hi(0, "DiffviewStatusCopied", { fg = palette.file_manager.vcs.modified_file })
-hi(0, "DiffviewStatusTypeChange", { fg = palette.file_manager.vcs.modified_file })
-hi(0, "DiffviewStatusUnmerged", { fg = palette.file_manager.vcs.merge_conflict_file })
-hi(0, "DiffviewStatusDeleted", { fg = palette.file_manager.vcs.deleted_file })
-hi(0, "DiffviewStatusIgnored", { fg = palette.file_manager.vcs.ignored_file })
-hi(0, "DiffviewStatusUntracked", { fg = palette.file_manager.vcs.untracked_file })
-hi(0, "DiffviewStatusUnknown", { fg = palette.file_manager.vcs.untracked_file })
-hi(0, "DiffviewStatusBroken", { fg = palette.file_manager.vcs.merge_conflict_file })
+    -- file status
+    DiffviewStatusAdded = { fg = palette.file_manager.vcs.added_file },
+    DiffviewStatusModified = { fg = palette.file_manager.vcs.modified_file },
+    DiffviewStatusRenamed = { fg = palette.file_manager.vcs.modified_file },
+    DiffviewStatusCopied = { fg = palette.file_manager.vcs.modified_file },
+    DiffviewStatusTypeChange = { fg = palette.file_manager.vcs.modified_file },
+    DiffviewStatusUnmerged = { fg = palette.file_manager.vcs.merge_conflict_file },
+    DiffviewStatusDeleted = { fg = palette.file_manager.vcs.deleted_file },
+    DiffviewStatusIgnored = { fg = palette.file_manager.vcs.ignored_file },
+    DiffviewStatusUntracked = { fg = palette.file_manager.vcs.untracked_file },
+    DiffviewStatusUnknown = { fg = palette.file_manager.vcs.untracked_file },
+    DiffviewStatusBroken = { fg = palette.file_manager.vcs.merge_conflict_file },
 
--- history
-hi(0, "DiffviewFilePanelFileName", { fg = palette.interface.foreground })
-hi(0, "DiffviewFilePanelSelected", { fg = palette.interface.foreground })
-hi(0, "DiffviewFilePanelPath", { fg = palette.hint_text })
-hi(0, "DiffviewFilePanelInsertions", { fg = palette.file_manager.vcs.added_file })
-hi(0, "DiffviewFilePanelDeletions", { fg = palette.file_manager.vcs.deleted_file })
-hi(0, "DiffviewFilePanelConflicts", { fg = palette.file_manager.vcs.merge_conflict_file })
-hi(0, "DiffviewFilePanelCounter", { fg = palette.lang.default.foreground })
-hi(0, "DiffviewHash", { fg = palette.lang.default.foreground })
-hi(0, "DiffviewReference", { fg = palette.interface.search_select })
-hi(0, "DiffviewNonText", { fg = "#42454B" })
+    -- history
+    DiffviewFilePanelFileName = { fg = palette.interface.foreground },
+    DiffviewFilePanelSelected = { fg = palette.interface.foreground },
+    DiffviewFilePanelPath = { fg = palette.hint_text },
+    DiffviewFilePanelInsertions = { fg = palette.file_manager.vcs.added_file },
+    DiffviewFilePanelDeletions = { fg = palette.file_manager.vcs.deleted_file },
+    DiffviewFilePanelConflicts = { fg = palette.file_manager.vcs.merge_conflict_file },
+    DiffviewFilePanelCounter = { fg = palette.lang.default.foreground },
+    DiffviewHash = { fg = palette.lang.default.foreground },
+    DiffviewReference = { fg = palette.interface.search_select },
+    DiffviewNonText = { fg = "#42454B" },
 
--- commit message pop-up
-hi(0, "gitKeyword", { fg = palette.hint_text })
-hi(0, "gitHashAbbrev", { fg = palette.lang.default.foreground })
-hi(0, "gitIdentityHeader", { fg = palette.hint_text })
-hi(0, "gitIdentity", { fg = palette.lang.default.foreground })
-hi(0, "gitEmail", { fg = palette.link })
-hi(0, "gitEmailDelimiter", { fg = palette.link })
-hi(0, "gitDateHeader", { fg = palette.hint_text })
-hi(0, "gitHead", { fg = palette.lang.default.foreground })
+    -- commit message pop-up
+    gitKeyword = { fg = palette.hint_text },
+    gitHashAbbrev = { fg = palette.lang.default.foreground },
+    gitIdentityHeader = { fg = palette.hint_text },
+    gitIdentity = { fg = palette.lang.default.foreground },
+    gitEmail = { fg = palette.link },
+    gitEmailDelimiter = { fg = palette.link },
+    gitDateHeader = { fg = palette.hint_text },
+    gitHead = { fg = palette.lang.default.foreground },
 
--- help menu
-hi(0, "DiffviewDim1", { fg = palette.hint_text }) -- git log option
-hi(0, "DiffviewSecondary", { fg = palette.hint_text }) -- hot key combination
+    -- help menu
+    DiffviewDim1 = { fg = palette.hint_text }, -- git log option
+    DiffviewSecondary = { fg = palette.hint_text }, -- hot key combination
+  }
+end
+
+return M

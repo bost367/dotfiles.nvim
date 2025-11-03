@@ -1,3 +1,10 @@
-local hi = vim.api.nvim_set_hl
+local M = {}
 
-hi(0, "IblScope", { fg = "#65676F" })
+---@return table<any,Highliht>
+function M.groups()
+  return {
+    IblScope = { fg = "#65676F" },
+  }
+end
+
+return M

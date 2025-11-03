@@ -1,0 +1,10 @@
+--- @class Highliht
+--- @field bg? string
+--- @field fg? string
+--- @field sp? string
+--- @field link? string
+--- @field bold? boolean
+--- @field strikethrough? boolean
+--- @field underline? boolean
+--- @field undercurl? boolean
+--- @field italic? boolean
