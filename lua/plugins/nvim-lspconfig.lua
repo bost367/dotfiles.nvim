@@ -26,6 +26,7 @@ return {
           "yamlls",
           "jsonls",
           "just",
+          "ts_ls",
         },
         automatic_enable = {
           exclude = {

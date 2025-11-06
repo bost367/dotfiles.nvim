@@ -2,16 +2,6 @@
 local M = {}
 local palette = require("darcula-dark.palette")
 
--- Highlight & Italic static function declaration and invocation
-vim.api.nvim_create_autocmd("LspTokenUpdate", {
-  callback = function(args)
-    local token = args.data.token
-    if token.type == "function" and token.modifiers.static then
-      vim.lsp.semantic_tokens.highlight_token(token, args.buf, args.data.client_id, "StaticFunction")
-    end
-  end,
-})
-
 ---@return table<any,Highliht>
 function M.groups()
   return {
@@ -42,6 +32,8 @@ function M.groups()
     ["@lsp.typemod.method.definition"] = { fg = palette.syntax.default.function_declaration },
     ["@lsp.typemod.function.declaration"] = { fg = palette.syntax.default.function_declaration },
     ["@lsp.typemod.function.definition"] = { fg = palette.syntax.default.function_declaration },
+    ["@lsp.typemod.function.static"] = { fg = palette.syntax.default.function_declaration },
+    ["@lsp.mod.static"] = { italic = true },
 
     -- Rust (rust-analyzer)
     ["@lsp.type.lifetime.rust"] = { fg = palette.syntax.rust.lifetime },
@@ -57,6 +49,24 @@ function M.groups()
     -- Protobuf (buf)
     ["@lsp.type.type.proto"] = { fg = palette.syntax.default.keyword },
     ["@lsp.type.decorator.proto"] = { fg = palette.syntax.default.struct },
+
+    -- TypeScript (ts_ls)
+    ["@lsp.type.variable.typescript"] = { fg = palette.syntax.ts.local_variable },
+    ["@lsp.type.method.typescript"] = { fg = palette.syntax.default.function_declaration },
+    ["@lsp.type.function.typescript"] = { fg = palette.syntax.default.function_declaration },
+    ["@lsp.type.typeParameter.typescript"] = { fg = palette.syntax.ts.generic },
+    ["@lsp.typemod.variable.local.typescript"] = { fg = palette.syntax.ts.local_variable },
+    ["@lsp.typemod.variable.defaultLibrary.typescript"] = { fg = palette.syntax.default.property, italic = true },
+    ["@lsp.typemod.class.defaultLibrary.typescript"] = { fg = palette.syntax.default.function_declaration },
+
+    -- JavaScript (ts_ls)
+    ["@lsp.type.variable.javascript"] = { fg = palette.syntax.ts.local_variable },
+    ["@lsp.type.method.javascript"] = { fg = palette.syntax.default.function_declaration },
+    ["@lsp.type.function.javascript"] = { fg = palette.syntax.default.function_declaration },
+    ["@lsp.type.typeParameter.javascript"] = { fg = palette.syntax.ts.generic },
+    ["@lsp.typemod.variable.local.javascript"] = { fg = palette.syntax.ts.local_variable },
+    ["@lsp.typemod.variable.defaultLibrary.javascript"] = { fg = palette.syntax.default.function_declaration },
+    ["@lsp.typemod.class.defaultLibrary.javascript"] = { fg = palette.syntax.default.function_declaration },
   }
 end
 

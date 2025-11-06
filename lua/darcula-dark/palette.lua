@@ -77,7 +77,7 @@ return {
       string = "#6AAB73",
       keyword = "#CF8E6D",
       number = "#2AACB8",
-      function_declaration = "#00AAFF",
+      function_declaration = "#56A8F5",
       function_call = "#BCBEC4",
       property = "#C77DBB",
       constant = "#C77DBB",
@@ -105,6 +105,13 @@ return {
     },
     bash = {
       cli_call = "#C57633",
+    },
+    ts = {
+      local_variable = "#A9B7C6",
+      generic = "#507874",
+    },
+    regexp = {
+      escape = "#B2AE60",
     },
   },
 }
