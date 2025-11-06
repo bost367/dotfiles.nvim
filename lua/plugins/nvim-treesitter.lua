@@ -20,6 +20,11 @@ local langs = {
   "editorconfig",
   "sql",
   "just",
+  "javascript",
+  "typescript",
+  "html",
+  "comment",
+  "regex",
 }
 
 vim.api.nvim_create_user_command("TSInstallList", function()

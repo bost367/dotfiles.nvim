@@ -65,6 +65,9 @@ function M.groups()
     ["@diff.delta"] = { fg = palette.syntax.diff.changed },
     ["StaticFunction"] = { fg = palette.syntax.default.function_declaration, italic = true },
 
+    ["@string.regexp"] = { fg = palette.syntax.default.string },
+    ["@string.escape.regex"] = { fg = palette.syntax.regexp.escape, bold = true },
+
     -- JSON
     ["@property.json"] = { fg = palette.syntax.default.constant },
 
@@ -98,6 +101,18 @@ function M.groups()
     ["@keyword.directive.just"] = { fg = palette.syntax.default.comment },
     ["@variable.just"] = { fg = palette.syntax.default.constant, italic = true },
     ["@function.just"] = { link = "StaticFunction" },
+
+    -- TypeScript
+    ["@function.call.typescript"] = { fg = palette.syntax.default.function_declaration },
+    ["@function.method.call.typescript"] = { fg = palette.syntax.default.function_declaration },
+    ["@variable.typescript"] = { fg = palette.syntax.ts.local_variable },
+    ["@constructor.typescript"] = { fg = palette.syntax.default.keyword },
+
+    -- JavaScript
+    ["@function.call.javascript"] = { fg = palette.syntax.default.function_declaration },
+    ["@function.method.call.javascript"] = { fg = palette.syntax.default.function_declaration },
+    ["@variable.javascript"] = { fg = palette.syntax.ts.local_variable },
+    ["@constructor.javascript"] = { fg = palette.syntax.default.keyword },
   }
 end
 
