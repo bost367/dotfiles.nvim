@@ -21,9 +21,10 @@ return {
           "lua_ls",
           "rust_analyzer",
           "bashls",
-          "buf",
+          "buf_ls",
           "taplo",
           "yamlls",
+          "jsonls",
         },
         automatic_enable = {
           exclude = {
