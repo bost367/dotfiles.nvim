@@ -3,11 +3,11 @@ local map = vim.keymap.set
 local unmap = vim.keymap.del
 
 -- Remove default keybindings that cause `gr` delay
-unmap('n', 'gri')
-unmap('n', 'grr')
-unmap('n', 'gra')
-unmap('n', 'grn')
-unmap('n', 'grt')
+unmap("n", "gri")
+unmap("n", "grr")
+unmap("n", "gra")
+unmap("n", "grn")
+unmap("n", "grt")
 
 local function opts(arg)
   return {
