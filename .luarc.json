@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
+  "runtime": {
+    "version": "LuaJIT",
+    "path": [
+      "lua/?.lua",
+      "lua/?/init.lua"
+    ]
+  },
+  "workspace": {
+    "library": [
+      "$VIMRUNTIME",
+      "${3rd}/luv/library"
+    ],
+    "checkThirdParty": false
+  },
+  "diagnostics": {
+    "libraryFiles": "Disable",
+    "unusedLocalExclude": [
+      "_*"
+    ]
+  },
+  "type": {
+    "weakNilCheck": true,
+    "weakUnionCheck": true,
+    "castNumberToInteger": true
+  },
+  "hint": {
+    "enable": true,
+    "setType": true,
+    "arrayIndex": "Disable"
+  }
+}
