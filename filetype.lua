@@ -6,5 +6,6 @@ vim.filetype.add({
   },
   extension = {
     ["mdx"] = "markdown",
+    ["sh"] = "bash",
   },
 })
