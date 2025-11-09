@@ -1,4 +1,4 @@
-vim.opt_local.expandtab = true
-vim.opt_local.softtabstop = 2
-vim.opt_local.shiftwidth = 2
-vim.opt_local.conceallevel = 0
+local indent = 2
+vim.opt_local.tabstop = indent
+vim.opt_local.shiftwidth = indent
+vim.opt_local.softtabstop = indent
