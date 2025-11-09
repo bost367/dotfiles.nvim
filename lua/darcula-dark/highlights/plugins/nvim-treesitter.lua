@@ -30,7 +30,7 @@ function M.groups()
     ["@variable.builtin"] = { fg = palette.syntax.default.keyword },
     ["@variable.parameter"] = { fg = palette.syntax.default.local_variable },
     ["@variable.parameter.builtin"] = { fg = palette.syntax.default.local_variable },
-    ["@variable.member"] = { fg = palette.syntax.default.constant },
+    ["@variable.member"] = { fg = palette.syntax.default.property },
     ["@string"] = { fg = palette.syntax.default.string },
     ["@character"] = { fg = palette.syntax.default.string },
     ["@character.special"] = { fg = palette.syntax.default.keyword },
@@ -69,6 +69,7 @@ function M.groups()
     ["@diff.plus"] = { fg = palette.syntax.diff.added },
     ["@diff.minus"] = { fg = palette.syntax.diff.deleted },
     ["@diff.delta"] = { fg = palette.syntax.diff.changed },
+    ["StaticFunction"] = { fg = palette.syntax.default.function_decaration, italic = true },
 
     -- JSON
     ["@property.json"] = { fg = palette.syntax.default.constant },
@@ -104,6 +105,10 @@ function M.groups()
 
     -- Rust
     ["@function.macro.rust"] = { fg = palette.syntax.default.metadata },
+
+    ["@keyword.directive.just"] = { fg = palette.syntax.default.comment },
+    ["@variable.just"] = { fg = palette.syntax.default.constant, italic = true },
+    ["@function.just"] = { link = "StaticFunction" },
   }
 end
 

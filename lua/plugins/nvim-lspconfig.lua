@@ -25,6 +25,7 @@ return {
           "taplo",
           "yamlls",
           "jsonls",
+          "just",
         },
         automatic_enable = {
           exclude = {
