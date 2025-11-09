@@ -22,6 +22,7 @@ return {
       xml = { "xmllint" },
       proto = { "buf" },
       toml = { "taplo" },
+      just = { "just" },
       ["_"] = { "trim_whitespace", "trim_newlines" },
     },
     formatters = {

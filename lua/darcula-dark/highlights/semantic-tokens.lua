@@ -5,7 +5,6 @@ local palette = require("darcula-dark.palette")
 vim.api.nvim_create_autocmd("LspTokenUpdate", {
   callback = function(args)
     local token = args.data.token
-    vim.api.nvim_set_hl(0, "StaticFunction", { fg = palette.syntax.default.function_decaration, italic = true })
     if token.type == "function" and token.modifiers.static then
       vim.lsp.semantic_tokens.highlight_token(token, args.buf, args.data.client_id, "StaticFunction")
     end
