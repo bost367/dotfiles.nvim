@@ -7,12 +7,14 @@ opt.autoread = true
 opt.fileformat = "unix" -- File mode is unix
 opt.fileformats = "unix,dos,mac" -- File mode detect order
 
--- indentation
+-- tab behaviour
 local indent = 4
-opt.tabstop = indent -- Number of spaces a tab counts for
-opt.shiftwidth = indent -- Number of spaces to use for each step of (auto)indent.
-opt.expandtab = true -- Use the spaces to insert a <Tab>
-opt.shiftround = true -- Round indent to multiple of 'shiftwidth'
+opt.tabstop = indent
+opt.shiftwidth = indent
+opt.softtabstop = indent
+opt.expandtab = true
+
+opt.shiftround = true
 opt.smartindent = true
 
 opt.wrap = false -- Disable line wrpping
