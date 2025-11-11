@@ -29,6 +29,7 @@ return {
           "ts_ls",
           "basedpyright",
           "ruff",
+          "codebook",
         },
         automatic_enable = {
           exclude = {
