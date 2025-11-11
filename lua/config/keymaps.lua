@@ -50,3 +50,9 @@ map("n", "<M-l>", "<cmd>wincmd l<cr>", opts({ desc = "Move cursor to window righ
 
 -- Clear search with <esc>
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", opts({ desc = "Escape and clear hlsearch" }))
+
+local function toggle_spellcheck()
+  local client = vim.lsp.get_clients({ name = "codebook" })
+end
+
+map("n", "<leader>s", toggle_spellcheck, { desc = "LSP rename" })

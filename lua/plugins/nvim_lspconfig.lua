@@ -27,6 +27,7 @@ return {
           "jsonls",
           "just",
           "ts_ls",
+          "codebook",
         },
         automatic_enable = {
           exclude = {
