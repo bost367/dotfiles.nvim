@@ -36,7 +36,7 @@ function M.groups()
     ["@lsp.mod.static"] = { italic = true },
 
     -- Rust (rust-analyzer)
-    ["@lsp.type.lifetime.rust"] = { fg = palette.syntax.rust.lifetime },
+    ["@lsp.type.lifetime.rust"] = { fg = palette.syntax.rust.lifetime, italic = true },
     ["@lsp.type.macro.rust"] = { fg = palette.syntax.rust.macros_functional },
     ["@lsp.typemod.method.unsafe.rust"] = { bg = palette.syntax.rust.unsafe },
     ["@lsp.typemod.function.unsafe.rust"] = { bg = palette.syntax.rust.unsafe },
