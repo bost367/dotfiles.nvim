@@ -77,7 +77,7 @@ return {
       string = "#6AAB73",
       keyword = "#CF8E6D",
       number = "#2AACB8",
-      function_decaration = "#00AAFF",
+      function_declaration = "#00AAFF",
       function_call = "#BCBEC4",
       property = "#C77DBB",
       constant = "#C77DBB",
@@ -94,7 +94,7 @@ return {
     },
     rust = {
       lifetime = "#20999D",
-      macro = "#FFC66D",
+      macros_functional = "#FFC66D",
       unsafe = "#4D3E3E",
     },
     diff = {
@@ -104,7 +104,7 @@ return {
       deleted = "#484A4A",
     },
     bash = {
-      builtin = "#C57633",
+      cli_call = "#C57633",
     },
   },
 }
