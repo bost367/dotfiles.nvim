@@ -116,5 +116,8 @@ return {
     regexp = {
       escape = "#B2AE60",
     },
+    markup = {
+      code_block = "#293C40",
+    },
   },
 }
