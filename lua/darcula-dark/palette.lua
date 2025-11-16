@@ -97,6 +97,9 @@ return {
       macros_functional = "#FFC66D",
       unsafe = "#4D3E3E",
     },
+    yaml = {
+      anchor = "#FFC66D",
+    },
     diff = {
       added = "#294436",
       changed = "#283541",

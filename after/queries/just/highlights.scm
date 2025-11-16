@@ -2,4 +2,4 @@
 (recipe_line
   (text)
     (interpolation) @variable.just
-    (#set! "priority" 300))
+    (#set! priority 300))
