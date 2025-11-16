@@ -1,3 +1,6 @@
+-- Description per group:
+-- https://github.com/nvim-treesitter/nvim-treesitter/blob/main/CONTRIBUTING.md
+
 local M = {}
 local palette = require("darcula-dark.palette")
 
@@ -19,13 +22,12 @@ function M.groups()
     ["@module"] = { fg = palette.syntax.default.foreground },
     ["@module.builtin"] = { fg = palette.syntax.default.foreground },
     ["@label"] = { fg = palette.syntax.default.label },
-    ["@keyword"] = { fg = palette.syntax.default.keyword },
     ["@attribute"] = { fg = palette.syntax.default.metadata },
     ["@property"] = { fg = palette.syntax.default.property },
     ["@boolean"] = { fg = palette.syntax.default.keyword },
-    ["@keyword.function"] = { fg = palette.syntax.default.keyword },
-    ["@keyword.return"] = { fg = palette.syntax.default.keyword },
-    ["@keyword.operator"] = { fg = palette.syntax.default.keyword },
+    ["@keyword"] = { fg = palette.syntax.default.keyword },
+    ["@keyword.conditional.ternary"] = { fg = palette.syntax.default.foreground },
+    ["@keyword.directive"] = { fg = palette.syntax.default.foreground, bold = true },
     ["@variable"] = { fg = palette.syntax.default.local_variable },
     ["@variable.builtin"] = { fg = palette.syntax.default.keyword },
     ["@variable.parameter"] = { fg = palette.syntax.default.local_variable },
@@ -76,7 +78,7 @@ function M.groups()
     ["@property.toml"] = { fg = palette.syntax.default.keyword },
 
     -- YAML
-    ["@label.yaml"] = { fg = palette.syntax.rust.macros_functional },
+    ["@label.yaml"] = { fg = palette.syntax.yaml.anchor },
     ["@comment.yaml"] = { fg = palette.syntax.default.comment_documentation },
     ["@punctuation.special.yaml"] = { fg = palette.syntax.default.foreground },
     ["@property.yaml"] = { fg = palette.syntax.default.keyword },
@@ -87,7 +89,6 @@ function M.groups()
     -- Bash
     ["@function.call.bash"] = { fg = palette.syntax.bash.cli_call },
     ["@function.builtin.bash"] = { fg = palette.syntax.bash.cli_call },
-    ["@keyword.directive.bash"] = { fg = palette.syntax.default.foreground, bold = true },
     ["@punctuation.special.bash"] = { fg = palette.syntax.default.keyword },
     ["@variable.builtin.bash"] = { fg = palette.syntax.default.constant },
 
@@ -98,7 +99,6 @@ function M.groups()
     ["@string.special.proto"] = { fg = palette.syntax.default.string },
 
     -- Justfile
-    ["@keyword.directive.just"] = { fg = palette.syntax.default.comment },
     ["@variable.just"] = { fg = palette.syntax.default.constant, italic = true },
     ["@function.just"] = { link = "StaticFunction" },
 
