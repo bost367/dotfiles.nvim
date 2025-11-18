@@ -1,4 +1,5 @@
 ;; extends
+(crate) @keyword
 ((lifetime) @lsp.type.lifetime.rust
   (#set! "priority" 300))
 (outer_doc_comment_marker) @comment.documentation
