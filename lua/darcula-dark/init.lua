@@ -1,18 +1,18 @@
 --- @type table<string>
 local plugins = {
-  "blink-cmp",
+  "blink_cmp",
   "diffview",
-  "fzf-lua",
+  "fzf_lua",
   "gitsigns",
-  "indent-blankline",
+  "indent_blankline",
   "lazy",
   "mason",
-  "nvim-cmp",
-  "nvim-scrollbar",
-  "nvim-tree",
-  "nvim-treesitter",
+  "nvim_cmp",
+  "nvim_scrollbar",
+  "nvim_tree",
+  "nvim_treesitter",
   "trouble",
-  "vim-illuminate",
+  "vim_illuminate",
 }
 
 ---@param filename string
@@ -24,7 +24,7 @@ local function colorize(filename)
 end
 
 colorize("builtin")
-colorize("semantic-tokens")
+colorize("semantic_tokens")
 
 for _, plugin in pairs(plugins) do
   colorize("plugins." .. plugin)
