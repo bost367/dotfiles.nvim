@@ -2,7 +2,7 @@ local palette = require("darcula-dark.palette")
 
 local solid_hl = {
   bg = palette.interface.background,
-  fg = "#9B9DA5",
+  fg = palette.hint_text_special,
 }
 
 return {

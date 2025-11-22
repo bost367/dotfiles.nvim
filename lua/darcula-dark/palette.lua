@@ -1,7 +1,7 @@
 return {
-  icon = "#CED0D6", -- almost any icon: gradle, git, services etc.
   link = "#56A8F5", -- url or open new window
   hint_text = "#6F737A",
+  hint_text_special = "#9B9DA5",
   -- dirty_blue = "#2E436E", -- same as coursor line
   editor = {
     background = "#1E1F22",
@@ -12,6 +12,7 @@ return {
     current_match = "#214283",
     matching_text = "#124957",
     under_corsour = "#373B39",
+    indent_scope = "#65676F",
     fold = {
       bg = "#393B41",
       fg = "#868991",
@@ -71,6 +72,14 @@ return {
     cursor_line = "#2E436E",
     active_element = "#3574F1", -- blue
   },
+  search = {
+    match_in_preview = "#2D5436",
+  },
+  autocomplete = {
+    background = "#2B2D30",
+    foreground = "#B6BFB8",
+    match = "#538AF7",
+  },
   syntax = {
     default = {
       foreground = "#BCBEC4",
@@ -119,5 +128,12 @@ return {
     markup = {
       code_block = "#293C40",
     },
+  },
+  icons = {
+    default = "#CED0D6", -- almost any icon: gradle, git, services etc.
+    json = "#B589EC",
+    md = "#548AF7",
+    yaml = "#DB5C5C",
+    yml = "#DB5C5C",
   },
 }

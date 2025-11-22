@@ -1,4 +1,4 @@
--- # https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textDocument_semanticTokens
+-- https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textDocument_semanticTokens
 local M = {}
 local palette = require("darcula-dark.palette")
 

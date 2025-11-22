@@ -39,7 +39,7 @@ function M.groups()
     DiffviewFilePanelCounter = { fg = palette.syntax.default.foreground },
     DiffviewHash = { fg = palette.syntax.default.foreground },
     DiffviewReference = { fg = palette.interface.search_select },
-    DiffviewNonText = { fg = "#42454B" },
+    DiffviewNonText = { fg = palette.editor.separator },
 
     -- commit message pop-up
     gitKeyword = { fg = palette.hint_text },

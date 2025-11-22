@@ -78,6 +78,7 @@ return {
   },
   opts = {
     previewers = {
+      scrollbar = false,
       codeaction_native = {
         pager = [[delta --width=$COLUMNS --hunk-header-style="omit" --file-style="omit"]],
       },

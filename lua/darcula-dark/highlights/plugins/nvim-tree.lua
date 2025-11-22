@@ -1,6 +1,6 @@
 local M = {}
 local palette = require("darcula-dark.palette")
-local folder_hl = palette.icon
+local folder_hl = palette.icons.default
 
 ---@return table<any,Highliht>
 function M.groups()

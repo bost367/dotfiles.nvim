@@ -1,28 +1,26 @@
 local palette = require("darcula-dark.palette")
-local not_selected = "#C1C3C6"
-local hi = vim.api.nvim_set_hl
+local not_selected = palette.editor.foreground
 
 -- Errros
-local hide_diagnostics_hl = {
+local ignore_diagnostics_hl = {
   fg = not_selected,
   bg = palette.editor.background,
   sp = palette.editor.separator,
   underline = true,
+  undercurl = false,
+  italic = false,
+  bold = false,
 }
 
--- Hide next diagnostics to avoid noisy hints
--- Warnings
-hi(0, "BufferLineWarning", hide_diagnostics_hl)
-hi(0, "BufferLineWarningVisible", hide_diagnostics_hl)
-hi(0, "BufferLineWarningSelected", hide_diagnostics_hl)
--- Hint
-hi(0, "BufferLineHint", hide_diagnostics_hl)
-hi(0, "BufferLineHintVisible", hide_diagnostics_hl)
-hi(0, "BufferLineHintSelected", hide_diagnostics_hl)
--- Info
-hi(0, "BufferLineInfo", hide_diagnostics_hl)
-hi(0, "BufferLineInfoVisible", hide_diagnostics_hl)
-hi(0, "BufferLineInfoSelected", hide_diagnostics_hl)
+local select_ignored_diagnostic_hl = {
+  fg = palette.interface.foreground,
+  bg = palette.editor.background,
+  sp = palette.editor.separator,
+  underline = true,
+  undercurl = false,
+  italic = false,
+  bold = false,
+}
 
 return {
   -- empty space after buffers
@@ -86,7 +84,7 @@ return {
   },
   -- number of hidden buffers (left/right arrows)
   trunc_marker = {
-    fg = palette.icon,
+    fg = palette.icons.default,
     bg = palette.editor.background,
     sp = palette.editor.separator,
     underline = true,
@@ -208,4 +206,13 @@ return {
     italic = false,
     bold = false,
   },
+  warning = ignore_diagnostics_hl,
+  warning_visible = ignore_diagnostics_hl,
+  warning_selected = select_ignored_diagnostic_hl,
+  info = ignore_diagnostics_hl,
+  info_visible = ignore_diagnostics_hl,
+  info_selected = select_ignored_diagnostic_hl,
+  hint = ignore_diagnostics_hl,
+  hint_visible = ignore_diagnostics_hl,
+  hint_selected = select_ignored_diagnostic_hl,
 }

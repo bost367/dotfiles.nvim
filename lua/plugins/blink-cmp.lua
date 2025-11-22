@@ -47,7 +47,7 @@ return {
       default = { "lsp", "buffer", "path" },
       providers = {
         lsp = {
-          name = "lsp",
+          name = "lsp ",
           transform_items = function(_, items)
             return vim.tbl_filter(function(item)
               return item.kind ~= require("blink.cmp.types").CompletionItemKind.Snippet
@@ -59,8 +59,8 @@ return {
             show_hidden_files_by_default = true,
           },
         },
-        buffer = { name = "buf" },
-        cmdline = { name = "cmd" },
+        buffer = { name = "buf " },
+        cmdline = { name = "cmd " },
       },
     },
     appearance = {
