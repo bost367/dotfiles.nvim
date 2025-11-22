@@ -13,7 +13,7 @@ function M.groups()
     LazyProgressDone = { fg = palette.interface.active_element },
     LazySpecial = { fg = palette.hint_text },
     LazyProp = { fg = palette.hint_text },
-    LazyUrl = { fg = palette.link },
+    LazyUrl = { fg = palette.link, underline = true },
     LazyDir = { fg = palette.hint_text },
   }
 end

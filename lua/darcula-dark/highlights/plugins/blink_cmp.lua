@@ -14,7 +14,7 @@ function M.groups()
     BlinkCmpLabelDetail = { fg = palette.hint_text },
     BlinkCmpLabelDescription = { fg = palette.hint_text },
     BlinkCmpSource = { fg = palette.hint_text },
-    BlinkCmpDoc = { bg = palette.editor.background, fg = palette.editor.separator },
+    BlinkCmpDoc = { bg = palette.editor.background, fg = palette.interface.foreground },
     BlinkCmpDocBorder = { bg = palette.editor.background, fg = palette.editor.separator },
     BlinkCmpDocSeparator = { bg = palette.editor.background, fg = palette.editor.separator },
     BlinkCmpDocCursorLine = { bg = palette.editor.background, fg = palette.editor.separator },

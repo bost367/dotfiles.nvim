@@ -5,14 +5,14 @@ return {
     {
       "<leader>6",
       function()
-        require("trouble").diagnostics_all({ toggle = true })
+        vim.cmd("Trouble diagnostics_all toggle")
       end,
       desc = "Show all troubles",
     },
     {
       "<leader>7",
       function()
-        require("trouble").diagnostics_current_buf({ toggle = true })
+        vim.cmd("Trouble diagnostics_current_buf toggle")
       end,
       desc = "Show troules in current buffer",
     },
