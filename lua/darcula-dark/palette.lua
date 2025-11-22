@@ -1,20 +1,19 @@
 return {
-  link = "#56A8F5", -- url or open new window
+  link = "#548AF7", -- url or open new window
   hint_text = "#6F737A",
   hint_text_special = "#9B9DA5",
-  -- dirty_blue = "#2E436E", -- same as coursor line
   editor = {
     background = "#1E1F22",
     foreground = "#BCBEC4",
-    separator = "#393B40", -- split dark windows
+    separator = "#323438", -- split dark windows
     cursor_line = "#26282E",
     selected_area = "#214283",
     current_match = "#214283",
-    matching_text = "#124957",
+    matching_text = "#114957",
     under_corsour = "#373B39",
     indent_scope = "#65676F",
     fold = {
-      bg = "#393B41",
+      bg = "#393B40",
       fg = "#868991",
     },
     diagnostic = {
@@ -35,7 +34,7 @@ return {
     cursor_line_fg = "#A1A3AB",
     cursor_line_bg = "#26282E",
     vcs = {
-      added_line = "#549159",
+      added_line = "#539258",
       changed_line = "#52423D",
       changed_delete_line = "#375FAD",
       deleted_line = "#868A91",
@@ -44,13 +43,13 @@ return {
   scroll_bar = {
     background = "#464648",
     vcs = {
-      added_line = "#447152",
-      changed_line = "#43698D",
+      added_line = "#437151",
+      changed_line = "#42698D",
       deleted_line = "#656E76",
     },
     diagnostic = {
-      error = "#D54D5B",
-      warn = "#F2C55C",
+      error = "#D64C5B",
+      warn = "#C29E49",
     },
   },
   file_manager = {
@@ -60,7 +59,7 @@ return {
       deleted_file = "#6C6C6C",
       ignored_file = "#848504",
       merged_file = "#9876AA",
-      staged_file = "#Df8984",
+      staged_file = "#DF8984",
       untracked_file = "#D1675A",
       merge_conflict_file = "#D5756C",
     },
@@ -70,15 +69,15 @@ return {
     foreground = "#DFE1E5",
     search_select = "#BA9752",
     cursor_line = "#2E436E",
-    active_element = "#3574F1", -- blue
+    active_element = "#3474F0", -- blue
   },
   search = {
     match_in_preview = "#2D5436",
   },
   autocomplete = {
     background = "#2B2D30",
-    foreground = "#B6BFB8",
-    match = "#538AF7",
+    foreground = "#B3B7BE",
+    match = "#538AFA",
   },
   syntax = {
     default = {
@@ -107,7 +106,7 @@ return {
       unsafe = "#4D3E3E",
     },
     yaml = {
-      anchor = "#FFC66D",
+      anchor = "#E8BF6A",
     },
     diff = {
       added = "#294436",
