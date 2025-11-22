@@ -3,7 +3,7 @@ return {
   hint_text = "#6F737A",
   hint_text_special = "#9B9DA5",
   editor = {
-    background = "#1E1F22",
+    background = "#191A1C",
     foreground = "#BCBEC4",
     separator = "#323438", -- split dark windows
     cursor_line = "#26282E",
@@ -65,7 +65,7 @@ return {
     },
   },
   interface = {
-    background = "#2B2D30",
+    background = "#191A1C",
     foreground = "#DFE1E5",
     search_select = "#BA9752",
     cursor_line = "#2E436E",

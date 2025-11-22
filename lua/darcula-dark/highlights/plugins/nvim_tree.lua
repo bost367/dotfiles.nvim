@@ -6,7 +6,7 @@ local folder_hl = palette.icons.default
 function M.groups()
   return {
     NvimTreeNormal = { bg = palette.interface.background, fg = palette.interface.foreground },
-    NvimTreeWinSeparator = { fg = palette.editor.background },
+    NvimTreeWinSeparator = { fg = palette.editor.separator },
     NvimTreeCursorLine = { bg = palette.interface.cursor_line },
     NvimTreeNormalFloat = { bg = palette.interface.background },
 
