@@ -17,6 +17,7 @@
   "nvim-tree.lua": { "branch": "master", "commit": "a0db8bf7d6488b1dcd9cb5b0dfd6684a1e14f769" },
   "nvim-treesitter": { "branch": "main", "commit": "cb2cb74f3c3cbbcc17e79cada2060165d616d849" },
   "nvim-web-devicons": { "branch": "master", "commit": "737cf6c657898d0c697311d79d361288a1343d50" },
+  "render-markdown.nvim": { "branch": "main", "commit": "1c958131c083c8557ea499fdb08c88b8afb05c4e" },
   "rustaceanvim": { "branch": "master", "commit": "88575b98bb9937fb9983ddec5e532b67e75ce677" },
   "vim-illuminate": { "branch": "master", "commit": "0d1e93684da00ab7c057410fecfc24f434698898" },
   "vim-plugin-ruscmd": { "branch": "master", "commit": "b4c6cf0b4ff76641d84c2ea1e90ab258f8ff7415" }

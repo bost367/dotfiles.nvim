@@ -21,6 +21,8 @@ return {
         window = {
           scrollbar = false,
         },
+        treesitter_highlighting = false,
+        -- draw = nil,
       },
       list = {
         selection = {
@@ -52,6 +54,11 @@ return {
     },
     sources = {
       default = { "lsp", "buffer", "path" },
+      -- per_filetype = {
+      --   markdown = {
+      --     "render-markdown",
+      --   },
+      -- },
       providers = {
         lsp = {
           name = "lsp ",
@@ -68,6 +75,15 @@ return {
         },
         buffer = { name = "buf " },
         cmdline = { name = "cmd " },
+        -- render_markdown = {
+        --   name = "md  ",
+        --   module = "render-markdown",
+        --   -- transform_items = function(_, items)
+        --   --   return vim.tbl_filter(function(item)
+        --   --     return item.kind ~= require("blink.cmp.types").CompletionItemKind.Snippet
+        --   --   end, items)
+        --   -- end,
+        -- },
       },
     },
     appearance = {

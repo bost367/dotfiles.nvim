@@ -12,6 +12,7 @@ local plugins = {
   "nvim_tree",
   "nvim_treesitter",
   "vim_illuminate",
+  "render_markdown",
 }
 
 ---@param filename string
