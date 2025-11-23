@@ -125,7 +125,10 @@ return {
       escape = "#B2AE60",
     },
     markup = {
-      code_block = "#293C40",
+      link = "#57AAF7",
+      -- link = "#57A8F5",
+      -- link = "#6A9BFA",
+      -- code_block = "#293C40",
     },
   },
   icons = {
