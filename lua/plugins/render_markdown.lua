@@ -6,6 +6,15 @@ return {
   },
   ---@type render.md.UserConfig
   opts = {
+    file_types = {
+      "markdown",
+      "blink-cmp-documentation",
+    },
+    restart_highlighter = true,
+    completions = {
+      blink = { enabled = true },
+      -- lsp = { enabled = true },
+    },
     heading = {
       sign = false,
       position = "inline",
@@ -21,8 +30,8 @@ return {
       -- above = "─",
       -- below = "─",
       -- style = "normal",
-      left_pad = 2,
-      left_margin = 1,
+      -- left_pad = 1,
+      -- left_margin = 1,
     },
     checkbox = {
       unchecked = { icon = " " },
