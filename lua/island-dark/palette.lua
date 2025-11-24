@@ -37,6 +37,9 @@ return {
     line_number = "#4B5059",
     cursor_line_fg = "#A1A3AB",
     cursor_line_bg = "#26282E",
+    breackpoint = "#E55765",
+    breackpoint_stop = "#F2C55C",
+    run = "#5FAD65",
     vcs = {
       added_line = "#539258",
       changed_line = "#52423D",

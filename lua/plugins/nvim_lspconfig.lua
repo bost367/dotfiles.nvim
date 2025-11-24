@@ -29,6 +29,7 @@ return {
           "ts_ls",
           "basedpyright",
           "ruff",
+          "codelldb",
         },
         automatic_enable = {
           exclude = {

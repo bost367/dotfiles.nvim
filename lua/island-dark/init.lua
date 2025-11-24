@@ -1,6 +1,8 @@
 --- @type table<string>
 local plugins = {
   "blink_cmp",
+  "dap",
+  "dap_ui",
   "diffview",
   "fzf_lua",
   "gitsigns",
