@@ -12,7 +12,9 @@ return {
       show_exact_scope = true,
     },
     exclude = {
-      filetypes = { "git" },
+      filetypes = {
+        "git",
+      },
     },
   },
 }

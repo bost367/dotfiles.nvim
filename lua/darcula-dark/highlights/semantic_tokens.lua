@@ -68,6 +68,11 @@ function M.groups()
     ["@lsp.typemod.variable.local.javascript"] = { fg = palette.syntax.ts.local_variable },
     ["@lsp.typemod.variable.defaultLibrary.javascript"] = { fg = palette.syntax.default.function_declaration },
     ["@lsp.typemod.class.defaultLibrary.javascript"] = { fg = palette.syntax.default.function_declaration },
+
+    LspInlayHint = { fg = palette.syntax.default.inline_hint_fg, bg = palette.syntax.default.inline_hint_bg },
+    LspReferenceText = { bg = palette.editor.scope.same_token },
+    LspReferenceRead = { bg = palette.editor.scope.read_variable },
+    LspReferenceWrite = { bg = palette.editor.scope.write_variable },
   }
 end
 

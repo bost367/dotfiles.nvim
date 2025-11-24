@@ -10,8 +10,6 @@ return {
     selected_area = "#214283",
     current_match = "#214283",
     matching_text = "#114957",
-    under_corsour = "#373B39",
-    indent_scope = "#65676F",
     fold = {
       bg = "#393B40",
       fg = "#868991",
@@ -27,6 +25,12 @@ return {
       info = "#3592C4",
       unnecessary = "#6F737A",
       spell = "#7EC482",
+    },
+    scope = {
+      indent_scope = "#65676F",
+      same_token = "#373B39",
+      read_variable = "#373B39",
+      write_variable = "#402F33",
     },
   },
   gutter_bar = {
@@ -70,6 +74,7 @@ return {
     search_select = "#BA9752",
     cursor_line = "#2E436E",
     active_element = "#3474F0", -- blue
+    button = "#2B2D30",
   },
   search = {
     match_in_preview = "#2D5436",

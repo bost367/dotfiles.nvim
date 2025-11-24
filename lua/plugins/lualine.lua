@@ -2,7 +2,7 @@
 
 --- @type table<string,string>
 local modes = {
-  ["NORMAL"] = " ",
+  ["NORMAL"] = " ",
   ["INSERT"] = " ",
   ["VISUAL"] = "󰒉 ",
   ["COMMAND"] = " ",
