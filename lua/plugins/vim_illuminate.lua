@@ -11,6 +11,13 @@ return {
         "DiffviewFileHistory",
         "DiffviewFiles",
         "git",
+        "dapui_scopes",
+        "dapui_console",
+        "dapui_stacks",
+        "dapui_breakpoints",
+        "dapui_scopes",
+        "dapui_watches",
+        "dap-repl",
       },
     })
   end,
