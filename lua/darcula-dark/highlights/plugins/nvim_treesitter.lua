@@ -61,7 +61,7 @@ function M.groups()
     ["@markup.quote"] = { fg = palette.syntax.default.string },
     ["@markup.link"] = { fg = palette.link, underline = true },
     ["@markup.link.label"] = { fg = palette.link, underline = true },
-    ["@markup.link.url"] = { fg = palette.link },
+    ["@markup.link.url"] = { fg = palette.link, underline = true },
     ["@markup.raw"] = { fg = palette.syntax.default.string },
     ["@markup.raw.block"] = { bg = palette.syntax.markup.code_block },
     ["@markup.list"] = { fg = palette.syntax.default.keyword },

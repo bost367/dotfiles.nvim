@@ -4,12 +4,12 @@ local palette = require("darcula-dark.palette")
 ---@return table<any,Highliht>
 function M.groups()
   return {
-    CmpItemAbbr = { fg = palette.editor.foreground },
-    CmpItemAbbrDeprecated = { fg = palette.editor.foreground, strikethrough = true },
+    CmpItemAbbr = { fg = palette.autocomplete.foreground },
+    CmpItemAbbrDeprecated = { fg = palette.autocomplete.foreground, strikethrough = true },
     CmpItemAbbrMatch = { fg = palette.interface.active_element },
     CmpItemAbbrMatchFuzzy = { fg = palette.interface.active_element },
     CmpItemMenu = { fg = palette.hint_text },
-    CmpItemKind = { fg = palette.editor.foreground },
+    CmpItemKind = { fg = palette.autocomplete.foreground },
     CmpItemKindVariable = { fg = palette.syntax.default.keyword },
     CmpItemKindField = { fg = palette.syntax.default.constant },
     CmpItemKindProperty = { fg = palette.syntax.default.constant },

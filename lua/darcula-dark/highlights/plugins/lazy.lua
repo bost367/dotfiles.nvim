@@ -5,7 +5,7 @@ local palette = require("darcula-dark.palette")
 function M.groups()
   return {
     LazyNormal = { bg = palette.editor.background },
-    LazyButton = { bg = palette.interface.background },
+    LazyButton = { bg = palette.interface.button },
     LazyButtonActive = { bg = palette.interface.active_element },
     LazyH1 = { bg = palette.interface.active_element },
     LazyH2 = { fg = palette.interface.foreground, bold = true },

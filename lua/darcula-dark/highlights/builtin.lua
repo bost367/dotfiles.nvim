@@ -75,8 +75,6 @@ function M.groups()
     DiagnosticUnderlineWarn = { sp = palette.editor.diagnostic.warn, undercurl = true },
     DiagnosticUnderlineHint = { sp = palette.editor.diagnostic.weak_warn, undercurl = true },
     DiagnosticUnderlineInfo = { sp = palette.editor.diagnostic.info, undercurl = true },
-
-    LspInlayHint = { fg = palette.syntax.default.inline_hint_fg, bg = palette.syntax.default.inline_hint_bg },
   }
 end
 
