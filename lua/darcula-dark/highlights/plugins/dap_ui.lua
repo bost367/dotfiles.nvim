@@ -36,7 +36,6 @@ function M.groups()
     DapUINormal = { bg = palette.editor.background, fg = palette.editor.foreground },
     DapUIFloatNormal = { bg = palette.interface.background, fg = palette.interface.foreground },
     DapUIFloatBorder = { bg = palette.interface.background, fg = palette.editor.separator },
-    -- DapUIEndofBuffer = { bg = palette.interface.background, fg = palette.editor.separator },
 
     -- stack window
     DapUIStoppedThread = { fg = palette.interface.foreground },
@@ -61,6 +60,8 @@ function M.groups()
 
     -- watches window
     DapUIWatchesEmpty = { fg = "#B8B8B9", bold = true }, -- header
+    -- DapUIWatchesValue = { fg = palette.icons.default },
+    -- DapUIWatchesError = { fg = palette.icons.default },
 
     -- icons
     DapUIStepOver = { fg = palette.icons.default },
@@ -79,6 +80,12 @@ function M.groups()
     -- DapUIRestartNC = { link = "DapUIRestart" },
     DapUIUnavailable = { fg = palette.icons.default },
     -- DapUIUnavailableNC = { link = "DapUIUnavailable" },
+
+    -- DapUIEndofBuffer = { fg = palette.icons.yaml, bg = palette.icons.yaml },
+    -- DapUIWinSelect = { fg = palette.icons.yaml, bg = palette.icons.yaml },
+    -- DapUIThread  = { fg = palette.icons.yaml, bg = palette.icons.yaml },
+    -- DapUIBreakpointsInfo = { fg = palette.icons.yaml, bg = palette.icons.yaml },
+    -- DapUICurrentFrameName = { fg = palette.icons.yaml, bg = palette.icons.yaml },
   }
 end
 

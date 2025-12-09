@@ -36,6 +36,13 @@ return {
         require("dap").step_out()
       end,
       desc = "Step out",
-    }
+    },
+    -- {
+    --   "<C-S-'",
+    --   function()
+    --     require("dap").terminate()
+    --   end,
+    --   desc = "Terminate",
+    -- },
   },
 }
