@@ -16,7 +16,7 @@ local plugins = {
 
 ---@param filename string
 local function colorize(filename)
-  local groups = require("darcula-dark.highlights." .. filename).groups()
+  local groups = require("island-dark.highlights." .. filename).groups()
   for name, highlight in pairs(groups) do
     vim.api.nvim_set_hl(0, name, highlight)
   end

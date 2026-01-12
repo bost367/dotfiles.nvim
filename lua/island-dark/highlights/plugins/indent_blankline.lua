@@ -1,5 +1,5 @@
 local M = {}
-local palette = require("darcula-dark.palette")
+local palette = require("island-dark.palette")
 
 ---@return table<any,Highliht>
 function M.groups()

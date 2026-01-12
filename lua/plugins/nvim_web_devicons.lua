@@ -1,4 +1,4 @@
-local icons = require("darcula-dark.palette").icons
+local icons = require("island-dark.palette").icons
 
 return {
   "nvim-tree/nvim-web-devicons",

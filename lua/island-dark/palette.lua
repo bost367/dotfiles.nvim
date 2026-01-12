@@ -3,9 +3,9 @@ return {
   hint_text = "#6F737A",
   hint_text_special = "#9B9DA5",
   editor = {
-    background = "#1E1F22",
+    background = "#191A1C",
     foreground = "#BCBEC4",
-    separator = "#323438", -- split dark windows
+    separator = "#313438", -- split dark windows
     cursor_line = "#26282E",
     selected_area = "#214283",
     current_match = "#214283",
@@ -27,7 +27,7 @@ return {
       spell = "#7EC482",
     },
     scope = {
-      indent_scope = "#65676F",
+      indent_scope = "#64676F",
       same_token = "#373B39",
       read_variable = "#373B39",
       write_variable = "#402F33",
@@ -69,12 +69,13 @@ return {
     },
   },
   interface = {
-    background = "#2B2D30",
+    background = "#191A1C",
     foreground = "#DFE1E5",
     search_select = "#BA9752",
     cursor_line = "#2E436E",
     active_element = "#3474F0", -- blue
     button = "#2B2D30",
+    statusbar = "#25272A",
   },
   search = {
     match_in_preview = "#2D5436",

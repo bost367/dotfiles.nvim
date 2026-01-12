@@ -1,5 +1,5 @@
 local M = {}
-local palette = require("darcula-dark.palette")
+local palette = require("island-dark.palette")
 
 ---@return table<any,Highliht>
 function M.groups()
@@ -9,7 +9,7 @@ function M.groups()
     DiffviewFolderSign = { fg = palette.interface.foreground },
     DiffviewCursorLine = { bg = palette.interface.cursor_line },
     DiffviewDiffAddAsDelete = { bg = palette.syntax.diff.deleted },
-    DiffviewWinSeparator = { bg = palette.editor.background, fg = palette.editor.background },
+    DiffviewWinSeparator = { bg = palette.interface.background, fg = palette.editor.separator },
     DiffviewDiffDeleteDim = { fg = palette.syntax.diff.deleted },
 
     -- tiitles

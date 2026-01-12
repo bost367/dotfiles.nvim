@@ -1,7 +1,7 @@
-local palette = require("darcula-dark.palette")
+local palette = require("island-dark.palette")
 
 local solid_hl = {
-  bg = palette.interface.background,
+  bg = palette.interface.statusbar,
   fg = palette.hint_text_special,
 }
 
