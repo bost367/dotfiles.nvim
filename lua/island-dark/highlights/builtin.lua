@@ -1,5 +1,5 @@
 local M = {}
-local palette = require("darcula-dark.palette")
+local palette = require("island-dark.palette")
 
 ---@return table<any,Highliht>
 function M.groups()
@@ -23,7 +23,7 @@ function M.groups()
     ErrorMsg = { fg = palette.editor.diagnostic.error },
     WarningMessage = { fg = palette.editor.diagnostic.warn },
     Special = { fg = palette.syntax.default.keyword },
-    MsgArea = { bg = palette.interface.background, fg = palette.interface.foreground },
+    MsgArea = { bg = palette.interface.statusbar, fg = palette.interface.foreground },
     Question = { fg = palette.hint_text },
     Directory = { fg = palette.hint_text },
     SpellBad = { sp = palette.editor.diagnostic.spell, undercurl = true },

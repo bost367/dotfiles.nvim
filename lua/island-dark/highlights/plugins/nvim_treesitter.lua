@@ -2,7 +2,7 @@
 -- https://github.com/nvim-treesitter/nvim-treesitter/blob/main/CONTRIBUTING.md
 
 local M = {}
-local palette = require("darcula-dark.palette")
+local palette = require("island-dark.palette")
 
 ---@return table<string,Highliht>
 function M.groups()

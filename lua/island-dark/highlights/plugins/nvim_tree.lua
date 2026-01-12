@@ -1,12 +1,12 @@
 local M = {}
-local palette = require("darcula-dark.palette")
+local palette = require("island-dark.palette")
 local folder_hl = palette.icons.default
 
 ---@return table<any,Highliht>
 function M.groups()
   return {
     NvimTreeNormal = { bg = palette.interface.background, fg = palette.interface.foreground },
-    NvimTreeWinSeparator = { fg = palette.editor.background },
+    NvimTreeWinSeparator = { fg = palette.editor.separator },
     NvimTreeCursorLine = { bg = palette.interface.cursor_line },
     NvimTreeNormalFloat = { bg = palette.interface.background },
 

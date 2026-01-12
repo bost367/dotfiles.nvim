@@ -47,7 +47,7 @@ cmd("filetype plugin indent on") -- Try to recognize filetypes and load rel' plu
 -- colour pallete
 opt.termguicolors = true -- Enable true colors
 cmd("syntax enable") -- Syntax highlighting
-cmd.colorscheme("darcula-dark")
+cmd.colorscheme("island-dark")
 
 opt.swapfile = false -- Disable swap files
 

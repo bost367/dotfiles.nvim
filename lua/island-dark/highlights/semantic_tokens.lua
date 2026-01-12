@@ -1,6 +1,6 @@
 -- https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textDocument_semanticTokens
 local M = {}
-local palette = require("darcula-dark.palette")
+local palette = require("island-dark.palette")
 
 ---@return table<any,Highliht>
 function M.groups()

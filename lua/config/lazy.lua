@@ -30,7 +30,7 @@ require("lazy").setup({
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "darcula-dark" } },
+  install = { colorscheme = { "island-dark" } },
   checker = {
     enabled = true,
     frequency = 60 * 60 * 24 * 7, -- check for updates every week
