@@ -59,7 +59,7 @@ return {
       function()
         require("fzf-lua").lsp_definitions({ ignore_current_line = true })
       end,
-      desc = "Go to references",
+      desc = "Go to definition",
     },
     {
       "<M-CR>",

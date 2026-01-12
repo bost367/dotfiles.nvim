@@ -13,7 +13,7 @@ local function opts(arg)
   return {
     desc = arg.desc,
     noremap = arg.noremap or true,
-    silent = arg.noremap or true,
+    silent = arg.silent or true,
     nowait = arg.nowait or false,
   }
 end
@@ -29,6 +29,10 @@ end
 map({ "n", "x" }, "gh", "_", opts({ desc = "Go to the first non-blank character" }))
 map({ "n", "x" }, "gl", "g_", opts({ desc = "Go to the last non-blank character" }))
 map("n", "tt", describe_diagnostic, opts({ desc = "Show diagnostic popup" }))
+map("n", "<leader>w", "<cmd>w<CR>", opts({ desc = "Write the buffer to the current file" }))
+map("n", "<leader>W", "<cmd>wa<CR>", opts({ desc = "Write all changed buffers" }))
+map("n", "<leader>qa", "<cmd>qa<CR>", opts({ desc = "Exit nvim" }))
+map("n", "<leader>xa", "<cmd>xa<CR>", opts({ desc = "Write all changed buffers and exit nvim" }))
 
 -- Buffers managment
 map("n", "L", "<cmd>bnext<cr>", opts({ desc = "Next buffer" }))
