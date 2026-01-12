@@ -13,7 +13,7 @@ local function opts(arg)
   return {
     desc = arg.desc,
     noremap = arg.noremap or true,
-    silent = arg.noremap or true,
+    silent = arg.silent or true,
     nowait = arg.nowait or false,
   }
 end
