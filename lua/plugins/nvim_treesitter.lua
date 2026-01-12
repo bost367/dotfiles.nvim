@@ -26,6 +26,7 @@ local langs = {
   "comment",
   "regex",
   "python",
+  "haskell",
 }
 
 vim.api.nvim_create_user_command("TSInstallList", function()
