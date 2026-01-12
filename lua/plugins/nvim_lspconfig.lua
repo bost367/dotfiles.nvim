@@ -27,6 +27,7 @@ return {
           "jsonls",
           "just",
           "ts_ls",
+          "hls",
         },
         automatic_enable = {
           exclude = {
