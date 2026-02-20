@@ -75,6 +75,13 @@ return {
       end,
       desc = "Find diagnostics",
     },
+    {
+      "fe",
+      function()
+        require("fzf-lua").oldfiles()
+      end,
+      desc = "Show history files",
+    },
   },
   opts = {
     previewers = {
@@ -105,6 +112,12 @@ return {
     },
     grep = {
       RIPGREP_CONFIG_PATH = vim.env.RIPGREP_CONFIG_PATH,
+    },
+    oldfiles = {
+      prompt = " ",
+      cwd_only = true,
+      include_current_session = false,
+      ignore_current_buffer = true,
     },
   },
 }
