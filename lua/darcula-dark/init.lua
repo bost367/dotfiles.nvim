@@ -11,7 +11,6 @@ local plugins = {
   "nvim_scrollbar",
   "nvim_tree",
   "nvim_treesitter",
-  "trouble",
   "vim_illuminate",
 }
 
