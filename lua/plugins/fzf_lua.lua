@@ -75,6 +75,20 @@ return {
       end,
       desc = "Find diagnostics",
     },
+    {
+      "fe",
+      function()
+        require("fzf-lua").history({ cwd_only = true })
+      end,
+      desc = "Show history files",
+    },
+    {
+      "fb",
+      function()
+        require("fzf-lua").buffers()
+      end,
+      desc = "Show buffers",
+    },
   },
   ---@module "fzf-lua"
   ---@type fzf-lua.Config|{}
@@ -110,6 +124,9 @@ return {
     },
     grep = {
       RIPGREP_CONFIG_PATH = vim.env.RIPGREP_CONFIG_PATH,
+    },
+    buffers = {
+      cwd_only = true,
     },
   },
   ---@diagnostic enable: missing-fields
