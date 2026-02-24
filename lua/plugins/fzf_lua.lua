@@ -77,6 +77,9 @@ return {
     },
   },
   opts = {
+    defaults = {
+      formatter = "path.filename_first",
+    },
     previewers = {
       scrollbar = false,
       codeaction_native = {
@@ -95,7 +98,6 @@ return {
       cwd_header = false,
       cwd_prompt = false,
       follow = true,
-      formatter = "path.filename_first",
     },
     lsp = {
       code_actions = {
