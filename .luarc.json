@@ -10,7 +10,10 @@
   "workspace": {
     "library": [
       "$VIMRUNTIME",
-      "${3rd}/luv/library"
+      "${3rd}/luv/library",
+      "$XDG_DATA_HOME/nvim/lazy/fzf-lua",
+      "$XDG_DATA_HOME/nvim/lazy/blink.cmp",
+      "$XDG_DATA_HOME/nvim/lazy/indent-blankline.nvim"
     ],
     "checkThirdParty": false
   },

@@ -2,6 +2,7 @@ return {
   "saghen/blink.cmp",
   version = "1.*",
   event = { "InsertEnter", "CmdlineEnter" },
+  ---@module "blink.cmp"
   ---@type blink.cmp.Config
   opts = {
     keymap = {
