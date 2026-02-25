@@ -14,7 +14,7 @@ return {
     {
       "fif",
       function()
-        require("fzf-lua").live_grep()
+        require("fzf-lua").grep_project()
       end,
       desc = "Find in files",
     },
@@ -76,12 +76,14 @@ return {
       desc = "Find diagnostics",
     },
   },
+  ---@module "fzf-lua"
+  ---@type fzf-lua.Config|{}
+  ---@diagnostic disable: missing-fields
   opts = {
     defaults = {
       formatter = "path.filename_first",
     },
     previewers = {
-      scrollbar = false,
       codeaction_native = {
         pager = [[delta --width=$COLUMNS --hunk-header-style="omit" --file-style="omit"]],
       },
@@ -92,6 +94,7 @@ return {
         title = false,
         layout = "vertical",
         vertical = "down:70%",
+        scrollbar = false,
       },
     },
     files = {
@@ -109,4 +112,5 @@ return {
       RIPGREP_CONFIG_PATH = vim.env.RIPGREP_CONFIG_PATH,
     },
   },
+  ---@diagnostic enable: missing-fields
 }
