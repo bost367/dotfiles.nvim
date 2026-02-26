@@ -21,15 +21,6 @@ local function buffer_mode(mode)
   end
 end
 
---- @return string
-local function readonly_mode()
-  if vim.bo.readonly then
-    return " "
-  else
-    return " "
-  end
-end
-
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = {
@@ -39,32 +30,58 @@ return {
     options = {
       theme = require("island-dark.highlights.plugins.specials.lualine"),
       globalstatus = true,
+      -- lower values makes statusline blinks.
+      -- blink appears only when file component is present.
+      refresh = { statusline = 50 },
       section_separators = "",
       component_separators = "",
+      disabled_filetypes = {
+        statusline = {
+          "DiffviewFileHistory",
+          "DiffviewFiles",
+          "git",
+        },
+      },
+      ignore_focus = {
+        "fzf",
+        "mason",
+        "lazy",
+        "NvimTree",
+        "qf",
+      },
     },
     sections = {
       lualine_a = {
         { "mode", fmt = buffer_mode },
-      },
-      lualine_b = {
         { "branch", icon = "" },
       },
+      lualine_b = {
+        {
+          "filename",
+          path = 1,
+          symbols = {
+            modified = "●",
+            readonly = "",
+            unnamed = "",
+            newfile = "󰽤",
+          },
+        },
+      },
       lualine_c = {},
-      lualine_x = {
+      lualine_x = {},
+      lualine_y = {
         {
           "diagnostics",
           sections = { "error", "warn", "hint", "info" },
           symbols = { error = " ", warn = " ", hint = " ", info = " " },
         },
       },
-      lualine_y = {
+      lualine_z = {
         "location",
         "fileformat",
         "encoding",
         "lsp_status",
-        readonly_mode,
       },
-      lualine_z = {},
     },
   },
 }
