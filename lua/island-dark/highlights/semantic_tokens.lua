@@ -50,6 +50,7 @@ function M.groups()
     -- Protobuf (buf)
     ["@lsp.type.type.proto"] = { fg = palette.syntax.default.keyword },
     ["@lsp.type.decorator.proto"] = { fg = palette.syntax.default.struct },
+    ["@lsp.type.modifier.proto"] = { fg = palette.syntax.default.keyword },
 
     -- TypeScript (ts_ls)
     ["@lsp.type.variable.typescript"] = { fg = palette.syntax.ts.local_variable },
