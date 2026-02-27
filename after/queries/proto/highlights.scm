@@ -1,8 +1,5 @@
 ;; extends
 (map_field) @keyword
-(reserved
-  (field_names
-    (identifier) @type))
 (field_option
   (identifier) @keyword
   (#set! priority 300))
