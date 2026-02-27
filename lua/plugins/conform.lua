@@ -23,6 +23,7 @@ return {
       proto = { "buf" },
       toml = { "taplo" },
       just = { "just" },
+      python = { "ruff_fix", "ruff_format" },
       ["_"] = { "trim_whitespace", "trim_newlines" },
     },
     formatters = {

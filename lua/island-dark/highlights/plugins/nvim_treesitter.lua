@@ -34,6 +34,7 @@ function M.groups()
     ["@variable.parameter.builtin"] = { fg = palette.syntax.default.local_variable },
     ["@variable.member"] = { fg = palette.syntax.default.property },
     ["@string"] = { fg = palette.syntax.default.string },
+    ["@string.documentation"] = { fg = palette.syntax.default.comment_documentation, italic = true },
     ["@character"] = { fg = palette.syntax.default.string },
     ["@character.special"] = { fg = palette.syntax.default.keyword },
     ["@number"] = { fg = palette.syntax.default.number },
@@ -41,7 +42,7 @@ function M.groups()
     ["@punctuation.delimiter"] = { fg = palette.syntax.default.foreground },
     ["@punctuation.bracket"] = { fg = palette.syntax.default.foreground },
     ["@comment"] = { fg = palette.syntax.default.comment },
-    ["@comment.documentation"] = { fg = palette.syntax.default.comment_documentation },
+    ["@comment.documentation"] = { fg = palette.syntax.default.comment_documentation, italic = true },
     ["@comment.todo"] = { fg = palette.syntax.default.comment_todo, italic = true },
     ["@punctuation.special"] = { fg = palette.syntax.default.foreground },
     ["@tag"] = { fg = "#D5B778" },
@@ -83,7 +84,7 @@ function M.groups()
 
     -- YAML
     ["@label.yaml"] = { fg = palette.syntax.yaml.anchor },
-    ["@comment.yaml"] = { fg = palette.syntax.default.comment_documentation },
+    ["@comment.yaml"] = { fg = palette.syntax.default.comment_documentation, italic = true },
     ["@punctuation.special.yaml"] = { fg = palette.syntax.default.foreground },
     ["@property.yaml"] = { fg = palette.syntax.default.keyword },
 
@@ -117,6 +118,14 @@ function M.groups()
     ["@function.method.call.javascript"] = { fg = palette.syntax.default.function_declaration },
     ["@variable.javascript"] = { fg = palette.syntax.ts.local_variable },
     ["@constructor.javascript"] = { fg = palette.syntax.default.keyword },
+
+    -- Python
+    ["@type.builtin.python"] = { fg = palette.syntax.python.builtin },
+    ["@function.builtin.python"] = { fg = palette.syntax.python.builtin },
+    ["@attribute.builtin.python"] = { fg = palette.syntax.default.metadata },
+    ["@customKeywoardArgumentPython"] = { fg = palette.syntax.python.parameter },
+    ["@customDunderPython"] = { fg = palette.syntax.python.dunder },
+    ["@constant.builtin.python"] = { italic = false }, -- fix 'Noone' and `__init__`
   }
 end
 

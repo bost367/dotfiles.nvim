@@ -27,6 +27,8 @@ return {
           "jsonls",
           "just",
           "ts_ls",
+          "basedpyright",
+          "ruff",
         },
         automatic_enable = {
           exclude = {
