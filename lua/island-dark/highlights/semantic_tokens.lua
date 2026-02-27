@@ -70,6 +70,9 @@ function M.groups()
     ["@lsp.typemod.variable.defaultLibrary.javascript"] = { fg = palette.syntax.default.function_declaration },
     ["@lsp.typemod.class.defaultLibrary.javascript"] = { fg = palette.syntax.default.function_declaration },
 
+    -- Python (basedpyright)
+    ["@lsp.mod.builtin.python"] = { fg = palette.syntax.python.builtin },
+
     LspInlayHint = { fg = palette.syntax.default.inline_hint_fg, bg = palette.syntax.default.inline_hint_bg },
     LspReferenceText = { bg = palette.editor.scope.same_token },
     LspReferenceRead = { bg = palette.editor.scope.read_variable },

@@ -133,6 +133,11 @@ return {
     markup = {
       code_block = "#293C40",
     },
+    python = {
+      builtin = "#8888C6", -- types and functions e.g. 'int', 'len("foo")'
+      parameter = "#AA4926",
+      dunder = "#B200B2",
+    },
   },
   icons = {
     default = "#CED0D6", -- almost any icon: gradle, git, services etc.
