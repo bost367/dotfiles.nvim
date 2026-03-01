@@ -72,11 +72,13 @@ function M.groups()
 
     -- Python (basedpyright)
     ["@lsp.mod.builtin.python"] = { fg = palette.syntax.python.builtin },
+    ["@lsp.typemod.variable.readonly.python"] = { fg = palette.syntax.default.constant, italic = true },
 
     LspInlayHint = { fg = palette.syntax.default.inline_hint_fg, bg = palette.syntax.default.inline_hint_bg },
     LspReferenceText = { bg = palette.editor.scope.same_token },
     LspReferenceRead = { bg = palette.editor.scope.read_variable },
     LspReferenceWrite = { bg = palette.editor.scope.write_variable },
+    LspCodeLens = { fg = palette.hint_text },
   }
 end
 
