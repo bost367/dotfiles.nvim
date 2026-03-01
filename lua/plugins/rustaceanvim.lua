@@ -18,6 +18,7 @@ return {
               fullFunctionSignatures = { enable = true },
               callable = { snippets = "add_parentheses" },
             },
+            lens = { enable = false },
           },
         },
       },

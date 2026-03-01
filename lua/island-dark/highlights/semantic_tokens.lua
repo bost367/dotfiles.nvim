@@ -77,6 +77,7 @@ function M.groups()
     LspReferenceText = { bg = palette.editor.scope.same_token },
     LspReferenceRead = { bg = palette.editor.scope.read_variable },
     LspReferenceWrite = { bg = palette.editor.scope.write_variable },
+    LspCodeLens = { fg = palette.hint_text },
   }
 end
 
