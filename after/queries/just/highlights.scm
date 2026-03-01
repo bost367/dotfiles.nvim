@@ -1,6 +1,7 @@
 ;; extends
 ((shebang) @keyword.directive
   (#set! priority 300))
+
 ; variable in string template: "ls '{{ dir }}'"
 (recipe_line
   (text)
