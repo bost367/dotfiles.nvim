@@ -8,6 +8,7 @@ unmap("n", "grr")
 unmap("n", "gra")
 unmap("n", "grn")
 unmap("n", "grt")
+unmap("n", "q:") -- opens command history. interferes with :q
 
 local function opts(arg)
   return {
@@ -33,11 +34,6 @@ map("n", "<leader>w", "<cmd>w<CR>", opts({ desc = "Write the buffer to the curre
 map("n", "<leader>W", "<cmd>wa<CR>", opts({ desc = "Write all changed buffers" }))
 map("n", "<leader>qa", "<cmd>qa<CR>", opts({ desc = "Exit nvim" }))
 map("n", "<leader>xa", "<cmd>xa<CR>", opts({ desc = "Write all changed buffers and exit nvim" }))
-
--- Buffers managment
-map("n", "L", "<cmd>bnext<cr>", opts({ desc = "Next buffer" }))
-map("n", "H", "<cmd>bprevious<cr>", opts({ desc = "Prev buffer" }))
-
 map("n", "<leader>r", vim.lsp.buf.rename, { desc = "LSP rename" })
 
 -- Resize window using

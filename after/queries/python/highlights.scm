@@ -33,6 +33,7 @@
     (call
       function: [(identifier) (attribute)] @attribute)
       (#set! priority 300)))
+
 ; built in function: '__init__', '__repr__' and so on
 (
   (identifier) @customDunderPython
