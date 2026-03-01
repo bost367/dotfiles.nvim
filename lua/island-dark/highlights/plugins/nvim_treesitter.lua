@@ -51,7 +51,6 @@ function M.groups()
     ["@diff.plus"] = { fg = palette.syntax.diff.added },
     ["@diff.minus"] = { fg = palette.syntax.diff.deleted },
     ["@diff.delta"] = { fg = palette.syntax.diff.changed },
-    ["StaticFunction"] = { fg = palette.syntax.default.function_declaration, italic = true },
 
     -- Markup
     ["@markup.italic"] = { fg = palette.syntax.default.foreground },
@@ -105,7 +104,7 @@ function M.groups()
 
     -- Justfile
     ["@variable.just"] = { fg = palette.syntax.default.constant, italic = true },
-    ["@function.just"] = { link = "StaticFunction" },
+    ["@function.just"] = { fg = palette.syntax.default.function_declaration, italic = true },
 
     -- TypeScript
     ["@function.call.typescript"] = { fg = palette.syntax.default.function_declaration },
