@@ -32,7 +32,8 @@ return {
         },
         automatic_enable = {
           exclude = {
-            "rust_analyzer",
+            "rust_analyzer", -- Start is delegated to 'rustaceanvim' plugin.
+            "taplo", -- Used as formatter. Language server makes nvim freeze on close.
           },
         },
       },
