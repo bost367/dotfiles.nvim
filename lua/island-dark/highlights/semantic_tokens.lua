@@ -74,6 +74,10 @@ function M.groups()
     ["@lsp.mod.builtin.python"] = { fg = palette.syntax.python.builtin },
     ["@lsp.typemod.variable.readonly.python"] = { fg = palette.syntax.default.constant, italic = true },
 
+    -- Just (just-lsp)
+    ["@lsp.type.variable.just"] = { fg = palette.syntax.default.property, italic = true },
+    ["@lsp.type.operator.just"] = { fg = palette.syntax.default.foreground },
+
     LspInlayHint = { fg = palette.syntax.default.inline_hint_fg, bg = palette.syntax.default.inline_hint_bg },
     LspReferenceText = { bg = palette.editor.scope.same_token },
     LspReferenceRead = { bg = palette.editor.scope.read_variable },
