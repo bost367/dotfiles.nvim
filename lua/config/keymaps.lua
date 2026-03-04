@@ -8,7 +8,11 @@ unmap("n", "grr")
 unmap("n", "gra")
 unmap("n", "grn")
 unmap("n", "grt")
-unmap("n", "q:") -- opens command history. interferes with :q
+
+-- Disable command history, to escape accidentally typing it, by trying exit.
+map("n", "q:", "<Nop>")
+map("n", "q/", "<Nop>")
+map("n", "q?", "<Nop>")
 
 local function opts(arg)
   return {
