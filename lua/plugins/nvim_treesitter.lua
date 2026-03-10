@@ -27,6 +27,7 @@ local langs = {
   "regex",
   "python",
   "gitcommit",
+  "wit",
 }
 
 vim.api.nvim_create_user_command("TSInstallList", function()

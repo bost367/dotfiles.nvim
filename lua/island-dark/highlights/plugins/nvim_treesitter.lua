@@ -125,6 +125,10 @@ function M.groups()
     ["@customKeywoardArgumentPython"] = { fg = palette.syntax.python.parameter },
     ["@customDunderPython"] = { fg = palette.syntax.python.dunder },
     ["@constant.builtin.python"] = { italic = false }, -- fix 'Noone' and `__init__`
+
+    -- WIT
+    ["@attribute.builtin.wit"] = { fg = palette.syntax.default.metadata },
+    ["@punctuation.special.wit"] = { fg = palette.syntax.default.metadata },
   }
 end
 
