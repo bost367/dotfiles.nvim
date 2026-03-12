@@ -105,6 +105,8 @@ function M.groups()
     -- Justfile
     ["@variable.just"] = { fg = palette.syntax.default.constant, italic = true },
     ["@function.just"] = { fg = palette.syntax.default.function_declaration, italic = true },
+    ["@lsp.type.operator.just"] = { fg = palette.syntax.default.foreground },
+    ["@lsp.type.variable.just"] = { fg = palette.syntax.default.property },
 
     -- TypeScript
     ["@function.call.typescript"] = { fg = palette.syntax.default.function_declaration },
