@@ -78,7 +78,7 @@ return {
     {
       "fe",
       function()
-        require("fzf-lua").history({ cwd_only = true })
+        require("fzf-lua").history({ cwd_only = true, ignore_current_buffer = true })
       end,
       desc = "Show history files",
     },
