@@ -13,14 +13,26 @@ return {
             files = {
               exclude = { "target", ".git", ".idea" },
             },
+            -- cargo = {
+            --   features = "all",
+            -- },
             inlayHints = {
               closingBraceHints = { enable = false },
               parameterHints = { enable = false },
             },
             completion = {
               fullFunctionSignatures = { enable = true },
+              privateEditable = { enable = true },
               callable = { snippets = "add_parentheses" },
               limit = 100,
+            },
+            workspace = {
+              symbol = {
+                search = {
+                  kind = "all_symbols",
+                  scope = "workspace_and_dependencies",
+                },
+              },
             },
             lens = { enable = false },
           },
