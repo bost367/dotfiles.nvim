@@ -37,6 +37,7 @@ function M.groups()
     BlinkCmpKindModule = { fg = palette.interface.active_element },
     BlinkCmpKindSnippet = { fg = palette.icons.default },
     BlinkCmpKindFolder = { fg = palette.icons.default },
+    BlinkCmpKindFile = { fg = palette.icons.default },
   }
 end
 
