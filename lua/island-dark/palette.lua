@@ -25,6 +25,7 @@ return {
       info = "#3592C4",
       unnecessary = "#6F737A",
       spell = "#7EC482",
+      unresolved = "#F75464",
     },
     scope = {
       indent_scope = "#64676F",

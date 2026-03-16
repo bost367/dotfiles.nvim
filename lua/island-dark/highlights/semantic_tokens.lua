@@ -23,7 +23,7 @@ function M.groups()
     ["@lsp.type.enum"] = { fg = palette.syntax.default.struct },
     ["@lsp.type.typeParameter"] = { fg = palette.syntax.default.generic },
     ["@lsp.type.formatSpecifier"] = { fg = palette.syntax.default.keyword },
-    ["@lsp.type.operator"] = { fg = palette.syntax.default.keyword },
+    ["@lsp.type.operator"] = { fg = palette.syntax.default.foreground },
     ["@lsp.type.builtinType"] = { fg = palette.syntax.default.keyword },
     ["@lsp.type.label"] = { fg = palette.syntax.default.label },
     -- https://github.com/stsewd/tree-sitter-comment/issues/22#issuecomment-1575804439
@@ -46,6 +46,8 @@ function M.groups()
     ["@lsp.typemod.parameter.mutable.rust"] = { underline = true },
     ["@lsp.typemod.variable.mutable.rust"] = { underline = true },
     ["@lsp.typemod.static.mutable.rust"] = { underline = true },
+    ["@lsp.type.unresolvedReference.rust"] = { fg = palette.editor.diagnostic.unresolved },
+    ["@lsp.typemod.operator.controlFlow.rust"] = { fg = palette.syntax.default.keyword },
 
     -- Protobuf (buf)
     ["@lsp.type.type.proto"] = { fg = palette.syntax.default.keyword },
@@ -76,7 +78,6 @@ function M.groups()
 
     -- Just (just-lsp)
     ["@lsp.type.variable.just"] = { fg = palette.syntax.default.property, italic = true },
-    ["@lsp.type.operator.just"] = { fg = palette.syntax.default.foreground },
 
     LspInlayHint = { fg = palette.syntax.default.inline_hint_fg, bg = palette.syntax.default.inline_hint_bg },
     LspReferenceText = { bg = palette.editor.scope.same_token },
