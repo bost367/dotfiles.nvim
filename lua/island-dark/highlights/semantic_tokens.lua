@@ -36,18 +36,38 @@ function M.groups()
     ["@lsp.mod.static"] = { italic = true },
 
     -- Rust (rust-analyzer)
+    ["@lsp.type.method.rust"] = { fg = palette.syntax.default.function_declaration },
+    ["@lsp.type.function.rust"] = { fg = palette.syntax.default.function_declaration },
     ["@lsp.type.lifetime.rust"] = { fg = palette.syntax.rust.lifetime, italic = true },
-    ["@lsp.type.macro.rust"] = { fg = palette.syntax.rust.macros_functional },
     ["@lsp.type.selfTypeKeyword.rust"] = { fg = palette.syntax.default.keyword },
+    ["@lsp.type.selfKeyword.rust"] = { fg = palette.syntax.default.keyword },
+    ["@lsp.type.punctuation.rust"] = { fg = palette.syntax.default.foreground },
+    ["@lsp.type.unresolvedReference.rust"] = { fg = palette.editor.diagnostic.unresolved },
+    -- unsafe
     ["@lsp.typemod.method.unsafe.rust"] = { bg = palette.syntax.rust.unsafe },
     ["@lsp.typemod.function.unsafe.rust"] = { bg = palette.syntax.rust.unsafe },
     ["@lsp.typemod.static.unsafe.rust"] = { bg = palette.syntax.rust.unsafe },
+    ["@lsp.typemod.operator.unsafe.rust"] = { bg = palette.syntax.rust.unsafe },
+    -- muatable variables
     ["@lsp.typemod.selfKeyword.mutable.rust"] = { underline = true },
     ["@lsp.typemod.parameter.mutable.rust"] = { underline = true },
     ["@lsp.typemod.variable.mutable.rust"] = { underline = true },
     ["@lsp.typemod.static.mutable.rust"] = { underline = true },
-    ["@lsp.type.unresolvedReference.rust"] = { fg = palette.editor.diagnostic.unresolved },
-    ["@lsp.typemod.operator.controlFlow.rust"] = { fg = palette.syntax.default.keyword },
+    -- documentation and example code comments
+    ["@lsp.mod.intraDocLink.rust"] = { fg = palette.syntax.default.foreground },
+    ["@lsp.typemod.comment.injected.rust"] = { fg = palette.syntax.default.comment },
+
+    ["@lsp.type.struct.rust"] = { fg = palette.syntax.rust.struct },
+    ["@lsp.type.enum.rust"] = { fg = palette.syntax.rust.struct, italic = true },
+    ["@lsp.type.enumMember.rust"] = { fg = palette.syntax.rust.enum_member, italic = true },
+    ["@lsp.type.typeAlias.rust"] = { fg = palette.syntax.rust.struct, italic = true },
+    ["@lsp.type.interface.rust"] = { fg = palette.syntax.rust.trait },
+    ["@lsp.typemod.method.trait.rust"] = { italic = true },
+    ["@lsp.typemod.namespace.crateRoot.rust"] = { fg = palette.syntax.rust.crate_name },
+    ["@lsp.typemod.operator.controlFlow.rust"] = { fg = palette.syntax.rust.question },
+    ["@lsp.type.macro.rust"] = { fg = palette.syntax.rust.macros_functional },
+    ["@lsp.type.procMacro.rust"] = { fg = palette.syntax.rust.macros_functional },
+    ["@lsp.type.attributeBracket.rust"] = { fg = palette.syntax.default.metadata }, -- macro brackets
 
     -- Protobuf (buf)
     ["@lsp.type.type.proto"] = { fg = palette.syntax.default.keyword },

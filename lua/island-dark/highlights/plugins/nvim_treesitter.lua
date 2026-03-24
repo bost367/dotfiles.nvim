@@ -131,6 +131,11 @@ function M.groups()
     -- WIT
     ["@attribute.builtin.wit"] = { fg = palette.syntax.default.metadata },
     ["@punctuation.special.wit"] = { fg = palette.syntax.default.metadata },
+
+    -- Rust
+    ["@type.rust"] = { fg = palette.syntax.rust.struct },
+    ["@function.call.rust"] = { fg = palette.syntax.default.function_declaration },
+    ["@character.special.rust"] = { fg = palette.syntax.default.foreground },
   }
 end
 

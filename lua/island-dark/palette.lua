@@ -109,8 +109,13 @@ return {
     },
     rust = {
       lifetime = "#20999D",
-      macros_functional = "#FFC66D",
+      macros_functional = "#4EADE5",
       unsafe = "#4D3E3E",
+      crate_name = "#8D91DC",
+      struct = "#86985D", -- enum, alias
+      enum_member = "#6DA1AB",
+      trait = "#8D91DC",
+      question = "#CC7832" -- error propagation
     },
     yaml = {
       anchor = "#E8BF6A",
