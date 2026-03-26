@@ -10,6 +10,9 @@ return {
             check = {
               command = "check",
             },
+            files = {
+              exclude = { "target", ".git", ".idea" },
+            },
             inlayHints = {
               closingBraceHints = { enable = false },
               parameterHints = { enable = false },
@@ -17,6 +20,7 @@ return {
             completion = {
               fullFunctionSignatures = { enable = true },
               callable = { snippets = "add_parentheses" },
+              limit = 100,
             },
             lens = { enable = false },
           },
