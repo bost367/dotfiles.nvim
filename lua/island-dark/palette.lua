@@ -110,7 +110,7 @@ return {
     rust = {
       lifetime = "#20999D",
       macros_functional = "#4EADE5",
-      unsafe = "#4D3E3E",
+      unsafe = "#462C24",
       crate_name = "#8D91DC",
       struct = "#86985D", -- enum, alias
       enum_member = "#6DA1AB",
