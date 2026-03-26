@@ -1,5 +1,6 @@
 local langs = {
   "c",
+  "cpp",
   "lua",
   "vim",
   "vimdoc",
