@@ -16,6 +16,7 @@ return {
     exclude = {
       filetypes = {
         "git",
+        "markdown",
       },
     },
   },

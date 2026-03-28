@@ -115,7 +115,7 @@ return {
       struct = "#86985D", -- enum, alias
       enum_member = "#6DA1AB",
       trait = "#8D91DC",
-      question = "#CC7832" -- error propagation
+      question = "#CC7832", -- error propagation
     },
     yaml = {
       anchor = "#E8BF6A",
@@ -148,5 +148,11 @@ return {
     md = "#548AF7",
     yaml = "#DB5C5C",
     yml = "#DB5C5C",
+  },
+  render = {
+    md = {
+      code_bg = "#2B2D30",
+      quote_indent = "#455981",
+    },
   },
 }
