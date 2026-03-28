@@ -154,6 +154,7 @@ return {
     md = {
       code_bg = "#2B2D30",
       quote_indent = "#455981",
+      link = "#3887A1",
     },
   },
 }

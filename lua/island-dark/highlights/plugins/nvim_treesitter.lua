@@ -42,7 +42,7 @@ function M.groups()
     ["@punctuation.delimiter"] = { fg = palette.syntax.default.foreground },
     ["@punctuation.bracket"] = { fg = palette.syntax.default.foreground },
     ["@comment"] = { fg = palette.syntax.default.comment },
-    ["@comment.documentation"] = { fg = palette.syntax.default.comment_documentation, italic = true },
+    ["@comment.documentation"] = { fg = palette.syntax.default.comment_documentation },
     ["@comment.todo"] = { fg = palette.syntax.default.comment_todo, italic = true },
     ["@punctuation.special"] = { fg = palette.syntax.default.foreground },
     ["@tag"] = { fg = "#D5B778" },
@@ -53,24 +53,24 @@ function M.groups()
     ["@diff.delta"] = { fg = palette.syntax.diff.changed },
 
     -- Markup
-    ["@markup.italic"] = { fg = palette.syntax.default.foreground, italic = true },
-    ["@markup.strikethrough"] = { fg = palette.syntax.default.foreground, strikethrough = true },
-    ["@markup.underline"] = { fg = palette.syntax.default.foreground, underline = true },
-    ["@markup.strong"] = { fg = palette.syntax.default.foreground, bold = true },
-    ["@markup.heading"] = { fg = palette.syntax.default.constant, italic = true },
+    ["@markup.italic"] = { italic = true },
+    ["@markup.strikethrough"] = { strikethrough = true },
+    ["@markup.underline"] = { underline = true },
+    ["@markup.strong"] = { bold = true },
+    ["@markup.heading"] = { fg = palette.syntax.default.constant, bold = true },
     ["@markup.quote"] = { fg = palette.syntax.default.string },
     ["@markup.raw"] = { fg = palette.syntax.default.string },
     ["@markup.list"] = { fg = palette.syntax.default.keyword },
     ["@markup.list.checked"] = { fg = palette.syntax.default.keyword },
     ["@markup.list.unchecked"] = { fg = palette.syntax.default.keyword },
     ["@label.markdown"] = { fg = palette.syntax.default.constant, italic = true },
-    ["@markup.link"] = { fg = palette.link, underline = true },
-    ["@markup.link.label"] = { fg = palette.link, underline = true },
-    ["@markup.link.url"] = { fg = palette.link, underline = true },
+    ["@markup.link"] = { fg = palette.render.md.link, underline = true },
+    ["@markup.link.label"] = { fg = palette.render.md.link, underline = true },
+    ["@markup.link.url"] = { fg = palette.render.md.link, underline = true },
 
     -- markdown-inline
-    ["@markup.link.url.markdown_inline"] = { fg = palette.link, underline = true, italic = true },
-    ["@markup.link.label.markdown_inline"] = { fg = palette.link, underline = true },
+    ["@markup.link.url.markdown_inline"] = { fg = palette.render.md.link, underline = true, italic = true },
+    ["@markup.link.label.markdown_inline"] = { fg = palette.render.md.link, underline = true },
     ["@conceal.markdown_inline"] = { fg = palette.syntax.default.keyword },
 
     -- Regex
