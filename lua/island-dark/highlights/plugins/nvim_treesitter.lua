@@ -42,7 +42,8 @@ function M.groups()
     ["@punctuation.delimiter"] = { fg = palette.syntax.default.foreground },
     ["@punctuation.bracket"] = { fg = palette.syntax.default.foreground },
     ["@comment"] = { fg = palette.syntax.default.comment },
-    ["@comment.documentation"] = { fg = palette.syntax.default.comment_documentation, italic = true },
+    -- ["@comment.documentation"] = { fg = palette.syntax.default.comment_documentation, italic = true },
+    ["@comment.documentation"] = { fg = palette.syntax.default.comment_documentation },
     ["@comment.todo"] = { fg = palette.syntax.default.comment_todo, italic = true },
     ["@punctuation.special"] = { fg = palette.syntax.default.foreground },
     ["@tag"] = { fg = "#D5B778" },
@@ -64,13 +65,13 @@ function M.groups()
     ["@markup.list.checked"] = { fg = palette.syntax.default.keyword },
     ["@markup.list.unchecked"] = { fg = palette.syntax.default.keyword },
     ["@label.markdown"] = { fg = palette.syntax.default.constant, italic = true },
-    ["@markup.link"] = { fg = palette.link, underline = true },
-    ["@markup.link.label"] = { fg = palette.link, underline = true },
-    ["@markup.link.url"] = { fg = palette.link, underline = true },
+    ["@markup.link"] = { fg = palette.render.md.link, underline = true },
+    ["@markup.link.label"] = { fg = palette.render.md.link, underline = true },
+    ["@markup.link.url"] = { fg = palette.render.md.link, underline = true },
 
     -- markdown-inline
-    ["@markup.link.url.markdown_inline"] = { fg = palette.link, underline = true, italic = true },
-    ["@markup.link.label.markdown_inline"] = { fg = palette.link, underline = true },
+    ["@markup.link.url.markdown_inline"] = { fg = palette.render.md.link, underline = true, italic = true },
+    ["@markup.link.label.markdown_inline"] = { fg = palette.render.md.link, underline = true },
     ["@conceal.markdown_inline"] = { fg = palette.syntax.default.keyword },
 
     -- Regex

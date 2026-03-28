@@ -7,6 +7,13 @@ return {
       server = {
         default_settings = {
           ["rust-analyzer"] = {
+            -- semanticHighlighting = {
+            --   doc = {
+            --     comment = {
+            --       inject = { enable = false },
+            --     },
+            --   },
+            -- },
             check = {
               command = "check",
             },
@@ -18,7 +25,9 @@ return {
               parameterHints = { enable = false },
             },
             completion = {
+              autoimport = { enable = true },
               fullFunctionSignatures = { enable = true },
+              postfix = { enable = true },
               callable = { snippets = "add_parentheses" },
               limit = 100,
             },
