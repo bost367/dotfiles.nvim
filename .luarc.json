@@ -13,7 +13,8 @@
       "${3rd}/luv/library",
       "$XDG_DATA_HOME/nvim/lazy/fzf-lua",
       "$XDG_DATA_HOME/nvim/lazy/blink.cmp",
-      "$XDG_DATA_HOME/nvim/lazy/indent-blankline.nvim"
+      "$XDG_DATA_HOME/nvim/lazy/indent-blankline.nvim",
+      "$XDG_DATA_HOME/nvim/lazy/render-markdown.nvim"
     ],
     "checkThirdParty": false
   },
