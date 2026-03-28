@@ -7,3 +7,16 @@ require("config.lazy")
 require("config.options")
 require("config.keymaps")
 require("config.commands")
+
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = "rust",
+--   callback = function()
+--     vim.opt_local.conceallevel = 2
+--     vim.opt_local.concealcursor = "nc"
+--
+--     vim.cmd([[
+--       " Скрываем ///
+--       syntax match RustDocSlashes "^\s*\zs///\ze" conceal cchar=┃
+--     ]])
+--   end,
+-- })
