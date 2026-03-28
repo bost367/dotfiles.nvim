@@ -115,7 +115,7 @@ return {
       struct = "#86985D", -- enum, alias
       enum_member = "#6DA1AB",
       trait = "#8D91DC",
-      question = "#CC7832" -- error propagation
+      question = "#CC7832", -- error propagation
     },
     yaml = {
       anchor = "#E8BF6A",
@@ -137,7 +137,10 @@ return {
       escape = "#B2AE60",
     },
     markup = {
-      code_block = "#293C40",
+      -- link = "#6A9BFA",
+      code_block = "#303236",
+      link = "#57A8F5",
+      -- code_block = "#2C2D30",
     },
     python = {
       builtin = "#8888C6", -- types and functions e.g. 'int', 'len("foo")'
@@ -151,5 +154,11 @@ return {
     md = "#548AF7",
     yaml = "#DB5C5C",
     yml = "#DB5C5C",
+  },
+  render = {
+    doc = {
+      code_block = "#343539",
+      link = "#3887A1",
+    },
   },
 }

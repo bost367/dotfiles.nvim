@@ -54,7 +54,8 @@ function M.groups()
     ["@lsp.typemod.variable.mutable.rust"] = { underline = true },
     ["@lsp.typemod.static.mutable.rust"] = { underline = true },
     -- documentation and example code comments
-    ["@lsp.mod.intraDocLink.rust"] = { fg = palette.syntax.default.foreground },
+    -- ["@lsp.mod.documentation.rust"] = { fg = palette.syntax.default.comment_documentation },
+    ["@lsp.mod.intraDocLink.rust"] = { fg = palette.render.doc.link },
     ["@lsp.typemod.comment.injected.rust"] = { fg = palette.syntax.default.comment },
 
     ["@lsp.type.struct.rust"] = { fg = palette.syntax.rust.struct },
