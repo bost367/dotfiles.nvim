@@ -136,9 +136,6 @@ return {
     regexp = {
       escape = "#B2AE60",
     },
-    markup = {
-      code_block = "#293C40",
-    },
     python = {
       builtin = "#8888C6", -- types and functions e.g. 'int', 'len("foo")'
       parameter = "#AA4926",

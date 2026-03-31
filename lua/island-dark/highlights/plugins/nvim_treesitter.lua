@@ -53,21 +53,24 @@ function M.groups()
     ["@diff.delta"] = { fg = palette.syntax.diff.changed },
 
     -- Markup
-    ["@markup.italic"] = { fg = palette.syntax.default.foreground },
-    ["@markup.strikethrough"] = { fg = palette.syntax.default.foreground },
-    ["@markup.underline"] = { fg = palette.syntax.default.foreground },
-    ["@markup.strong"] = { fg = palette.syntax.default.foreground },
+    ["@markup.italic"] = { fg = palette.syntax.default.foreground, italic = true },
+    ["@markup.strikethrough"] = { fg = palette.syntax.default.foreground, strikethrough = true },
+    ["@markup.underline"] = { fg = palette.syntax.default.foreground, underline = true },
+    ["@markup.strong"] = { fg = palette.syntax.default.foreground, bold = true },
     ["@markup.heading"] = { fg = palette.syntax.default.constant, italic = true },
     ["@markup.quote"] = { fg = palette.syntax.default.string },
-    ["@markup.link"] = { fg = palette.link, underline = true },
-    ["@markup.link.label"] = { fg = palette.link, underline = true },
-    ["@markup.link.url"] = { fg = palette.link, underline = true },
     ["@markup.raw"] = { fg = palette.syntax.default.string },
-    ["@markup.raw.block"] = { bg = palette.syntax.markup.code_block },
     ["@markup.list"] = { fg = palette.syntax.default.keyword },
     ["@markup.list.checked"] = { fg = palette.syntax.default.keyword },
     ["@markup.list.unchecked"] = { fg = palette.syntax.default.keyword },
     ["@label.markdown"] = { fg = palette.syntax.default.constant, italic = true },
+    ["@markup.link"] = { fg = palette.link, underline = true },
+    ["@markup.link.label"] = { fg = palette.link, underline = true },
+    ["@markup.link.url"] = { fg = palette.link, underline = true },
+
+    -- markdown-inline
+    ["@markup.link.url.markdown_inline"] = { fg = palette.link, underline = true, italic = true },
+    ["@markup.link.label.markdown_inline"] = { fg = palette.link, underline = true },
     ["@conceal.markdown_inline"] = { fg = palette.syntax.default.keyword },
 
     -- Regex
@@ -87,9 +90,6 @@ function M.groups()
     ["@punctuation.special.yaml"] = { fg = palette.syntax.default.foreground },
     ["@property.yaml"] = { fg = palette.syntax.default.keyword },
 
-    -- Markdown
-    ["@punctuation.special.markdown"] = { fg = palette.syntax.default.keyword },
-
     -- Bash
     ["@function.call.bash"] = { fg = palette.syntax.bash.cli_call },
     ["@function.builtin.bash"] = { fg = palette.syntax.bash.cli_call },
@@ -105,7 +105,6 @@ function M.groups()
     -- Justfile
     ["@variable.just"] = { fg = palette.syntax.default.constant, italic = true },
     ["@function.just"] = { fg = palette.syntax.default.function_declaration, italic = true },
-    ["@lsp.type.operator.just"] = { fg = palette.syntax.default.foreground },
     ["@lsp.type.variable.just"] = { fg = palette.syntax.default.property },
 
     -- TypeScript
@@ -126,7 +125,7 @@ function M.groups()
     ["@attribute.builtin.python"] = { fg = palette.syntax.default.metadata },
     ["@customKeywoardArgumentPython"] = { fg = palette.syntax.python.parameter },
     ["@customDunderPython"] = { fg = palette.syntax.python.dunder },
-    ["@constant.builtin.python"] = { italic = false }, -- fix 'Noone' and `__init__`
+    ["@constant.builtin.python"] = { italic = false }, -- fix 'None' and `__init__`
 
     -- WIT
     ["@attribute.builtin.wit"] = { fg = palette.syntax.default.metadata },
