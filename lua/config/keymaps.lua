@@ -8,11 +8,7 @@ unmap("n", "grr")
 unmap("n", "gra")
 unmap("n", "grn")
 unmap("n", "grt")
-
--- Disable command history, to escape accidentally typing it, by trying exit.
-map("n", "q:", "<Nop>")
-map("n", "q/", "<Nop>")
-map("n", "q?", "<Nop>")
+unmap("n", "q:") -- opens command history. interferes with :q
 
 local function opts(arg)
   return {
@@ -54,3 +50,9 @@ map("n", "<M-l>", "<cmd>wincmd l<cr>", opts({ desc = "Move cursor to window righ
 
 -- Clear search with <esc>
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", opts({ desc = "Escape and clear hlsearch" }))
+
+local function toggle_spellcheck()
+  local client = vim.lsp.get_clients({ name = "codebook" })
+end
+
+map("n", "<leader>s", toggle_spellcheck, { desc = "LSP rename" })

@@ -1,0 +1,32 @@
+local default_ft = {
+  "c",
+  "css",
+  "gitcommit",
+  "go",
+  "haskell",
+  "html",
+  "java",
+  "javascript",
+  "javascriptreact",
+  "lua",
+  "markdown",
+  "php",
+  "python",
+  "ruby",
+  "rust",
+  "toml",
+  "text",
+  "typescript",
+  "typescriptreact",
+}
+return {
+  filetypes = vim.list_extend(default_ft, {
+    "yaml",
+    "toml",
+    "bash",
+    "json",
+    "just",
+    "proto",
+    "query",
+  }),
+}
