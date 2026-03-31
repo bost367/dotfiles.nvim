@@ -25,7 +25,6 @@ return {
       info = "#3592C4",
       unnecessary = "#6F737A",
       spell = "#7EC482",
-      unresolved = "#F75464",
     },
     scope = {
       indent_scope = "#64676F",
@@ -38,6 +37,9 @@ return {
     line_number = "#4B5059",
     cursor_line_fg = "#A1A3AB",
     cursor_line_bg = "#26282E",
+    breackpoint = "#E55765",
+    breackpoint_stop = "#F2C55C",
+    run = "#5FAD65",
     vcs = {
       added_line = "#539258",
       changed_line = "#52423D",
@@ -109,13 +111,8 @@ return {
     },
     rust = {
       lifetime = "#20999D",
-      macros_functional = "#4EADE5",
-      unsafe = "#462C24",
-      crate_name = "#8D91DC",
-      struct = "#86985D", -- enum, alias
-      enum_member = "#6DA1AB",
-      trait = "#8D91DC",
-      question = "#CC7832", -- error propagation
+      macros_functional = "#FFC66D",
+      unsafe = "#4D3E3E",
     },
     yaml = {
       anchor = "#E8BF6A",
@@ -136,6 +133,9 @@ return {
     regexp = {
       escape = "#B2AE60",
     },
+    markup = {
+      code_block = "#293C40",
+    },
     python = {
       builtin = "#8888C6", -- types and functions e.g. 'int', 'len("foo")'
       parameter = "#AA4926",
@@ -148,11 +148,5 @@ return {
     md = "#548AF7",
     yaml = "#DB5C5C",
     yml = "#DB5C5C",
-  },
-  render = {
-    md = {
-      code_bg = "#2B2D30",
-      quote_indent = "#455981",
-    },
   },
 }
