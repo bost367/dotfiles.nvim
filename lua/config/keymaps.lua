@@ -9,11 +9,6 @@ unmap("n", "gra")
 unmap("n", "grn")
 unmap("n", "grt")
 
--- Disable command history, to escape accidentally typing it, by trying exit.
-map("n", "q:", "<Nop>")
-map("n", "q/", "<Nop>")
-map("n", "q?", "<Nop>")
-
 local function opts(arg)
   return {
     desc = arg.desc,

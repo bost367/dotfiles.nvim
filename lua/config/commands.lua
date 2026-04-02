@@ -10,6 +10,7 @@ autocmd("FileType", {
     "qf",
     "mason",
     "git",
+    "vim",
   },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
