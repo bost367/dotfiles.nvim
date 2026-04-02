@@ -30,7 +30,7 @@ local injected_makdown = {
   render_modes = { "n", "v", "V", "i", "c", "t" }, -- `h mode()`
   heading = {
     icons = { " ", " ", " ", " ", " ", " " },
-    backgrounds = { "RenderMarkdownDocComment" },
+    backgrounds = { "RenderMarkdownHeaderDocComment" },
   },
   dash = { highlight = "RenderMarkdownDocComment" },
   checkbox = {
@@ -40,7 +40,7 @@ local injected_makdown = {
   },
   bullet = { highlight = "RenderMarkdownDocComment" },
   quote = { highlight = "RenderMarkdownDocComment" },
-  pipe_table = { head = "RenderMarkdownDocComment", row = "RenderMarkdownDocComment" },
+  pipe_table = { head = "RenderMarkdownHeaderDocComment", row = "RenderMarkdownDocComment" },
 }
 
 return {
@@ -69,7 +69,7 @@ return {
       width = "block",
       min_width = 90,
       border = "thin",
-      left_pad = 1,
+      left_pad = 4,
     },
     checkbox = {
       unchecked = { icon = " " },

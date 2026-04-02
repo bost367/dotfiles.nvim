@@ -30,6 +30,7 @@ function M.groups()
     ["@markup.quote.markdown"] = { fg = palette.syntax.default.foreground },
     -- RenderMarkdownLink is byggy - it is has ho effect
     RenderMarkdownDocComment = { fg = palette.syntax.default.comment_documentation },
+    RenderMarkdownHeaderDocComment = { fg = palette.syntax.default.comment_documentation, bold = true },
   }
 end
 
