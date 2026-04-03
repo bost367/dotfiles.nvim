@@ -54,11 +54,11 @@ function M.groups()
     ["@diff.delta"] = { fg = palette.syntax.diff.changed },
 
     -- Markup
-    ["@markup.italic"] = { fg = palette.syntax.default.foreground, italic = true },
-    ["@markup.strikethrough"] = { fg = palette.syntax.default.foreground, strikethrough = true },
-    ["@markup.underline"] = { fg = palette.syntax.default.foreground, underline = true },
-    ["@markup.strong"] = { fg = palette.syntax.default.foreground, bold = true },
-    ["@markup.heading"] = { fg = palette.syntax.default.constant, italic = true },
+    ["@markup.italic"] = { italic = true },
+    ["@markup.strikethrough"] = { strikethrough = true },
+    ["@markup.underline"] = { underline = true },
+    ["@markup.strong"] = { bold = true },
+    ["@markup.heading"] = { fg = palette.syntax.default.constant, bold = true },
     ["@markup.quote"] = { fg = palette.syntax.default.string },
     ["@markup.raw"] = { fg = palette.syntax.default.string },
     ["@markup.list"] = { fg = palette.syntax.default.keyword },
