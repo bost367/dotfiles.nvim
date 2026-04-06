@@ -116,6 +116,7 @@ return {
       enum_member = "#6DA1AB",
       trait = "#8D91DC",
       question = "#CC7832", -- error propagation
+      self = "#D98EB3",
     },
     yaml = {
       anchor = "#E8BF6A",

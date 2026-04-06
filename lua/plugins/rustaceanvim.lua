@@ -18,6 +18,7 @@ return {
               parameterHints = { enable = false },
             },
             completion = {
+              autoimport = { enable = true },
               fullFunctionSignatures = { enable = true },
               callable = { snippets = "add_parentheses" },
               limit = 100,

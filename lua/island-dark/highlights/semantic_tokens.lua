@@ -40,7 +40,6 @@ function M.groups()
     ["@lsp.type.function.rust"] = { fg = palette.syntax.default.function_declaration },
     ["@lsp.type.lifetime.rust"] = { fg = palette.syntax.rust.lifetime, italic = true },
     ["@lsp.type.selfTypeKeyword.rust"] = { fg = palette.syntax.default.keyword },
-    ["@lsp.type.selfKeyword.rust"] = { fg = palette.syntax.default.keyword },
     ["@lsp.type.punctuation.rust"] = { fg = palette.syntax.default.foreground },
     ["@lsp.type.unresolvedReference.rust"] = { fg = palette.editor.diagnostic.unresolved },
     -- unsafe
@@ -56,7 +55,12 @@ function M.groups()
     -- documentation and example code comments
     ["@lsp.mod.documentation.rust"] = { fg = palette.syntax.default.comment_documentation },
     ["@lsp.typemod.comment.injected.rust"] = { fg = palette.syntax.default.comment },
+    ["@lsp.type.boolean.rust"] = { fg = palette.syntax.default.keyword },
+    ["@lsp.type.arithmetic.rust"] = { fg = palette.syntax.default.foreground },
+    ["@lsp.type.negation.rust"] = { fg = palette.syntax.default.foreground },
+    ["@lsp.typemod.generic.injected.rust"] = { fg = palette.syntax.default.foreground },
 
+    ["@lsp.type.selfKeyword.rust"] = { fg = palette.syntax.rust.self },
     ["@lsp.type.struct.rust"] = { fg = palette.syntax.rust.struct },
     ["@lsp.type.enum.rust"] = { fg = palette.syntax.rust.struct, italic = true },
     ["@lsp.type.enumMember.rust"] = { fg = palette.syntax.rust.enum_member, italic = true },
