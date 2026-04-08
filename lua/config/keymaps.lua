@@ -2,12 +2,14 @@
 local map = vim.keymap.set
 local unmap = vim.keymap.del
 
+-- :verbose map - see all mappings
 -- Remove default keybindings that cause `gr` delay
 unmap("n", "gri")
 unmap("n", "grr")
 unmap("n", "gra")
 unmap("n", "grn")
 unmap("n", "grt")
+unmap("n", "grx")
 
 local function opts(arg)
   return {
