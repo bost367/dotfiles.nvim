@@ -42,7 +42,7 @@ autocmd("LspAttach", {
   callback = function(args)
     local client = vim.lsp.get_client_by_id(args.data.client_id)
     if client ~= nil then
-      if client.supports_method("textDocument/inlayHint") or client.server_capabilities.inlayHintProvider then
+      if client:supports_method("textDocument/inlayHint") or client.server_capabilities.inlayHintProvider then
         vim.lsp.inlay_hint.enable(true, { bufnr = args.buf })
       end
     end
