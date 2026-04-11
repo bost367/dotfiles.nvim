@@ -8,7 +8,7 @@ function M.groups()
     MasonHighlightBlockBold = { bg = palette.interface.active_element },
     MasonMutedBlock = { bg = palette.interface.button },
     MasonMuted = { fg = palette.hint_text },
-    MasonHighlight = { fg = palette.link, underline = true },
+    MasonHighlight = { fg = palette.link },
     MasonHighlightBlock = { bg = palette.interface.active_element },
   }
 end
