@@ -29,6 +29,7 @@ local langs = {
   "python",
   "gitcommit",
   "wit",
+  "nix",
 }
 
 vim.api.nvim_create_user_command("TSInstallList", function()

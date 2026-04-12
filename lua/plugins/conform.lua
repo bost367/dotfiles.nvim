@@ -24,6 +24,7 @@ return {
       toml = { "taplo" },
       just = { "just" },
       python = { "ruff_fix", "ruff_format" },
+      nix = { "nixfmt" },
       ["_"] = { "trim_whitespace", "trim_newlines" },
     },
     formatters = {

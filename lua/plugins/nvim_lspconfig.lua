@@ -29,6 +29,7 @@ return {
           "ts_ls",
           "basedpyright",
           "ruff",
+          "nil_ls",
         },
         automatic_enable = {
           exclude = {
